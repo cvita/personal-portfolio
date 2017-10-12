@@ -1,0 +1,22 @@
+{
+  "name": "personal-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-lazy-load": "^3.0.12",
+    "react-transition-group": "^1.2.1",
+    "reactstrap": "^5.0.0-alpha.3"
+  },
+  "devDependencies": {
+    "react-scripts": "1.0.14"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "gzip-bundles": "gzip -r build/static/js & gzip -r build/static/css"
+  }
+}
