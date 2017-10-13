@@ -2,7 +2,7 @@ import React from 'react';
 import laptopImage from '../assets/laptop.png';
 import LazyLoad from 'react-lazy-load';
 import { CSSTransitionGroup } from 'react-transition-group';
-import { Container, Row, Col, Card, CardTitle, CardText, CardDeck, CardBody, CardLink } from 'reactstrap';
+import { Container, Row, Col, Card, CardTitle, CardText, CardBody, CardLink } from 'reactstrap';
 import './Projects.css';
 
 
@@ -10,9 +10,9 @@ function ScreenshotInLaptop(props) {
   const { images, title } = props;
   return (
     <div className='screenshotInLaptop'>
-      <img className='laptopImage' src={laptopImage} alt="laptop" />
-      <div className='projectImageContainer'>
-        <img className='projectImage' src={images.medium.source_url} alt={title + ' screenshot'} />
+      <img className='laptop' src={laptopImage} alt='laptop' />
+      <div className='screenshotContainer'>
+        <img className='screenshot' src={images.medium.source_url} alt={title + ' screenshot'} />
       </div>
     </div>
   );
@@ -21,36 +21,41 @@ function ScreenshotInLaptop(props) {
 class Preview extends React.Component {
   render() {
     const { title, titlePretty, github_url, demo_url, short_description, tech_stack, images } = this.props.details;
-
     return (
+      <LazyLoad>
+        <CSSTransitionGroup
+          transitionName='fadeInOnLoad'
+          transitionAppear={true}
+          transitionAppearTimeout={500}
+          transitionEnter={false}
+          transitionLeave={false}>
+          <Card className='preview'>
+            <CardBody>
+              <CardTitle className='previewTitle'>{titlePretty}</CardTitle>
+            </CardBody>
 
-      <Card className='preview'>
+            <Container className='previewImageContainer'>
+              <Row>
+                <Col lg='6' md={this.props.size || '12'} xs={'12'}>
+                  <ScreenshotInLaptop images={images} title={title} />
+                </Col>
+                <Col lg='6' md={this.props.size || '12'} xs={'12'}>
+                  <div className='previewTechStack'>
+                    <h5>{tech_stack}</h5>
+                  </div>
+                </Col>
+              </Row>
+            </Container>
 
-        <CardBody>
-          <CardTitle className='previewTitle'>{titlePretty}</CardTitle>
-        </CardBody>
+            <CardBody>
+              <CardText className='previewShortDescription'>{short_description}</CardText>
+              <CardLink href={demo_url}>Demo</CardLink>
+              <CardLink href={github_url}>GitHub</CardLink>
+            </CardBody>
 
-        <Container className='previewImageContainer'>
-          <Row>
-            <Col sm='6' xs='12'>
-              <ScreenshotInLaptop images={images} title={title} />
-            </Col>
-            <Col sm='6' xs='12'>
-              <div className='techStack'>
-                <h5>{tech_stack}</h5>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-
-        <CardBody>
-          <CardText className='shortDescription'>{short_description}</CardText>
-          <CardLink href={demo_url}>Demo</CardLink>
-          <CardLink href={github_url}>GitHub</CardLink>
-        </CardBody>
-
-      </Card>
-
+          </Card>
+        </CSSTransitionGroup>
+      </LazyLoad>
     );
   }
 }
@@ -58,7 +63,11 @@ class Preview extends React.Component {
 class Projects extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { projects: [] };
+    this.state = {
+      featuredProject: null,
+      projects: []
+    };
+    this.parseWPResponse = this.parseWPResponse.bind(this);
   }
   componentDidMount() {
     const wpURL = window.location.origin.indexOf('localhost') === -1 ?
@@ -66,34 +75,45 @@ class Projects extends React.Component {
       'http://localhost:8888/wp-json/wp/v2/projects?_embed';
     fetch(wpURL)
       .then(res => res.json())
-      .then(res => this.setState({ projects: res }));
+      .then(res => {
+        this.setState({
+          featuredProject: this.parseWPResponse(res.shift()),
+          projects: res
+        });
+      });
+  }
+  parseWPResponse(project) {
+    return ({
+      ...project.acf,
+      images: project._embedded['wp:featuredmedia'][0].media_details.sizes,
+      titlePretty: project.title.rendered
+    });
   }
   render() {
-    const myProjects = this.state.projects.map((project, i) => {
-      const details = {
-        ...project.acf,
-        images: project._embedded['wp:featuredmedia'][0].media_details.sizes,
-        titlePretty: project.title.rendered
-      };
+    const { featuredProject } = this.state;
+    const regularProjects = this.state.projects.map(project => {
+      const details = this.parseWPResponse(project);
       return (
-        <LazyLoad key={`${details.title}_${i}`}>
-          <CSSTransitionGroup
-            transitionName='fadeInOnLoad'
-            transitionAppear={true}
-            transitionAppearTimeout={500}
-            transitionEnter={false}
-            transitionLeave={false}>
-            <Preview details={details} />
-          </CSSTransitionGroup>
-        </LazyLoad>
+        <Col md='4' sm='12' key={details.title}>
+          <Preview details={details} />
+        </Col>
       );
     });
+
     return (
       <div>
-        <h1 className='heading'>Personal projects</h1>
-        <CardDeck>
-          {myProjects}
-        </CardDeck>
+        <h1 className='sectionHeading'>Personal projects</h1>
+
+        <Row>
+          <Col>
+            {featuredProject &&
+              <Preview details={featuredProject} size={'6'} />}
+          </Col>
+        </Row>
+
+        <Row>
+          {regularProjects}
+        </Row>
       </div>
     );
   }

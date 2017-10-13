@@ -28,11 +28,7 @@ function Home() {
           </Col>
         </Row>
 
-        <Row>
-          <Col>
-            <Projects />
-          </Col>
-        </Row>
+        <Projects />
 
         <div className='stubFooter' />
       </Container>
