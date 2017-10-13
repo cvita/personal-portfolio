@@ -2,7 +2,7 @@ import React from 'react';
 import laptopImage from '../assets/laptop.png';
 import LazyLoad from 'react-lazy-load';
 import { CSSTransitionGroup } from 'react-transition-group';
-import { Container, Row, Col, Button, Card, CardTitle, CardText, CardBody, CardLink, CardImgOverlay } from 'reactstrap';
+import { Container, Row, Col, Button, Card, CardTitle, CardText, CardBody, CardImgOverlay } from 'reactstrap';
 import './Projects.css';
 
 
@@ -27,7 +27,7 @@ class Preview extends React.Component {
     console.log(`You selected ${projectTitle}`);
   }
   render() {
-    const { title, titlePretty, github_url, demo_url, short_description, tech_stack, images } = this.props.details;
+    const { title, titlePretty, short_description, tech_stack, images } = this.props.details;
     return (
       <LazyLoad>
         <CSSTransitionGroup
@@ -56,8 +56,6 @@ class Preview extends React.Component {
 
             <CardBody>
               <CardText className='previewShortDescription'>{short_description}</CardText>
-              <CardLink href={demo_url}>Demo</CardLink>
-              <CardLink href={github_url}>GitHub</CardLink>
             </CardBody>
 
             <CardImgOverlay className='previewCardImgOver'>
