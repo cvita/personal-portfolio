@@ -9,6 +9,13 @@ body {
   background: white;
 }
 
+.sectionHeading {
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgb(134, 147, 160);
+}
+
 /* CSSTransitionGroup settings to compliment lazy loading */
 .fadeInOnLoad-appear {
   opacity: 0.01;
