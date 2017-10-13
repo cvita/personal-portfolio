@@ -13,7 +13,7 @@ body {
   font-size: 0.8em;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgb(134, 147, 160);
+  color: rgb(106, 116, 126);
 }
 
 /* CSSTransitionGroup settings to compliment lazy loading */
