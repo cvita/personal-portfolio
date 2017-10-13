@@ -2,7 +2,7 @@ import React from 'react';
 import laptopImage from '../assets/laptop.png';
 import LazyLoad from 'react-lazy-load';
 import { CSSTransitionGroup } from 'react-transition-group';
-import { Container, Row, Col, Card, CardTitle, CardText, CardBody, CardLink } from 'reactstrap';
+import { Container, Row, Col, Button, Card, CardTitle, CardText, CardBody, CardLink, CardImgOverlay } from 'reactstrap';
 import './Projects.css';
 
 
@@ -19,6 +19,13 @@ function ScreenshotInLaptop(props) {
 }
 
 class Preview extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick(projectTitle) {
+    console.log(`You selected ${projectTitle}`);
+  }
   render() {
     const { title, titlePretty, github_url, demo_url, short_description, tech_stack, images } = this.props.details;
     return (
@@ -52,6 +59,12 @@ class Preview extends React.Component {
               <CardLink href={demo_url}>Demo</CardLink>
               <CardLink href={github_url}>GitHub</CardLink>
             </CardBody>
+
+            <CardImgOverlay className='previewCardImgOver'>
+              <div className='previewOverlayBackground' onClick={() => this.handleClick(title)}>
+                <Button className='previewSelect' color='secondary' outline>Read more</Button>
+              </div>
+            </CardImgOverlay>
 
           </Card>
         </CSSTransitionGroup>
