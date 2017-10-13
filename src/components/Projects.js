@@ -4,6 +4,7 @@ import LazyLoad from 'react-lazy-load';
 import { CSSTransitionGroup } from 'react-transition-group';
 import { Container, Row, Col, Button, Card, CardTitle, CardText, CardBody, CardImgOverlay } from 'reactstrap';
 import './Projects.css';
+import SelectedProject from './SelectedProject';
 
 
 function ScreenshotInLaptop(props) {
@@ -18,17 +19,12 @@ function ScreenshotInLaptop(props) {
   );
 }
 
-class Preview extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleClick = this.handleClick.bind(this);
-  }
-  handleClick(projectTitle) {
-    console.log(`You selected ${projectTitle}`);
-  }
-  render() {
-    const { title, titlePretty, short_description, tech_stack, images } = this.props.details;
-    return (
+function Preview(props) {
+  const { title, titlePretty, short_description, tech_stack, images } = props.details;
+  const outerColSize = props.featured ? '12' : '4';
+  const innerColSize = props.featured ? '6' : '12';
+  return (
+    <Col md={outerColSize} sm='12'>
       <LazyLoad>
         <CSSTransitionGroup
           transitionName='fadeInOnLoad'
@@ -43,10 +39,10 @@ class Preview extends React.Component {
 
             <Container className='previewImageContainer'>
               <Row>
-                <Col lg='6' md={this.props.size || '12'} xs={'12'}>
+                <Col lg='6' md={innerColSize} xs={'12'}>
                   <ScreenshotInLaptop images={images} title={title} />
                 </Col>
-                <Col lg='6' md={this.props.size || '12'} xs={'12'}>
+                <Col lg='6' md={innerColSize} xs={'12'}>
                   <div className='previewTechStack'>
                     <h5>{tech_stack}</h5>
                   </div>
@@ -59,7 +55,7 @@ class Preview extends React.Component {
             </CardBody>
 
             <CardImgOverlay className='previewCardImgOver'>
-              <div className='previewOverlayBackground' onClick={() => this.handleClick(title)}>
+              <div className='previewOverlayBackground' onClick={() => props.handleSelect(props.details)}>
                 <Button className='previewSelect' color='secondary' outline>Read more</Button>
               </div>
             </CardImgOverlay>
@@ -67,18 +63,19 @@ class Preview extends React.Component {
           </Card>
         </CSSTransitionGroup>
       </LazyLoad>
-    );
-  }
+    </Col>
+  );
 }
 
 class Projects extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      featuredProject: null,
-      projects: []
+      projects: [],
+      selectedProject: null
     };
     this.parseWPResponse = this.parseWPResponse.bind(this);
+    this.assignSelectedProject = this.assignSelectedProject.bind(this);
   }
   componentDidMount() {
     const wpURL = window.location.origin.indexOf('localhost') === -1 ?
@@ -86,12 +83,7 @@ class Projects extends React.Component {
       'http://localhost:8888/wp-json/wp/v2/projects?_embed';
     fetch(wpURL)
       .then(res => res.json())
-      .then(res => {
-        this.setState({
-          featuredProject: this.parseWPResponse(res.shift()),
-          projects: res
-        });
-      });
+      .then(res => this.setState({ projects: res.map(project => this.parseWPResponse(project)) }));
   }
   parseWPResponse(project) {
     return ({
@@ -100,14 +92,23 @@ class Projects extends React.Component {
       titlePretty: project.title.rendered
     });
   }
+  assignSelectedProject(details) {
+    this.setState({ selectedProject: details });
+  }
   render() {
-    const { featuredProject } = this.state;
-    const regularProjects = this.state.projects.map(project => {
-      const details = this.parseWPResponse(project);
+    const { projects, selectedProject } = this.state;
+
+    const myProjects = projects.map((details, i) => {
+      if (selectedProject && details.title === selectedProject.title) {
+        return <div key={details.title + i} />
+      }
       return (
-        <Col md='4' sm='12' key={details.title}>
-          <Preview details={details} />
-        </Col>
+        <Preview
+          featured={i === 0 && !selectedProject}
+          details={details}
+          handleSelect={selectedProjectDetails => this.assignSelectedProject(selectedProjectDetails)}
+          key={details.title + i}
+        />
       );
     });
 
@@ -115,15 +116,16 @@ class Projects extends React.Component {
       <div>
         <h1 className='sectionHeading'>Personal projects</h1>
 
-        <Row>
-          <Col>
-            {featuredProject &&
-              <Preview details={featuredProject} size={'6'} />}
-          </Col>
-        </Row>
+        {selectedProject && (
+          <Row>
+            <Col>
+              <SelectedProject {...selectedProject} />
+            </Col>
+          </Row>
+        )}
 
         <Row>
-          {regularProjects}
+          {myProjects}
         </Row>
       </div>
     );
