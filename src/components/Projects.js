@@ -7,19 +7,16 @@ import './Projects.css';
 import SelectedProject from './SelectedProject';
 
 
-function ScreenshotInLaptop(props) {
-  const { images, title } = props;
-  return (
-    <div className='screenshotInLaptop'>
-      <img className='laptop' src={laptopImage} alt='laptop' />
-      <div className='screenshotContainer'>
-        <img className='screenshot' src={images.medium.source_url} alt={title + ' screenshot'} />
-      </div>
+const ScreenshotInLaptop = props => (
+  <div className='screenshotInLaptop'>
+    <img className='laptop' src={laptopImage} alt='laptop' />
+    <div className='screenshotContainer'>
+      <img className='screenshot' src={props.images.medium.source_url} alt={props.title + ' screenshot'} />
     </div>
-  );
-}
+  </div>
+);
 
-function Preview(props) {
+const Preview = props => {
   const { title, titlePretty, short_description, tech_stack, images } = props.details;
   const outerColSize = props.featured ? '12' : '4';
   const innerColSize = props.featured ? '6' : '12';
@@ -55,7 +52,7 @@ function Preview(props) {
             </CardBody>
 
             <CardImgOverlay className='previewCardImgOver'>
-              <div className='previewOverlayBackground' onClick={() => props.handleSelect(props.details)}>
+              <div className='previewOverlayBackground' onClick={props.handleClick}>
                 <Button className='previewSelect' color='secondary' outline>Read more</Button>
               </div>
             </CardImgOverlay>
@@ -68,36 +65,13 @@ function Preview(props) {
 }
 
 class Projects extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      projects: [],
-      selectedProject: null
-    };
-    this.parseWPResponse = this.parseWPResponse.bind(this);
-    this.assignSelectedProject = this.assignSelectedProject.bind(this);
-  }
   componentDidMount() {
-    const wpURL = window.location.origin.indexOf('localhost') === -1 ?
-      'https://chrisvita.com/wordpress/wp-json/wp/v2/projects?_embed' :
-      'http://localhost:8888/wp-json/wp/v2/projects?_embed';
-    fetch(wpURL)
-      .then(res => res.json())
-      .then(res => this.setState({ projects: res.map(project => this.parseWPResponse(project)) }));
-  }
-  parseWPResponse(project) {
-    return ({
-      ...project.acf,
-      images: project._embedded['wp:featuredmedia'][0].media_details.sizes,
-      titlePretty: project.title.rendered
-    });
-  }
-  assignSelectedProject(details) {
-    this.setState({ selectedProject: details });
+    if (this.props.projects.length === 0) {
+      this.props.fetchProjects();
+    }
   }
   render() {
-    const { projects, selectedProject } = this.state;
-
+    const { projects, selectedProject } = this.props;
     const myProjects = projects.map((details, i) => {
       if (selectedProject && details.title === selectedProject.title) {
         return <div key={details.title + i} />
@@ -106,20 +80,20 @@ class Projects extends React.Component {
         <Preview
           featured={i === 0 && !selectedProject}
           details={details}
-          handleSelect={selectedProjectDetails => this.assignSelectedProject(selectedProjectDetails)}
+          handleClick={() => this.props.makeSelectedProject(details)}
           key={details.title + i}
         />
       );
     });
 
     return (
-      <div>
+      <Container>
         <h1 className='sectionHeading'>Personal projects</h1>
 
         {selectedProject && (
           <Row>
             <Col>
-              <SelectedProject {...selectedProject} />
+              <SelectedProject {...this.props.selectedProject} />
             </Col>
           </Row>
         )}
@@ -127,7 +101,7 @@ class Projects extends React.Component {
         <Row>
           {myProjects}
         </Row>
-      </div>
+      </Container>
     );
   }
 }

@@ -1,23 +1,26 @@
-import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Home from './components/Home';
-//import SelectedProject from './components/SelectedProject';
-import Projects from './components/Projects';
-import NoMatch404 from './components/NoMatch404';
+import React from 'react';
+import Main from './Main';
+
+import { ConnectedRouter } from 'react-router-redux';
+import { history } from './redux/store';
+
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import * as actionCreators from './redux/actionCreators';
 
 
-class App extends Component {
-  render() {
-    return (
-      <BrowserRouter>
-        <Switch>
-          <Route path='/' exact={true} component={Home} />
-          <Route path='/projects/*' component={Projects} />
-          <Route component={NoMatch404} />
-        </Switch>
-      </BrowserRouter>
-    );
-  }
-}
+const App = props => (
+  <ConnectedRouter history={history}>
+    <Main {...props} />
+  </ConnectedRouter>
+);
 
-export default App;
+const mapStateToProps = state => ({
+  selectedProject: state.selectedProject,
+  projects: state.projects,
+  errors: state.errors
+});
+
+const mapDispatchToProps = dispatch => (bindActionCreators(actionCreators, dispatch));
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
