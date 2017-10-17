@@ -1,10 +1,16 @@
 import React from 'react';
-import laptopImage from '../assets/laptop.png';
+import { Route, Switch } from 'react-router-dom';
+import { push } from 'react-router-redux';
+import store from '../redux/store';
+
 import LazyLoad from 'react-lazy-load';
 import { CSSTransitionGroup } from 'react-transition-group';
 import { Container, Row, Col, Button, Card, CardTitle, CardText, CardBody, CardImgOverlay } from 'reactstrap';
 import './Projects.css';
+
+import laptopImage from '../assets/laptop.png';
 import SelectedProject from './SelectedProject';
+import NoMatch404 from './NoMatch404';
 
 
 const ScreenshotInLaptop = props => (
@@ -72,35 +78,48 @@ class Projects extends React.Component {
   }
   render() {
     const { projects, selectedProject } = this.props;
-    const myProjects = projects.map((details, i) => {
-      if (selectedProject && details.title === selectedProject.title) {
-        return <div key={details.title + i} />
+    const projectPreviews = projects.map((project, i) => {
+      if (project.title !== selectedProject.title) {
+        return <Preview
+          featured={project.featured && selectedProject.title === null}
+          details={project}
+          handleClick={() => store.dispatch(push(`/projects/${project.title}`))}
+          key={`${project.title}_preview_${i}`}
+        />;
+      } else {
+        return <div key={`${project.title}_preview_${i}`} />
       }
-      return (
-        <Preview
-          featured={i === 0 && !selectedProject}
-          details={details}
-          handleClick={() => this.props.makeSelectedProject(details)}
-          key={details.title + i}
-        />
-      );
     });
+
+    const projectRoutes = projects.map((project, i) => {
+      return <Route
+        path={`/projects/${project.title}`}
+        exact={true}
+        render={() => <SelectedProject {...this.props} />}
+        key={`${project.title}_route_${i}`}
+      />;
+    });
+
+    if (projects.length > 0) {
+      projectRoutes.push(<Route path='/projects/*' component={NoMatch404} key={'404_route'} />);
+    }
 
     return (
       <Container>
         <h1 className='sectionHeading'>Personal projects</h1>
 
-        {selectedProject && (
-          <Row>
-            <Col>
-              <SelectedProject {...this.props.selectedProject} />
-            </Col>
-          </Row>
-        )}
+        <Row>
+          <Col>
+            <Switch>
+              {projectRoutes}
+            </Switch>
+          </Col>
+        </Row>
 
         <Row>
-          {myProjects}
+          {projectPreviews}
         </Row>
+
       </Container>
     );
   }

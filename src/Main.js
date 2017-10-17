@@ -15,8 +15,18 @@ const Main = props => (
 
     <main>
       <Switch>
-        <Route path='/' exact component={Home} />
+        <Route
+          path='/'
+          exact={true}
+          render={() => (
+            <div>
+              <Home />
+              <Projects {...props} />
+            </div>)}
+        />
+
         <Route path='/projects' render={() => <Projects {...props} />} />
+        
         <Route component={NoMatch404} />
       </Switch>
     </main>
