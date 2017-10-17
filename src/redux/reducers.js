@@ -26,6 +26,7 @@ const projects = (state = initialState.projects, action) => {
 
 const errors = (state = initialState.errors, action) => {
   if (action.type.indexOf('FAILED') !== -1) {
+    console.error(action);
     return [...state, action];
   }
   return state;
