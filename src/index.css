@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Droid+Serif:400,700');
+
 html {
   font-size: 16px;
 }
@@ -7,6 +9,23 @@ body {
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   background: white;
+}
+
+.title {
+  letter-spacing: 0.01em;
+  color: #2e3844;
+}
+
+.subtitle {
+  letter-spacing: 0.03em;
+  color: #6D7C8B;
+}
+
+.bodyText {
+  font-size: 1em;
+  line-height: 1.8em;
+  font-family: 'Droid Serif', serif;
+  color: #2e3844;
 }
 
 .sectionHeading {

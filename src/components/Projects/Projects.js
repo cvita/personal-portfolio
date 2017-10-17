@@ -4,7 +4,6 @@ import { push } from 'react-router-redux';
 import store from '../../redux/store';
 
 import { Container, Row, Col } from 'reactstrap';
-import './Projects.css';
 
 import Preview from './Preview';
 import SelectedProject from './SelectedProject';
@@ -47,7 +46,8 @@ class Projects extends React.Component {
 
     return (
       <Container>
-        <h1 className='sectionHeading'>Personal projects</h1>
+        {!selectedProject.title && (
+          <h1 className='sectionHeading'>Personal projects</h1>)}
 
         <Row>
           <Col>
