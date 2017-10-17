@@ -3,14 +3,19 @@ import { Link } from 'react-router-dom';
 import { Alert } from 'reactstrap';
 
 
-function NoMatch404({ location }) {
+const NoMatch404 = ({ location }) => {
+  const reversedLocation = location.pathname.split('').reverse('').join('');
+  const oneStepBack = location.pathname.slice(0, -(reversedLocation.indexOf('/') + 1));
+
   return (
     <div className='text-center'>
-      <Alert color='danger'>Path <code>{location.pathname}</code> not found.</Alert>
-      <p className='lead text-muted'>Let's try going back <Link to='/'>home</Link>.</p>
+      <h1 className='lead'>
+        <Alert color='danger'><strong>Error:</strong> path <code>{location.pathname}</code> not found.</Alert>
+        <Link to={oneStepBack}>Let's try going one step back.</Link>
+      </h1>
     </div>
   );
-}
+};
 
 
 export default NoMatch404;

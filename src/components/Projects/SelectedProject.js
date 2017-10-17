@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import initialState from '../redux/initialState';
+import initialState from '../../redux/initialState';
 import { Container, Row, Col } from 'reactstrap';
 
 
