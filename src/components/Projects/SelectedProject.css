@@ -1,0 +1,35 @@
+.selectedProject {
+  margin-bottom: 6em;
+}
+
+.featuredMedia {
+  margin-bottom: 2em;
+  border: 1px solid rgb(204, 209, 218);
+}
+
+.featuredMedia img {
+  max-width: 100%;
+}
+
+.subtitle.select {
+  font-size: 0.9em;
+  padding-left: 0;
+  border: none;
+}
+
+.viewButtonContainer {
+  margin-bottom: 2em;
+}
+
+.sectionHeading.selected.view {
+  margin-bottom: -0.1em;
+}
+
+.viewButton {
+  padding-left: 0;
+  text-align: left;
+}
+
+.bodyText.selected {
+  margin-bottom: 3em;
+}
