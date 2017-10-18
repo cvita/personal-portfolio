@@ -18,7 +18,8 @@ const App = props => (
 const mapStateToProps = state => ({
   selectedProject: state.selectedProject,
   projects: state.projects,
-  errors: state.errors
+  errors: state.errors,
+  routing: state.routing
 });
 
 const mapDispatchToProps = dispatch => (bindActionCreators(actionCreators, dispatch));
