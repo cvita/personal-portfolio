@@ -4,6 +4,18 @@
   overflow: hidden;
 }
 
+.navbar-toggler:focus {
+  outline: none;
+}
+
+.navbarToggleText {
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  top: -10px;
+}
+
 .navBrand {
   padding: 0.5em;
   border: 0.18em solid #2e3844;

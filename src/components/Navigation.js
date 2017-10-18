@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Collapse, Navbar, NavbarToggler, Nav, NavItem } from 'reactstrap';
+import { Collapse, Navbar, Nav, NavItem } from 'reactstrap';
 import './Navigation.css';
 
 
@@ -34,7 +34,18 @@ class Navigation extends Component {
         <Navbar color='faded' light expand='sm'>
           <Link className='navBrand' to='/'>CV</Link>
 
-          <NavbarToggler onClick={this.toggle} />
+          <button
+            className='navbar-toggler'
+            onClick={this.toggle}
+            type='button'
+            data-toggle='collapse'
+            data-target='#navbarSupportedContent'
+          >
+            <span className='navbar-toggler-icon'>
+              {/* Next line to comply with accessability */}
+              <span className='navbarToggleText'>Navbar toggle</span>
+            </span>
+          </button>
 
           <Collapse isOpen={this.state.isOpen} navbar>
             <NavigationItems paths={paths} />
