@@ -1,0 +1,52 @@
+.footer {
+  width: 100%;
+  min-height: 4em;
+  margin-top: 15em;
+  padding: 1em;
+  border-top: 0.25em solid orange;
+  background: #6E899B;
+}
+
+.contactInfo {
+  letter-spacing: 0.03em;
+  font-weight: 400;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.socialInfo {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 1.6em;
+}
+
+.fa-linkedin-square {
+  font-size: 0.95em;
+}
+
+@media (max-width: 575px) {
+  .contactInfo, .socialInfo {
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+.footerList, .footerList a {
+  padding: 0;
+  list-style-type: none;
+  color: #171B26;
+}
+
+.footerList a:hover {
+  text-decoration: none;
+}
+
+.footerList a span {
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  top: -10px;
+}

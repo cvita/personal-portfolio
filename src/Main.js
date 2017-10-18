@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 import Home from './components/Home';
 import Projects from './components/Projects/Projects';
 import NoMatch404 from './components/NoMatch404';
@@ -32,16 +33,7 @@ const Main = props => (
     </main>
 
     <footer>
-      <div
-        style={{
-          width: '100%',
-          height: '50px',
-          marginTop: '500px',
-          textAlign: 'center'
-        }}
-      >
-        Footer goes here
-      </div>
+      <Footer />
     </footer>
   </div>
 );
