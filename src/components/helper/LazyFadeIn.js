@@ -4,7 +4,7 @@ import { CSSTransitionGroup } from 'react-transition-group';
 
 
 const LazyFadeIn = props => (
-  <LazyLoad>
+  <LazyLoad offset={600}>
     <CSSTransitionGroup
       transitionName='fadeInOnLoad'
       transitionAppear={true}

@@ -5,36 +5,36 @@ import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import Projects from './components/Projects/Projects';
+import Music from './components/Music/Music';
+import Player from './components/Music/Player';
 import NoMatch404 from './components/NoMatch404';
+import './Main.css';
 
 
 const Main = props => (
-  <div>
-    <header>
-      <Navigation {...props.routing.location} />
-    </header>
+  <div className='mainBody'>
 
-    <main>
-      <Switch>
-        <Route
-          path='/'
-          exact={true}
-          render={() => (
-            <div>
-              <Home />
-              <Projects {...props} />
-            </div>)}
-        />
+    <div className='mainContent'>
+      <header>
+        <Navigation {...props.routing.location} />
+      </header>
+      <main>
+        <Switch>
+          <Route path='/' exact={true} render={() => <div><Home /><Projects {...props} /></div>} />
+          <Route path='/projects' render={() => <Projects {...props} />} />
+          <Route path='/music' render={() => <Music {...props} />} />
+          <Route component={NoMatch404} />
+        </Switch>
+      </main>
+    </div>
 
-        <Route path='/projects' render={() => <Projects {...props} />} />
+    {props.selectedMusic &&
+      <Player {...props.selectedMusic} />}
 
-        <Route component={NoMatch404} />
-      </Switch>
-    </main>
-
-    <footer>
+    <footer className='mainFooter'>
       <Footer />
     </footer>
+
   </div>
 );
 
