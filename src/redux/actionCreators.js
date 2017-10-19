@@ -6,6 +6,18 @@ export const makeSelectedProject = details => ({
   payload: details
 });
 
+const defaultPlayerProps = {
+  albumId: '421650746',
+  size: 'large',
+  tracklist: 'false',
+  artwork: 'small'
+};
+
+export const makeSelectedMusic = (playerProps = defaultPlayerProps) => ({
+  type: types.MAKE_SELECTED_MUSIC,
+  payload: playerProps
+});
+
 // Async
 export const fetchProjects = () => ({
   type: types.FETCH_PROJECTS_REQUESTED,

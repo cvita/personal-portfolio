@@ -24,6 +24,15 @@ const projects = (state = initialState.projects, action) => {
   }
 };
 
+const selectedMusic = (state = initialState.selectedMusic, action) => {
+  switch (action.type) {
+    case types.MAKE_SELECTED_MUSIC:
+      return action.payload;
+    default:
+      return state;
+  }
+};
+
 const errors = (state = initialState.errors, action) => {
   if (action.type.indexOf('FAILED') !== -1) {
     console.error(action);
@@ -35,6 +44,7 @@ const errors = (state = initialState.errors, action) => {
 const rootReducer = combineReducers({
   selectedProject,
   projects,
+  selectedMusic,
   errors,
   routing: routerReducer
 });

@@ -12,6 +12,7 @@ const initialState = {
     video: null
   },
   projects: [],
+  selectedMusic: null,
   errors: []
 };
 

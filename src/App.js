@@ -18,6 +18,7 @@ const App = props => (
 const mapStateToProps = state => ({
   selectedProject: state.selectedProject,
   projects: state.projects,
+  selectedMusic: state.selectedMusic,
   errors: state.errors,
   routing: state.routing
 });
