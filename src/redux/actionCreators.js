@@ -21,5 +21,10 @@ export const makeSelectedMusic = (playerProps = defaultPlayerProps) => ({
 // Async
 export const fetchProjects = () => ({
   type: types.FETCH_PROJECTS_REQUESTED,
-  payload: null
+  payload: 'projects'
+});
+
+export const fetchMusics = () => ({
+  type: types.FETCH_MUSICS_REQUESTED,
+  payload: 'musics'
 });

@@ -19,6 +19,7 @@ const mapStateToProps = state => ({
   selectedProject: state.selectedProject,
   projects: state.projects,
   selectedMusic: state.selectedMusic,
+  musics: state.musics,
   errors: state.errors,
   routing: state.routing
 });

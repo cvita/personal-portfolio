@@ -14,6 +14,15 @@ const selectedProject = (state = initialState.selectedProject, action) => {
   }
 };
 
+const selectedMusic = (state = initialState.selectedMusic, action) => {
+  switch (action.type) {
+    case types.MAKE_SELECTED_MUSIC:
+      return action.payload;
+    default:
+      return state;
+  }
+};
+
 // Async
 const projects = (state = initialState.projects, action) => {
   switch (action.type) {
@@ -24,9 +33,9 @@ const projects = (state = initialState.projects, action) => {
   }
 };
 
-const selectedMusic = (state = initialState.selectedMusic, action) => {
+const musics = (state = initialState.musics, action) => {
   switch (action.type) {
-    case types.MAKE_SELECTED_MUSIC:
+    case types.FETCH_MUSICS_SUCCEEDED:
       return action.payload;
     default:
       return state;
@@ -45,6 +54,7 @@ const rootReducer = combineReducers({
   selectedProject,
   projects,
   selectedMusic,
+  musics,
   errors,
   routing: routerReducer
 });

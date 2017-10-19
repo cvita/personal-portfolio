@@ -13,6 +13,7 @@ const initialState = {
   },
   projects: [],
   selectedMusic: null,
+  musics: [],
   errors: []
 };
 
