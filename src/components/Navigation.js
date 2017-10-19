@@ -27,7 +27,7 @@ class Navigation extends Component {
   }
   render() {
     const currentPath = this.props && this.props.pathname ? this.props.pathname : null;
-    const paths = ['projects'];
+    const paths = ['projects', 'music'];
 
     return (
       <div className='navigation'>
