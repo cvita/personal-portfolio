@@ -15,6 +15,16 @@
   border: 0;
 }
 
+.playerRight {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.infoAlert {
+  margin: 0 1em;
+}
+
 .showHideButton {
-  float: right;
+  height: 100%;
 }
