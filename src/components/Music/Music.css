@@ -1,0 +1,50 @@
+.album {
+  margin: 3em auto;
+}
+
+.albumImageContainer:hover {
+  cursor: pointer;
+}
+
+.albumImage {
+  width: 100%;
+}
+
+.playButton {
+  position: absolute;
+  font-size: 2em;
+  margin: 0.1em 0.75em;
+  bottom: 0;
+  right: 0;
+  color: white;
+  transition: 0.3s;
+}
+
+.playButton:hover {
+  transform: scale(1.2);
+}
+
+.artistAndTitle span {
+  font-size: 0.6em;
+  letter-spacing: 0.03em;
+}
+
+.genreList {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.genreList li:after {
+  content: ", ";
+  white-space: pre;
+}
+
+.genreList li:last-child:after {
+  content: "";
+}
+
+.albumDetails {
+  margin-bottom: 1em;
+}
+
