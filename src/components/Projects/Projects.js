@@ -7,7 +7,7 @@ import { Container, Row, Col } from 'reactstrap';
 
 import Preview from './Preview';
 import SelectedProject from './SelectedProject';
-import NoMatch404 from '../NoMatch404';
+import NoMatch404 from '../helper/NoMatch404';
 
 
 class Projects extends React.Component {
