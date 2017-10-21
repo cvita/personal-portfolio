@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-import Home from './components/Home';
+import Home from './components/Home/Home';
 import Projects from './components/Projects/Projects';
 import Music from './components/Music/Music';
 import Player from './components/Music/Player';
