@@ -1,13 +1,14 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import Home from './components/Home/Home';
-import Projects from './components/Projects/Projects';
-import Music from './components/Music/Music';
-import Player from './components/Music/Player';
-import NoMatch404 from './components/NoMatch404';
+import Home from '../Home/Home';
+import Projects from '../Projects/Projects';
+import Music from '../Music/Music';
+import Player from '../Music/Player';
+import NoMatch404 from '../helper/NoMatch404';
+
+import Navigation from './Navigation';
+import Footer from './Footer';
 import './Main.css';
 
 

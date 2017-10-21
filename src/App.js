@@ -1,5 +1,4 @@
 import React from 'react';
-import Main from './Main';
 
 import { ConnectedRouter } from 'react-router-redux';
 import { history } from './redux/store';
@@ -7,6 +6,8 @@ import { history } from './redux/store';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as actionCreators from './redux/actionCreators';
+
+import Main from './components/Main/Main';
 
 
 const App = props => (
