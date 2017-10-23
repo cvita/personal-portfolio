@@ -17,12 +17,15 @@
     "redux-saga": "^0.15.6"
   },
   "devDependencies": {
-    "react-scripts": "1.0.14"
+    "fetch-mock": "^5.13.1",
+    "react-scripts": "1.0.14",
+    "redux-saga-test-plan": "^3.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "coverage": "react-scripts test --env=jsdom --coverage",
     "eject": "react-scripts eject",
     "gzip-bundles": "gzip -r build/static/js & gzip -r build/static/css"
   }

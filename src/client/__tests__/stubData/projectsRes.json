@@ -1,0 +1,758 @@
+[
+  {
+    "id": 5,
+    "date": "2017-10-03T15:35:56",
+    "date_gmt": "2017-10-03T15:35:56",
+    "guid": {
+      "rendered": "http://localhost:8888/?post_type=projects&#038;p=5"
+    },
+    "modified": "2017-10-23T17:44:03",
+    "modified_gmt": "2017-10-23T17:44:03",
+    "slug": "game-price-tracker",
+    "status": "publish",
+    "type": "projects",
+    "link": "http://localhost:8888/projects/game-price-tracker/",
+    "title": {
+      "rendered": "Game Price Tracker"
+    },
+    "content": {
+      "rendered": "<p>Since it came out in 2012, I wanted to play the survival-horror game, Zombi. The game&#8217;s reviews were tepid, but it still intrigued me. To justify a purchase, I knew I&#8217;d need to find a sale price. And just like that, an excuse to build to build an app!</p>\n<h3>My initial requirements</h3>\n<ul>\n<li>It should have a way to select a game on the Sony PlayStation Store</li>\n<li>It should have a place to save the game&#8217;s initial price</li>\n<li>It should have a place to save my email address</li>\n<li>It should have a way to determine a sale price</li>\n<li>It should have a way to email me in case of a sale price</li>\n</ul>\n<p>I satisfied these requirements with a few routes, a simple MongoDB schema, and the use of Postman. A week or so later, I received an email from the app. Zombi was on sale! With a working proof of concept, I added more advanced requirements and moved forward.</p>\n<figure><img class=\"alignnone wp-image-29 size-full\" src=\"http://localhost:8888/wp-content/uploads/2017/10/postmanExample5_31_2017.png\" alt=\"\" width=\"2234\" height=\"606\" srcset=\"http://localhost:8888/wp-content/uploads/2017/10/postmanExample5_31_2017.png 2234w, http://localhost:8888/wp-content/uploads/2017/10/postmanExample5_31_2017-300x81.png 300w, http://localhost:8888/wp-content/uploads/2017/10/postmanExample5_31_2017-768x208.png 768w, http://localhost:8888/wp-content/uploads/2017/10/postmanExample5_31_2017-1024x278.png 1024w\" sizes=\"(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px\" /><figcaption>First using Postman in lieu of a proper UI.</figcaption></figure>\n",
+      "protected": false
+    },
+    "featured_media": 7,
+    "template": "",
+    "acf": {
+      "title": "game-price-tracker",
+      "": false,
+      "github_url": "https://github.com/VitaC123/game-price-tracker",
+      "tech_stack": "React, Redux, Node, Express, MongoDB",
+      "short_description": "A full stack progressive web app, which alerts users to price drops in the Sony PlayStation store.",
+      "long_description": "The app allows a user to search for a PlayStation game, and to submit their email address to sign up for a notification if the game goes on sale. The game and user info are stored in a MongoDB collection as a &#039;price alert.&#039;<br />\r\n<br />\r\nOnce a day, the app&#039;s back-end iterates through the database and queries the PlayStation store, comparing prices to determine if the game is on sale. If the game is on sale, the user will receive an email. If the game hasn&#039;t gone on sale for 18 weeks, the user&#039;s price alert is deleted, and the user is invited to sign up again.",
+      "video": "pekA4Ye9-9E",
+      "travis": true,
+      "demo_url": "https://game-price-tracker.herokuapp.com/",
+      "featured": true,
+      "primary_language": "JavaScript",
+      "testing_framework": "Jest",
+      "project_background": "",
+      "tech_stack_full": "JavaScript, React, Redux, Node, Express, MongoDB, Babel, ESLint, Jest, REST API (consume), REST API (serve), Lighthouse, Travis-CI, Bootstrap, CSS, HTML, Git, GitHub, NPM"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://localhost:8888/wp-json/wp/v2/projects/5"
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://localhost:8888/wp-json/wp/v2/projects"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://localhost:8888/wp-json/wp/v2/types/projects"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "http://localhost:8888/wp-json/wp/v2/media/7"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://localhost:8888/wp-json/wp/v2/media?parent=5"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    },
+    "_embedded": {
+      "wp:featuredmedia": [
+        {
+          "id": 7,
+          "date": "2017-10-03T17:41:11",
+          "slug": "screen-shot-2017-10-03-at-10-40-28-am",
+          "type": "attachment",
+          "link": "http://localhost:8888/projects/game-price-tracker/screen-shot-2017-10-03-at-10-40-28-am/",
+          "title": {
+            "rendered": "game-price-tracker screenshot(2)"
+          },
+          "author": 1,
+          "acf": false,
+          "caption": {
+            "rendered": ""
+          },
+          "alt_text": "",
+          "media_type": "image",
+          "mime_type": "image/png",
+          "media_details": {
+            "width": 1102,
+            "height": 810,
+            "file": "2017/10/Screen-Shot-2017-10-03-at-10.40.28-AM.png",
+            "sizes": {
+              "thumbnail": {
+                "file": "Screen-Shot-2017-10-03-at-10.40.28-AM-150x150.png",
+                "width": 150,
+                "height": 150,
+                "mime_type": "image/png",
+                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/Screen-Shot-2017-10-03-at-10.40.28-AM-150x150.png"
+              },
+              "medium": {
+                "file": "Screen-Shot-2017-10-03-at-10.40.28-AM-300x221.png",
+                "width": 300,
+                "height": 221,
+                "mime_type": "image/png",
+                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/Screen-Shot-2017-10-03-at-10.40.28-AM-300x221.png"
+              },
+              "medium_large": {
+                "file": "Screen-Shot-2017-10-03-at-10.40.28-AM-768x565.png",
+                "width": 768,
+                "height": 565,
+                "mime_type": "image/png",
+                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/Screen-Shot-2017-10-03-at-10.40.28-AM-768x565.png"
+              },
+              "large": {
+                "file": "Screen-Shot-2017-10-03-at-10.40.28-AM-1024x753.png",
+                "width": 1024,
+                "height": 753,
+                "mime_type": "image/png",
+                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/Screen-Shot-2017-10-03-at-10.40.28-AM-1024x753.png"
+              },
+              "twentyseventeen-thumbnail-avatar": {
+                "file": "Screen-Shot-2017-10-03-at-10.40.28-AM-100x100.png",
+                "width": 100,
+                "height": 100,
+                "mime_type": "image/png",
+                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/Screen-Shot-2017-10-03-at-10.40.28-AM-100x100.png"
+              },
+              "full": {
+                "file": "Screen-Shot-2017-10-03-at-10.40.28-AM.png",
+                "width": 1102,
+                "height": 810,
+                "mime_type": "image/png",
+                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/Screen-Shot-2017-10-03-at-10.40.28-AM.png"
+              }
+            },
+            "image_meta": {
+              "aperture": "0",
+              "credit": "",
+              "camera": "",
+              "caption": "",
+              "created_timestamp": "0",
+              "copyright": "",
+              "focal_length": "0",
+              "iso": "0",
+              "shutter_speed": "0",
+              "title": "",
+              "orientation": "0",
+              "keywords": []
+            }
+          },
+          "source_url": "http://localhost:8888/wp-content/uploads/2017/10/Screen-Shot-2017-10-03-at-10.40.28-AM.png",
+          "_links": {
+            "self": [
+              {
+                "href": "http://localhost:8888/wp-json/wp/v2/media/7"
+              }
+            ],
+            "collection": [
+              {
+                "href": "http://localhost:8888/wp-json/wp/v2/media"
+              }
+            ],
+            "about": [
+              {
+                "href": "http://localhost:8888/wp-json/wp/v2/types/attachment"
+              }
+            ],
+            "author": [
+              {
+                "embeddable": true,
+                "href": "http://localhost:8888/wp-json/wp/v2/users/1"
+              }
+            ],
+            "replies": [
+              {
+                "embeddable": true,
+                "href": "http://localhost:8888/wp-json/wp/v2/comments?post=7"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 9,
+    "date": "2017-09-10T22:13:01",
+    "date_gmt": "2017-09-10T22:13:01",
+    "guid": {
+      "rendered": "http://localhost:8888/?post_type=projects&#038;p=9"
+    },
+    "modified": "2017-10-10T22:17:35",
+    "modified_gmt": "2017-10-10T22:17:35",
+    "slug": "youtube-mixtape",
+    "status": "publish",
+    "type": "projects",
+    "link": "http://localhost:8888/projects/youtube-mixtape/",
+    "title": {
+      "rendered": "YouTube Mixtape"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 10,
+    "template": "",
+    "acf": {
+      "": false,
+      "title": "youtube-mixtape",
+      "tech_stack": "jQuery-UI, Node, Express, Spotify API, YouTube API",
+      "travis": false,
+      "github_url": false,
+      "demo_url": "https://youtube-mixtape.herokuapp.com/",
+      "short_description": "Combining Spotify genera search with YouTube video results."
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://localhost:8888/wp-json/wp/v2/projects/9"
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://localhost:8888/wp-json/wp/v2/projects"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://localhost:8888/wp-json/wp/v2/types/projects"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "http://localhost:8888/wp-json/wp/v2/media/10"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://localhost:8888/wp-json/wp/v2/media?parent=9"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    },
+    "_embedded": {
+      "wp:featuredmedia": [
+        {
+          "id": 10,
+          "date": "2017-10-10T22:14:38",
+          "slug": "homepage6_2_17",
+          "type": "attachment",
+          "link": "http://localhost:8888/projects/youtube-mixtape/homepage6_2_17/",
+          "title": {
+            "rendered": "YouTube Mixtape screenshot"
+          },
+          "author": 1,
+          "acf": false,
+          "caption": {
+            "rendered": ""
+          },
+          "alt_text": "",
+          "media_type": "image",
+          "mime_type": "image/png",
+          "media_details": {
+            "width": 1696,
+            "height": 1564,
+            "file": "2017/10/homePage6_2_17.png",
+            "sizes": {
+              "thumbnail": {
+                "file": "homePage6_2_17-150x150.png",
+                "width": 150,
+                "height": 150,
+                "mime_type": "image/png",
+                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/homePage6_2_17-150x150.png"
+              },
+              "medium": {
+                "file": "homePage6_2_17-300x277.png",
+                "width": 300,
+                "height": 277,
+                "mime_type": "image/png",
+                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/homePage6_2_17-300x277.png"
+              },
+              "medium_large": {
+                "file": "homePage6_2_17-768x708.png",
+                "width": 768,
+                "height": 708,
+                "mime_type": "image/png",
+                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/homePage6_2_17-768x708.png"
+              },
+              "large": {
+                "file": "homePage6_2_17-1024x944.png",
+                "width": 1024,
+                "height": 944,
+                "mime_type": "image/png",
+                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/homePage6_2_17-1024x944.png"
+              },
+              "twentyseventeen-featured-image": {
+                "file": "homePage6_2_17-1696x1200.png",
+                "width": 1696,
+                "height": 1200,
+                "mime_type": "image/png",
+                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/homePage6_2_17-1696x1200.png"
+              },
+              "twentyseventeen-thumbnail-avatar": {
+                "file": "homePage6_2_17-100x100.png",
+                "width": 100,
+                "height": 100,
+                "mime_type": "image/png",
+                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/homePage6_2_17-100x100.png"
+              },
+              "full": {
+                "file": "homePage6_2_17.png",
+                "width": 1696,
+                "height": 1564,
+                "mime_type": "image/png",
+                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/homePage6_2_17.png"
+              }
+            },
+            "image_meta": {
+              "aperture": "0",
+              "credit": "",
+              "camera": "",
+              "caption": "",
+              "created_timestamp": "0",
+              "copyright": "",
+              "focal_length": "0",
+              "iso": "0",
+              "shutter_speed": "0",
+              "title": "",
+              "orientation": "0",
+              "keywords": []
+            }
+          },
+          "source_url": "http://localhost:8888/wp-content/uploads/2017/10/homePage6_2_17.png",
+          "_links": {
+            "self": [
+              {
+                "href": "http://localhost:8888/wp-json/wp/v2/media/10"
+              }
+            ],
+            "collection": [
+              {
+                "href": "http://localhost:8888/wp-json/wp/v2/media"
+              }
+            ],
+            "about": [
+              {
+                "href": "http://localhost:8888/wp-json/wp/v2/types/attachment"
+              }
+            ],
+            "author": [
+              {
+                "embeddable": true,
+                "href": "http://localhost:8888/wp-json/wp/v2/users/1"
+              }
+            ],
+            "replies": [
+              {
+                "embeddable": true,
+                "href": "http://localhost:8888/wp-json/wp/v2/comments?post=10"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 11,
+    "date": "2017-08-13T15:16:15",
+    "date_gmt": "2017-08-13T15:16:15",
+    "guid": {
+      "rendered": "http://localhost:8888/?post_type=projects&#038;p=11"
+    },
+    "modified": "2017-10-13T15:18:27",
+    "modified_gmt": "2017-10-13T15:18:27",
+    "slug": "this-vs-that",
+    "status": "publish",
+    "type": "projects",
+    "link": "http://localhost:8888/projects/this-vs-that/",
+    "title": {
+      "rendered": "This vs That"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 12,
+    "template": "",
+    "acf": {
+      "": false,
+      "title": "this-vs-that",
+      "tech_stack": "vanilla JavaScript, jQuery",
+      "travis": false,
+      "github_url": false,
+      "demo_url": "https://rawgit.com/VitaC123/This-vs-That/master/index.html",
+      "short_description": "Chaining Google autosuggestions."
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://localhost:8888/wp-json/wp/v2/projects/11"
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://localhost:8888/wp-json/wp/v2/projects"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://localhost:8888/wp-json/wp/v2/types/projects"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "http://localhost:8888/wp-json/wp/v2/media/12"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://localhost:8888/wp-json/wp/v2/media?parent=11"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    },
+    "_embedded": {
+      "wp:featuredmedia": [
+        {
+          "id": 12,
+          "date": "2017-10-13T15:16:47",
+          "slug": "this-vs-that-screenshot",
+          "type": "attachment",
+          "link": "http://localhost:8888/projects/this-vs-that/this-vs-that-screenshot/",
+          "title": {
+            "rendered": "this-vs-that-screenshot"
+          },
+          "author": 1,
+          "acf": false,
+          "caption": {
+            "rendered": ""
+          },
+          "alt_text": "",
+          "media_type": "image",
+          "mime_type": "image/png",
+          "media_details": {
+            "width": 1672,
+            "height": 1438,
+            "file": "2017/10/this-vs-that-screenshot.png",
+            "sizes": {
+              "thumbnail": {
+                "file": "this-vs-that-screenshot-150x150.png",
+                "width": 150,
+                "height": 150,
+                "mime_type": "image/png",
+                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/this-vs-that-screenshot-150x150.png"
+              },
+              "medium": {
+                "file": "this-vs-that-screenshot-300x258.png",
+                "width": 300,
+                "height": 258,
+                "mime_type": "image/png",
+                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/this-vs-that-screenshot-300x258.png"
+              },
+              "medium_large": {
+                "file": "this-vs-that-screenshot-768x661.png",
+                "width": 768,
+                "height": 661,
+                "mime_type": "image/png",
+                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/this-vs-that-screenshot-768x661.png"
+              },
+              "large": {
+                "file": "this-vs-that-screenshot-1024x881.png",
+                "width": 1024,
+                "height": 881,
+                "mime_type": "image/png",
+                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/this-vs-that-screenshot-1024x881.png"
+              },
+              "twentyseventeen-featured-image": {
+                "file": "this-vs-that-screenshot-1672x1200.png",
+                "width": 1672,
+                "height": 1200,
+                "mime_type": "image/png",
+                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/this-vs-that-screenshot-1672x1200.png"
+              },
+              "twentyseventeen-thumbnail-avatar": {
+                "file": "this-vs-that-screenshot-100x100.png",
+                "width": 100,
+                "height": 100,
+                "mime_type": "image/png",
+                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/this-vs-that-screenshot-100x100.png"
+              },
+              "full": {
+                "file": "this-vs-that-screenshot.png",
+                "width": 1672,
+                "height": 1438,
+                "mime_type": "image/png",
+                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/this-vs-that-screenshot.png"
+              }
+            },
+            "image_meta": {
+              "aperture": "0",
+              "credit": "",
+              "camera": "",
+              "caption": "",
+              "created_timestamp": "0",
+              "copyright": "",
+              "focal_length": "0",
+              "iso": "0",
+              "shutter_speed": "0",
+              "title": "",
+              "orientation": "0",
+              "keywords": []
+            }
+          },
+          "source_url": "http://localhost:8888/wp-content/uploads/2017/10/this-vs-that-screenshot.png",
+          "_links": {
+            "self": [
+              {
+                "href": "http://localhost:8888/wp-json/wp/v2/media/12"
+              }
+            ],
+            "collection": [
+              {
+                "href": "http://localhost:8888/wp-json/wp/v2/media"
+              }
+            ],
+            "about": [
+              {
+                "href": "http://localhost:8888/wp-json/wp/v2/types/attachment"
+              }
+            ],
+            "author": [
+              {
+                "embeddable": true,
+                "href": "http://localhost:8888/wp-json/wp/v2/users/1"
+              }
+            ],
+            "replies": [
+              {
+                "embeddable": true,
+                "href": "http://localhost:8888/wp-json/wp/v2/comments?post=12"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 13,
+    "date": "2017-01-13T15:22:16",
+    "date_gmt": "2017-01-13T15:22:16",
+    "guid": {
+      "rendered": "http://localhost:8888/?post_type=projects&#038;p=13"
+    },
+    "modified": "2017-10-13T15:23:37",
+    "modified_gmt": "2017-10-13T15:23:37",
+    "slug": "winter-beer-conditions-checker",
+    "status": "publish",
+    "type": "projects",
+    "link": "http://localhost:8888/projects/winter-beer-conditions-checker/",
+    "title": {
+      "rendered": "Winter Beer Conditions Checker"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 14,
+    "template": "",
+    "acf": {
+      "": false,
+      "title": "winter-beer-conditions-checker",
+      "tech_stack": "vanilla JavaScript, jQuery, CSS",
+      "travis": false,
+      "github_url": false,
+      "demo_url": "http://rawgit.com/VitaC123/Winter-Beer-Conditions-Checker/master/index.html",
+      "short_description": "Determines location and weather."
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://localhost:8888/wp-json/wp/v2/projects/13"
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://localhost:8888/wp-json/wp/v2/projects"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://localhost:8888/wp-json/wp/v2/types/projects"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "http://localhost:8888/wp-json/wp/v2/media/14"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://localhost:8888/wp-json/wp/v2/media?parent=13"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    },
+    "_embedded": {
+      "wp:featuredmedia": [
+        {
+          "id": 14,
+          "date": "2017-10-13T15:22:24",
+          "slug": "winter-beer-conditions-checker-sceenshot",
+          "type": "attachment",
+          "link": "http://localhost:8888/projects/winter-beer-conditions-checker/winter-beer-conditions-checker-sceenshot/",
+          "title": {
+            "rendered": "winter-beer-conditions-checker-sceenshot"
+          },
+          "author": 1,
+          "acf": false,
+          "caption": {
+            "rendered": ""
+          },
+          "alt_text": "",
+          "media_type": "image",
+          "mime_type": "image/png",
+          "media_details": {
+            "width": 2210,
+            "height": 1342,
+            "file": "2017/10/winter-beer-conditions-checker-sceenshot.png",
+            "sizes": {
+              "thumbnail": {
+                "file": "winter-beer-conditions-checker-sceenshot-150x150.png",
+                "width": 150,
+                "height": 150,
+                "mime_type": "image/png",
+                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/winter-beer-conditions-checker-sceenshot-150x150.png"
+              },
+              "medium": {
+                "file": "winter-beer-conditions-checker-sceenshot-300x182.png",
+                "width": 300,
+                "height": 182,
+                "mime_type": "image/png",
+                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/winter-beer-conditions-checker-sceenshot-300x182.png"
+              },
+              "medium_large": {
+                "file": "winter-beer-conditions-checker-sceenshot-768x466.png",
+                "width": 768,
+                "height": 466,
+                "mime_type": "image/png",
+                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/winter-beer-conditions-checker-sceenshot-768x466.png"
+              },
+              "large": {
+                "file": "winter-beer-conditions-checker-sceenshot-1024x622.png",
+                "width": 1024,
+                "height": 622,
+                "mime_type": "image/png",
+                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/winter-beer-conditions-checker-sceenshot-1024x622.png"
+              },
+              "twentyseventeen-featured-image": {
+                "file": "winter-beer-conditions-checker-sceenshot-2000x1200.png",
+                "width": 2000,
+                "height": 1200,
+                "mime_type": "image/png",
+                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/winter-beer-conditions-checker-sceenshot-2000x1200.png"
+              },
+              "twentyseventeen-thumbnail-avatar": {
+                "file": "winter-beer-conditions-checker-sceenshot-100x100.png",
+                "width": 100,
+                "height": 100,
+                "mime_type": "image/png",
+                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/winter-beer-conditions-checker-sceenshot-100x100.png"
+              },
+              "full": {
+                "file": "winter-beer-conditions-checker-sceenshot.png",
+                "width": 2210,
+                "height": 1342,
+                "mime_type": "image/png",
+                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/winter-beer-conditions-checker-sceenshot.png"
+              }
+            },
+            "image_meta": {
+              "aperture": "0",
+              "credit": "",
+              "camera": "",
+              "caption": "",
+              "created_timestamp": "0",
+              "copyright": "",
+              "focal_length": "0",
+              "iso": "0",
+              "shutter_speed": "0",
+              "title": "",
+              "orientation": "0",
+              "keywords": []
+            }
+          },
+          "source_url": "http://localhost:8888/wp-content/uploads/2017/10/winter-beer-conditions-checker-sceenshot.png",
+          "_links": {
+            "self": [
+              {
+                "href": "http://localhost:8888/wp-json/wp/v2/media/14"
+              }
+            ],
+            "collection": [
+              {
+                "href": "http://localhost:8888/wp-json/wp/v2/media"
+              }
+            ],
+            "about": [
+              {
+                "href": "http://localhost:8888/wp-json/wp/v2/types/attachment"
+              }
+            ],
+            "author": [
+              {
+                "embeddable": true,
+                "href": "http://localhost:8888/wp-json/wp/v2/users/1"
+              }
+            ],
+            "replies": [
+              {
+                "embeddable": true,
+                "href": "http://localhost:8888/wp-json/wp/v2/comments?post=14"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+]

@@ -5,7 +5,7 @@ import * as types from './actionTypes';
 
 
 // Sync
-const selectedProject = (state = initialState.selectedProject, action) => {
+export const selectedProject = (state = initialState.selectedProject, action) => {
   switch (action.type) {
     case types.MAKE_SELECTED_PROJECT:
       return action.payload;
@@ -14,7 +14,7 @@ const selectedProject = (state = initialState.selectedProject, action) => {
   }
 };
 
-const selectedMusic = (state = initialState.selectedMusic, action) => {
+export const selectedMusic = (state = initialState.selectedMusic, action) => {
   switch (action.type) {
     case types.MAKE_SELECTED_MUSIC:
       return action.payload;
@@ -24,7 +24,7 @@ const selectedMusic = (state = initialState.selectedMusic, action) => {
 };
 
 // Async
-const projects = (state = initialState.projects, action) => {
+export const projects = (state = initialState.projects, action) => {
   switch (action.type) {
     case types.FETCH_PROJECTS_SUCCEEDED:
       return action.payload;
@@ -33,7 +33,7 @@ const projects = (state = initialState.projects, action) => {
   }
 };
 
-const musics = (state = initialState.musics, action) => {
+export const musics = (state = initialState.musics, action) => {
   switch (action.type) {
     case types.FETCH_MUSICS_SUCCEEDED:
       return action.payload;
@@ -42,8 +42,8 @@ const musics = (state = initialState.musics, action) => {
   }
 };
 
-const errors = (state = initialState.errors, action) => {
-  if (action.type.indexOf('FAILED') !== -1) {
+export const errors = (state = initialState.errors, action) => {
+  if (action.type && action.type.indexOf('FAILED') !== -1) {
     console.error(action);
     return [...state, action];
   }

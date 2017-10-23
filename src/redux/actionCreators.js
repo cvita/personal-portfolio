@@ -1,10 +1,5 @@
 import * as types from './actionTypes';
 
-// Sync
-export const makeSelectedProject = details => ({
-  type: types.MAKE_SELECTED_PROJECT,
-  payload: details
-});
 
 const defaultPlayerProps = {
   albumId: '421650746',
@@ -12,6 +7,12 @@ const defaultPlayerProps = {
   tracklist: 'false',
   artwork: 'small'
 };
+
+// Sync
+export const makeSelectedProject = details => ({
+  type: types.MAKE_SELECTED_PROJECT,
+  payload: details
+});
 
 export const makeSelectedMusic = (playerProps = defaultPlayerProps) => ({
   type: types.MAKE_SELECTED_MUSIC,

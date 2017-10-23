@@ -1,6 +1,6 @@
 const fetchPosts = (customPostType) => (
   new Promise((resolve, reject) => {
-    const request = window.location.origin.indexOf('localhost') === -1 ?
+    const request = process.env.NODE_ENV === 'production' ?
       `https://chrisvita.com/wordpress/wp-json/wp/v2/${customPostType}?_embed` :
       `http://localhost:8888/wp-json/wp/v2/${customPostType}?_embed`;
     fetch(request, { method: 'GET' })
@@ -15,6 +15,7 @@ const parsePostsResponse = (wpPosts) => (
   wpPosts.map(post => {
     return {
       ...post.acf,
+      projectBackground: post.content.rendered,
       images: post._embedded['wp:featuredmedia'][0].media_details.sizes,
       titlePretty: post.title.rendered
     };
