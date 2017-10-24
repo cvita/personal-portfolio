@@ -1,8 +1,8 @@
 {
-  "name": "personal-portfolio",
-  "homepage": "https://VitaC123.github.io/personal-portfolio/",
+  "name": "frontEnd",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:3001/",
   "dependencies": {
     "history": "^4.7.2",
     "react": "^16.0.0",
@@ -25,6 +25,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "test-ci": "CI=true react-scripts test --env=jsdom",
     "coverage": "react-scripts test --env=jsdom --coverage",
     "eject": "react-scripts eject",
     "gzip-bundles": "gzip -r build/static/js & gzip -r build/static/css"

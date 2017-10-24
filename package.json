@@ -1,0 +1,58 @@
+{
+  "name": "personal-portfolio",
+  "version": "1.0.0",
+  "description": "A showcase of personal projects. Built using React-Redux and the WordPress REST API.",
+  "main": "server.js",
+  "scripts": {
+    "start": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "nodemon --exec npm run babel-node -- ./backEnd/server.js",
+    "dev:client": "cd frontEnd && npm start",
+    "babel-node": "babel-node --presets env",
+    "server": "node ./build/server.js",
+    "build-server-and-client": "npm run build-server && cd frontEnd && npm run build && npm run gzip-bundles && cd ..",
+    "build-server": "babel backEnd/ -d build",
+    "flow": "flow",
+    "flow:deps": "flow-typed install",
+    "flow:check": "npm run flow check ./backEnd/",
+    "lint": "eslint ./backEnd/",
+    "test-server": "jest --config=jestconfigbackend.json --runInBand",
+    "test-client": "cd frontEnd && npm run test-ci && cd ..",
+    "test": "npm run test-server && npm run test-client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/n/a.git"
+  },
+  "keywords": [
+    "wordpress",
+    "api"
+  ],
+  "author": "chris vita",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/n/a/issues"
+  },
+  "homepage": "https://github.com/n/a#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.0.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-flow": "^6.23.0",
+    "concurrently": "^3.5.0",
+    "eslint": "^4.7.1",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-flowtype": "^2.35.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.3.0",
+    "flow-bin": "^0.54.1",
+    "flow-typed": "^2.1.5",
+    "jest": "^21.1.0",
+    "nodemon": "^1.12.1"
+  },
+  "dependencies": {
+    "express": "^4.15.4",
+    "request": "^2.82.0",
+    "request-promise": "^4.2.1"
+  }
+}
