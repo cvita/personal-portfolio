@@ -14,6 +14,7 @@
     "flow:deps": "flow-typed install",
     "flow:check": "npm run flow check ./backEnd/",
     "lint": "eslint ./backEnd/",
+    "test-dev": "jest --watch --config=jestconfig.json",
     "test": "jest --config=jestconfig.json --runInBand --forceExit"
   },
   "repository": {
@@ -45,7 +46,8 @@
     "flow-bin": "^0.54.1",
     "flow-typed": "^2.1.5",
     "jest": "^21.1.0",
-    "nodemon": "^1.12.1"
+    "nodemon": "^1.12.1",
+    "supertest": "^3.0.0"
   },
   "dependencies": {
     "express": "^4.15.4",

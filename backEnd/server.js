@@ -1,13 +1,12 @@
-import express from 'express';
+import app from './app';
 import bodyParser from 'body-parser';
 
-const app = express();
+
 app.use(bodyParser.json());
 
 app.set('port', (process.env.PORT || 3001));
 const port = app.get('port');
 app.listen(port, () => console.log(`Find the server at: http://localhost:${port.toString()}/`));
-
 
 if (process.env.NODE_ENV === 'production') {
   app.use('*', (req, res, next) => {
@@ -18,7 +17,6 @@ if (process.env.NODE_ENV === 'production') {
     }
 
     app.get('*', (req, res, next) => {
-      console.warn('touched!')
       if (req.url.indexOf('main.') !== -1) {
         req.url = req.url + '.gz';
         res.set('Content-Encoding', 'gzip');
@@ -29,6 +27,7 @@ if (process.env.NODE_ENV === 'production') {
     });
 
     app.use(express.static('frontEnd/build'));
+
     app.get('*', (req, res) => {
       res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
     });
