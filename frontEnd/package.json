@@ -1,0 +1,34 @@
+{
+  "name": "frontEnd",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:3001/",
+  "dependencies": {
+    "history": "^4.7.2",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-lazy-load": "^3.0.12",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "react-router-redux": "^5.0.0-alpha.6",
+    "react-transition-group": "^1.2.1",
+    "reactstrap": "^5.0.0-alpha.3",
+    "redux": "^3.7.2",
+    "redux-saga": "^0.15.6"
+  },
+  "devDependencies": {
+    "fetch-mock": "^5.13.1",
+    "react-scripts": "1.0.14",
+    "redux-saga-test-plan": "^3.2.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "test-ci": "CI=true react-scripts test --env=jsdom",
+    "coverage": "react-scripts test --env=jsdom --coverage",
+    "eject": "react-scripts eject",
+    "gzip-bundles": "gzip -r build/static/js & gzip -r build/static/css",
+    "build-client-and-server": "npm run build && npm run gzip-bundles && cd .. && npm run build-server && cd frontEnd"
+  }
+}

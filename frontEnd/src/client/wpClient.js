@@ -1,7 +1,7 @@
 const fetchPosts = (customPostType) => (
   new Promise((resolve, reject) => {
     const request = process.env.NODE_ENV === 'production' ?
-      `https://chrisvita.com/wp_api/wp-json/wp/v2/${customPostType}?_embed` :
+      `https://chris-vita-portfolio-wp.herokuapp.com/wp-json/wp/v2/${customPostType}?_embed` :
       `http://localhost:8888/wp-json/wp/v2/${customPostType}?_embed`;
     fetch(request, { method: 'GET' })
       .then(res => res.json())

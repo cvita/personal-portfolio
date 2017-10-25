@@ -3,11 +3,17 @@ node_js:
   - 'stable'
 script:
   - npm test
-  - npm run build
+  - cd ./frontEnd
+  - npm install
+  - npm run test-ci
+  - npm run build-client-and-server
 deploy:
-  provider: pages
+  provider: heroku
   skip_cleanup: true
-  github_token: $github_token
-  local_dir: build
-  on:
-    branch: master
+  api_key:
+    secure: $heroku_api_key
+    app: chris-vita-portfolio
+    on:
+      all_branches: true
+    run:
+      - restart

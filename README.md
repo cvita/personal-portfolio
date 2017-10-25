@@ -2,4 +2,4 @@
 
 *A showcase of personal projects. Built using React-Redux and the WordPress REST API.*
 
-The site is still under construction, but can be previewed here [here](https://vitac123.github.io/personal-portfolio).
+The site is still under construction, but can be previewed here [here](https://www.chrisvita.com).
