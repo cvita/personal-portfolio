@@ -4,7 +4,7 @@ import './YouTubePlayer.css';
 
 function YouTubePlayer(props) {
   const { videoId, title } = props;
-  const src = 'https://www.youtube.com/embed/' + videoId + '?enablejsapi=1';
+  const src = `https://www.youtube.com/embed/${videoId}?enablejsapi=1'&amp;rel=0&amp;showinfo=0`;
 
   return (
     <div className='videoWrapper'>

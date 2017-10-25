@@ -17,12 +17,14 @@ const TechStack = props => (
 
 const SelectedProjectLayout = props => {
   const {
-    title,
     titlePretty,
+    projectBackground,
+    title,
     images,
     short_description,
     long_description,
-    github, demo_url,
+    github_url,
+    demo_url,
     tech_stack,
     travis,
     video
@@ -52,7 +54,7 @@ const SelectedProjectLayout = props => {
 
           <div className='viewButtonContainer'>
             <h3 className='sectionHeading selected view'>View</h3>
-            <a href={github}><Button className='viewButton' color='link'>
+            <a href={github_url}><Button className='viewButton' color='link'>
               <i className="fa fa-github" aria-hidden="true"></i> Source</Button>
             </a>
             <a href={demo_url}><Button className='viewButton' color='link'>
@@ -69,11 +71,20 @@ const SelectedProjectLayout = props => {
       <Row>
         <Col md='8' xs='12'>
           <h3 className='sectionHeading selected'>Project background</h3>
-          <p className='bodyText selected' dangerouslySetInnerHTML={{ __html: long_description }} />
+          <div className='bodyText selected projectBackground' dangerouslySetInnerHTML={{ __html: projectBackground }} />
         </Col>
         <Col md='4' xs='12'>
           <h3 className='sectionHeading selected'>Technologies</h3>
           <TechStack list={tech_stack} />
+        </Col>
+      </Row>
+      <Row>
+        <Col md='8' xs='12'>
+          <h3 className='sectionHeading selected'>Detailed description</h3>
+          <p className='bodyText selected' dangerouslySetInnerHTML={{ __html: long_description }} />
+        </Col>
+        <Col md='4' xs='12'>
+       
         </Col>
       </Row>
     </div>

@@ -33,3 +33,32 @@
 .bodyText.selected {
   margin-bottom: 3em;
 }
+
+.projectBackground p, ul, figure {
+  margin-bottom: 2em;
+}
+
+.projectBackground h3{
+  font-size: 0.9em;
+  letter-spacing: 0.03em;
+  font-weight: bold;
+}
+
+.projectBackground img {
+  max-width: 100%;
+  height: auto;
+}
+
+.projectBackground figure > img, figure > a > img {
+  padding: 1em;
+  border: 1px solid rgb(221, 226, 231);
+}
+
+.projectBackground figcaption {
+  margin-top: 0.15em;
+  text-align: center;
+  font-size: 0.9em;
+  letter-spacing: 0.03em;
+  font-style: italic;
+  color: #6D7C8B;
+}

@@ -19,7 +19,7 @@ const Preview = props => {
   const outerColSize = props.featured ? '12' : '4';
   const innerColSize = props.featured ? '6' : '12';
   return (
-    <Col md={outerColSize} sm='12'>
+    <Col md={outerColSize} xs='12'>
       <LazyFadeIn>
         <Card className='preview'>
           <CardBody>
