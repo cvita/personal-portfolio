@@ -9,15 +9,12 @@
     "dev:client": "cd frontEnd && npm start",
     "babel-node": "babel-node --presets env",
     "server": "node ./build/server.js",
-    "build-server-and-client": "npm run build-server && cd frontEnd && npm run build && npm run gzip-bundles && cd ..",
-    "build-server": "babel backEnd/ -d build",
+    "build-server": "babel backEnd/ -d frontEnd/build --ignore '**/*.test.js'",
     "flow": "flow",
     "flow:deps": "flow-typed install",
     "flow:check": "npm run flow check ./backEnd/",
     "lint": "eslint ./backEnd/",
-    "test-server": "jest --config=jestconfigbackend.json --runInBand",
-    "test-client": "cd frontEnd && npm run test-ci && cd ..",
-    "test": "npm run test-server && npm run test-client"
+    "test": "jest --config=jestconfig.json --runInBand --forceExit"
   },
   "repository": {
     "type": "git",
