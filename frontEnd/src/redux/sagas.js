@@ -1,11 +1,11 @@
 import { all, call, put, takeLatest } from 'redux-saga/effects';
 import * as types from './actionTypes';
-import wpClient from '../client/wpClient';
+import wp from '../client/wp';
 
 
 export function* fetchProjects(action) {
   try {
-    const projects = yield call(wpClient.fetchPosts, action.payload);
+    const projects = yield call(wp.fetchPosts, action.payload);
     yield put({ type: types.FETCH_PROJECTS_SUCCEEDED, payload: projects });
   } catch (e) {
     yield put({ type: types.FETCH_PROJECTS_FAILED, message: e.message });
@@ -14,7 +14,7 @@ export function* fetchProjects(action) {
 
 export function* fetchMusics(action) {
   try {
-    const musics = yield call(wpClient.fetchPosts, action.payload);
+    const musics = yield call(wp.fetchPosts, action.payload);
     yield put({ type: types.FETCH_MUSICS_SUCCEEDED, payload: musics });
   } catch (e) {
     yield put({ type: types.FETCH_MUSICS_FAILED, message: e.message });

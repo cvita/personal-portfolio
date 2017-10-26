@@ -1,13 +1,14 @@
 import fetchMock from 'fetch-mock';
 import fs from 'fs';
-import wpClient from '../wpClient';
+import wpClient from '../wp';
+import { url } from '../wpLocation';
 
 
 const pathToStubData = './src/client/__tests__/stubData';
 
 it('fetches custom post types: `projects` and parses the response', () => {
   fetchMock.get(
-    'http://localhost:8888/wp-json/wp/v2/projects?_embed',
+    `${url}/projects?_embed`,
     fs.readFileSync(`${pathToStubData}/projectsRes.json`, 'utf8')
   );
   return wpClient.fetchPosts('projects')
