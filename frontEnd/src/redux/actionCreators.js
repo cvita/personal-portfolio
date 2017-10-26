@@ -20,6 +20,11 @@ export const makeSelectedMusic = (playerProps = defaultPlayerProps) => ({
 });
 
 // Async
+export const fetchSiteText = (customPostType, postId, embed = false) => ({
+  type: types.FETCH_SITE_TEXT_REQUESTED,
+  payload: [customPostType, postId, embed]
+});
+
 export const fetchProjects = () => ({
   type: types.FETCH_PROJECTS_REQUESTED,
   payload: 'projects'

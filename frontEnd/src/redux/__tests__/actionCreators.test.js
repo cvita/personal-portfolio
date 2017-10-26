@@ -3,6 +3,14 @@ import * as types from '../actionTypes';
 
 
 describe('action creators', () => {
+  it('should create an action to fetch site text from WP', () => {
+    const expectedAction = {
+      type: types.FETCH_SITE_TEXT_REQUESTED,
+      payload: ['additional_text', '69', false]
+    };
+    expect(actions.fetchSiteText('additional_text', '69')).toEqual(expectedAction);
+  });
+
   it('should create an action to fetch projects from WP', () => {
     const expectedAction = {
       type: types.FETCH_PROJECTS_REQUESTED,

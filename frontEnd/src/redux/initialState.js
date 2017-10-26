@@ -1,4 +1,5 @@
 const initialState = {
+  siteText: {},
   selectedProject: {
     title: null,
     titlePretty: null,

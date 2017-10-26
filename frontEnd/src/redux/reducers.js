@@ -24,6 +24,16 @@ export const selectedMusic = (state = initialState.selectedMusic, action) => {
 };
 
 // Async
+export const siteText = (state = initialState.siteText, action) => {
+  switch (action.type) {
+    case types.FETCH_SITE_TEXT_SUCCEEDED:
+      const { section_title } = action.payload[0];
+      return { [section_title]: action.payload[0], ...state };
+    default:
+      return state;
+  }
+};
+
 export const projects = (state = initialState.projects, action) => {
   switch (action.type) {
     case types.FETCH_PROJECTS_SUCCEEDED:
@@ -51,6 +61,7 @@ export const errors = (state = initialState.errors, action) => {
 };
 
 const rootReducer = combineReducers({
+  siteText,
   selectedProject,
   projects,
   selectedMusic,
