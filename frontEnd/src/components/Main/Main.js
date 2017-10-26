@@ -21,10 +21,16 @@ const Main = props => (
       </header>
       <main>
         <Switch>
-          <Route path='/' exact={true} render={() => <div><Home /><Projects {...props} /></div>} />
+          <Route path='/' exact={true} render={() => (
+            <div>
+              <Home {...props.siteText} fetchSiteText={props.fetchSiteText} />
+              <Projects {...props} />
+            </div>
+          )}
+          />
           <Route path='/projects' render={() => <Projects {...props} />} />
           <Route path='/music' render={() => <Music {...props} />} />
-          <Redirect from='/personal-portfolio' to='/'/>
+          <Redirect from='/personal-portfolio' to='/' />
           <Route component={NoMatch404} />
         </Switch>
       </main>

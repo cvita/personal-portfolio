@@ -36,6 +36,10 @@ body {
   color: rgb(106, 116, 126);
 }
 
+.renderedText a {
+  color: #6D7C8B;
+}
+
 /* CSSTransitionGroup settings to compliment lazy loading */
 .fadeInOnLoad-appear {
   opacity: 0.01;
