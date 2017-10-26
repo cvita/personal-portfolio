@@ -9,7 +9,7 @@
     "dev:client": "cd frontEnd && npm start",
     "babel-node": "babel-node --presets env",
     "server": "node ./build/server.js",
-    "build-server": "babel backEnd/ -d frontEnd/build --ignore '**/*.test.js'",
+    "build-server": "babel backEnd/ -d build --ignore '**/*.test.js'",
     "flow": "flow",
     "flow:deps": "flow-typed install",
     "flow:check": "npm run flow check ./backEnd/",

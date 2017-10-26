@@ -29,6 +29,6 @@
     "coverage": "react-scripts test --env=jsdom --coverage",
     "eject": "react-scripts eject",
     "gzip-bundles": "gzip -r build/static/js & gzip -r build/static/css",
-    "build-client-and-server": "npm run build && npm run gzip-bundles && cd .. && npm run build-server && cd frontEnd"
+    "build-client": "npm run build && npm run gzip-bundles"
   }
 }

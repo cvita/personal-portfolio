@@ -3,17 +3,19 @@ node_js:
   - 'stable'
 script:
   - npm test
+  - npm run build-server
   - cd ./frontEnd
   - npm install
   - npm run test-ci
-  - npm run build-client-and-server
+  - npm run build-client
+before_deploy:
+  - cd ..
 deploy:
   provider: heroku
   skip_cleanup: true
-  api_key:
-    secure: $heroku_api_key
-    app: chris-vita-portfolio
-    on:
-      all_branches: true
-    run:
-      - restart
+  api_key: $heroku_api_key
+  app: chris-vita-portfolio
+  on:
+    all_branches: true
+  run:
+    - restart

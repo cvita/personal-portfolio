@@ -1,5 +1,6 @@
 import app from './app';
 import bodyParser from 'body-parser';
+const expressStatic = require('express').static;
 
 
 app.use(bodyParser.json());
@@ -11,7 +12,7 @@ app.listen(port, () => console.log(`Find the server at: http://localhost:${port.
 if (process.env.NODE_ENV === 'production') {
   app.use('*', (req, res, next) => {
     if (req.headers['x-forwarded-proto'] !== 'https') { // Specific to deployment on Heroku
-      res.redirect(`https://${req.get('host') || ''}${req.url}`);
+      res.redirect('https://' + req.get('host') + req.url);
     } else {
       next();
     }
@@ -26,7 +27,7 @@ if (process.env.NODE_ENV === 'production') {
       next();
     });
 
-    app.use(express.static('frontEnd/build'));
+    app.use(expressStatic('frontEnd/build'));
 
     app.get('*', (req, res) => {
       res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
