@@ -1,8 +1,11 @@
-const fetchPosts = (customPostType) => (
+import { url } from './wpLocation';
+
+
+const fetchPosts = (customPostType, embed = true, postId = '') => (
   new Promise((resolve, reject) => {
-    const request = process.env.NODE_ENV === 'production' ?
-      `https://chris-vita-portfolio-wp.herokuapp.com/wp-json/wp/v2/${customPostType}?_embed` :
-      `http://localhost:8888/wp-json/wp/v2/${customPostType}?_embed`;
+    const request = embed ?
+      `${url}/${customPostType}?_embed` :
+      `${url}/${customPostType}/${postId}`;
     fetch(request, { method: 'GET' })
       .then(res => res.json())
       .then(posts => resolve(parsePostsResponse(posts)))
