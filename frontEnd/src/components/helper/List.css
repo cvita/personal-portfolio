@@ -1,0 +1,10 @@
+.helperList {
+  font-size: 0.9em;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  color: #6D7C8B;
+}
+
+.helperList li {
+  margin-bottom: 0.5em;
+}
