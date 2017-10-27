@@ -4,7 +4,7 @@
   /* Next line as a fallback for sticky */
   position: fixed;
   position: sticky;
-  bottom: 0;
+  bottom: -1px;
   z-index: 1;
   background: #333333;
 }
