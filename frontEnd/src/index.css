@@ -30,6 +30,7 @@ body {
 }
 
 .sectionHeading {
+  margin-top: 2.5em;
   font-size: 0.8em;
   letter-spacing: 0.1em;
   text-transform: uppercase;
