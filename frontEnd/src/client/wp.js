@@ -6,7 +6,6 @@ const fetchPosts = (customPostType, postId = '', embed = true) => (
     const request = embed ?
       `${url}/${customPostType}?_embed` :
       `${url}/${customPostType}/${postId}/`;
-      console.log(request);
     fetch(request, { method: 'GET' })
       .then(res => res.json())
       .then(posts => resolve(parsePostsResponse(posts)))
