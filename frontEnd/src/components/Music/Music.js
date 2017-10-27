@@ -5,15 +5,25 @@ import './Music.css';
 
 
 const AlbumLayout = props => {
-  const { artist_name, titlePretty, description, genres, recording_title, images, bandcamp_album_id } = props;
+  const {
+    artist_name,
+    recording_title,
+    genres,
+    // main_text_heading,
+    // main_text,
+    bandcamp_album_id,
+    // video,
+    images
+ } = props;
+
   return (
-    <LazyFadeIn>
+    <LazyFadeIn offset={250}>
       <Row className='media album'>
 
         <Col md='4' sm='4' xs='8'>
           <div className='albumImageContainer' onClick={() => props.handleClick(bandcamp_album_id)}>
             <i className="fa fa-play-circle playButton" aria-hidden="true" />
-            <img className='mr-3 albumImage' src={images.medium_large.source_url} alt={titlePretty} />
+            <img className='mr-3 albumImage' src={images.medium.source_url} alt={recording_title} />
           </div>
         </Col>
 
@@ -21,10 +31,10 @@ const AlbumLayout = props => {
           <div className='media-body'>
             <Row>
               <Col>
-                <h2 className='mt-0 mb-1 title artistAndTitle'>
-                  {artist_name} <span className='subtitle'>{recording_title}</span>
-                </h2>
-                <p className='bodyText'>{description}</p>
+                <h2 className='mt-0 mb-1 title'>{artist_name}</h2>
+                <h3 className='subtitle recordingTitle'>{recording_title}</h3>
+                {/* <h3 className='sectionHeading'>{main_text_heading}</h3>
+                <div className='bodyText' dangerouslySetInnerHTML={{ __html: main_text }} /> */}
               </Col>
             </Row>
             <Row>
@@ -44,8 +54,19 @@ const AlbumLayout = props => {
   );
 }
 
+const MusicText = props => (
+  <div>
+    <h1 className='sectionHeading'>{props.primary_heading}</h1>
+    <p className='lead' dangerouslySetInnerHTML={{ __html: props.primary_text }} />
+    <div className='bodyText' dangerouslySetInnerHTML={{ __html: props.secondary_text }} />
+  </div>
+);
+
 class Music extends Component {
   componentDidMount() {
+    if (!this.props.siteText.music) {
+      this.props.fetchSiteText('additional_text', '72');
+    }
     if (this.props.musics.length === 0) {
       this.props.fetchMusics();
     }
@@ -64,9 +85,10 @@ class Music extends Component {
     return (
       <Container>
         <Col>
-          <h1 className='sectionHeading'>Albums</h1>
-          <p className='lead'>When I'm not writing code, I write songs.</p>
-          <p className='bodyText'>I've lead many recording projects as a lead singer, guitarist, and recording engineer. Here, you can listen to some of my favorites.</p>
+          {this.props.siteText.music &&
+            <LazyFadeIn>
+              <MusicText {...this.props.siteText.music} />
+            </LazyFadeIn>}
         </Col>
 
         {albums.length > 0 && (
