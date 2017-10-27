@@ -13,26 +13,23 @@ if (process.env.NODE_ENV === 'production') {
   app.use('*', (req, res, next) => {
     if (req.headers['x-forwarded-proto'] !== 'https') { // Specific to deployment on Heroku
       res.redirect('https://' + req.get('host') + req.url);
-      console.log('Redirecting to https://', req.get('host'))
     } else {
       next();
     }
   });
 
-  // app.use((req, res, next) => {
-  //   const allowedOrigins = [
-  //     'https://www.chrisvita.com',
-  //     'https://chrisvita.com',
-  //     'https://chris-vita-portfolio.herokuapp.com'
-  //   ];
-  //   const reqOrigin = req.headers.origin;
-  //   console.log('reqOrigin is: ', reqOrigin);
-  //   if (allowedOrigins.indexOf(reqOrigin) !== -1) {
-  //     res.setHeader('Access-Control-Allow-Origin', reqOrigin);
-  //     console.log('allowed! ', res.header);
-  //   }
-  //   next();
-  // });
+  app.use((req, res, next) => {
+    const allowedOrigins = [
+      'https://www.chrisvita.com',
+      'https://chrisvita.com',
+      'https://chris-vita-portfolio.herokuapp.com'
+    ];
+    const reqOrigin = req.headers.origin;
+    if (allowedOrigins.indexOf(reqOrigin) !== -1) {
+      res.setHeader('Access-Control-Allow-Origin', reqOrigin);
+    }
+    next();
+  });
 
   app.get('*', (req, res, next) => {
     if (req.url.indexOf('main.') !== -1) {
