@@ -4,7 +4,7 @@ import { url } from './wpLocation';
 const fetchPosts = (customPostType, postId = '', embed = true) => (
   new Promise((resolve, reject) => {
     const request = embed ?
-      `${url}/${customPostType}?_embed` :
+      `${url}/${customPostType}?_embed/` :
       `${url}/${customPostType}/${postId}/`;
     fetch(request, { method: 'GET' })
       .then(res => res.json())
