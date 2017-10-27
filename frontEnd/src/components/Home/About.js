@@ -30,7 +30,7 @@ const About = props => {
         <Col md='4' xs='12'>
           <h3 className='sectionHeading'>{tertiary_heading}</h3>
           <div className='bodyText' dangerouslySetInnerHTML={{ __html: tertiary_text }} />
-          <List classes='list-unstyled subtitle toolsList' list={list_1} />
+          <List list={list_1} />
 
           <h3 className='sectionHeading'>{quaternary_heading}</h3>
           <div className='bodyText renderedText' dangerouslySetInnerHTML={{ __html: quaternary_text }} />
