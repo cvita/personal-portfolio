@@ -27,14 +27,14 @@ const SelectedProjectLayout = props => {
     tech_stack,
     travis,
     video_heading,
-    video
+    video,
+    project_embed
     } = props;
 
   const travisUrl = `https://travis-ci.org/VitaC123/${title}`;
   const travisBadge = travis ?
     <span> <a href={travisUrl}><img src={`${travisUrl}.svg?branch=master`} alt='travis-ci' /></a></span> :
     '';
-
 
   return (
     <div className='selectedProject'>
@@ -73,8 +73,12 @@ const SelectedProjectLayout = props => {
 
       <Row>
         <Col md='7' xs='12'>
-          <h3 className='sectionHeading'>{long_description_heading}</h3>
-          <div className='bodyText' dangerouslySetInnerHTML={{ __html: long_description }} />
+          {long_description &&
+            <div>
+              <h3 className='sectionHeading'>{long_description_heading}</h3>
+              <div className='bodyText' dangerouslySetInnerHTML={{ __html: long_description }} />
+            </div>}
+
 
           {video.length > 0 &&
             <div>
@@ -90,8 +94,8 @@ const SelectedProjectLayout = props => {
               <img className='img-fluid secondaryImage' src={secondary_image.sizes.large} alt={title} />
               <p className='secondaryImageCaption' dangerouslySetInnerHTML={{ __html: secondary_image_caption }} />
             </div>}
-        </Col>
 
+        </Col>
 
         <Col />
 
@@ -112,6 +116,14 @@ const SelectedProjectLayout = props => {
           </Col>
           <Col />
         </Row>}
+
+      {project_embed && (
+        <Row>
+          <Col>
+            <h3 className='sectionHeading'>Try it out</h3>
+            <div dangerouslySetInnerHTML={{ __html: project_embed }} />
+          </Col>
+        </Row>)}
 
     </div>
   );
