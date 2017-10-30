@@ -4,6 +4,7 @@ const initialState = {
   projects: [],
   selectedMusic: null,
   musics: [],
+  testimonial: [],
   errors: []
 };
 

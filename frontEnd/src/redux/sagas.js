@@ -30,10 +30,20 @@ export function* fetchMusics(action) {
   }
 }
 
+export function* fetchTestimonial(action) {
+  try {
+    const testimonial = yield call(wp.fetchPosts, ...action.payload);
+    yield put({ type: types.FETCH_TESTIMONIAL_SUCCEEDED, payload: testimonial });
+  } catch (e) {
+    yield put({ type: types.FETCH_TESTIMONIAL_FAILED, message: e.message });
+  }
+}
+
 
 function* sagas() {
   yield all([
     takeLatest(types.FETCH_SITE_TEXT_REQUESTED, fetchSiteText),
+    takeLatest(types.FETCH_TESTIMONIAL_REQUESTED, fetchTestimonial),
     takeLatest(types.FETCH_PROJECTS_REQUESTED, fetchProjects),
     takeLatest(types.FETCH_MUSICS_REQUESTED, fetchMusics)
   ]);

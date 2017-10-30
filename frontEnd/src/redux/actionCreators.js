@@ -34,3 +34,8 @@ export const fetchMusics = () => ({
   type: types.FETCH_MUSICS_REQUESTED,
   payload: 'musics'
 });
+
+export const fetchTestimonial = (customPostType, embed = true) => ({
+  type: types.FETCH_TESTIMONIAL_REQUESTED,
+  payload: [customPostType, embed]
+});
