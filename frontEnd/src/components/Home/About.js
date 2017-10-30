@@ -22,7 +22,7 @@ const About = props => {
         <Col md='7' xs='12'>
           <h3 className='sectionHeading'>{primary_heading}</h3>
           <div className='lead' dangerouslySetInnerHTML={{ __html: primary_text }} />
-          <div className='bodyText renderedText' dangerouslySetInnerHTML={{ __html: secondary_text }} />
+          <div className='bodyText renderedHTML' dangerouslySetInnerHTML={{ __html: secondary_text }} />
         </Col>
 
         <Col />
@@ -33,7 +33,7 @@ const About = props => {
           <List list={list_1} />
 
           <h3 className='sectionHeading'>{quaternary_heading}</h3>
-          <div className='bodyText renderedText' dangerouslySetInnerHTML={{ __html: quaternary_text }} />
+          <div className='bodyText renderedHTML' dangerouslySetInnerHTML={{ __html: quaternary_text }} />
         </Col>
       </Row>
     </Container>
