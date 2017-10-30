@@ -1,12 +1,13 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 import { Row, Col } from 'reactstrap';
 import About from './About';
+import Testimonial from './Testimonial';
 import './Home.css';
 
 
-class Home extends PureComponent {
+class Home extends Component {
   componentDidMount() {
-    if (!this.props.home) {
+    if (!this.props.siteText.introduction) {
       this.props.fetchSiteText('additional_text', '69');
     }
   }
@@ -24,8 +25,12 @@ class Home extends PureComponent {
           <div className='heroImage' />
         </div>
 
-        {this.props.introduction &&
-          <About text={this.props.introduction} />}
+        {this.props.siteText.introduction &&
+          <About text={this.props.siteText.introduction} />}
+
+        {this.props.children}
+
+        <Testimonial testimonial={this.props.testimonial} fetchTestimonial={this.props.fetchTestimonial} />
 
       </div>
     );

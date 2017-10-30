@@ -1,0 +1,22 @@
+.testimonialSection {
+  margin-bottom: 6em;
+}
+
+.testimonialContainer {
+  background: rgb(241, 243, 245);
+}
+
+.testimonialImage {
+  width: 100%;
+  max-width: 13em;
+  margin: 0 auto 0.5em auto;
+  display: block;
+  border-radius: 50%;
+}
+
+.testimonialNameAndOrg {
+  margin-bottom: 2em;
+  font-size: 1em;
+  line-height: 1.25em;
+  text-align: center;
+}
