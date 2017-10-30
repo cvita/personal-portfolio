@@ -12,60 +12,32 @@ import Footer from './Footer';
 import './Main.css';
 
 
-const Main = props => {
-  const {
-    siteText,
-    projects,
-    selectedProject,
-    routing,
-    fetchSiteText,
-    fetchProjects,
-    makeSelectedProject,
-    } = props;
+const Main = props => (
+  <div className='mainBody'>
 
-  const projectsComponent = (
-    <Projects
-      projects={projects}
-      selectedProject={selectedProject}
-      fetchProjects={fetchProjects}
-      makeSelectedProject={makeSelectedProject}
-      routing={routing}
-    />
-  );
-  return (
-    <div className='mainBody'>
-
-      <div className='mainContent'>
-        <header>
-          <Navigation {...routing.location} />
-        </header>
-        <main>
-          <Switch>
-            <Route path='/' exact={true} render={() => (
-              <div>
-                <Home{...siteText} fetchSiteText={fetchSiteText} />
-                {projectsComponent}
-              </div>
-            )}
-            />
-            <Route path='/projects' render={() => projectsComponent} />
-            <Route path='/music' render={() => <Music {...props} />} />
-            <Redirect from='/personal-portfolio' to='/' />
-            <Route component={NoMatch404} />
-          </Switch>
-        </main>
-      </div>
-
-      {props.selectedMusic &&
-        <Player {...props.selectedMusic} />}
-
-      <footer className='mainFooter'>
-        <Footer />
-      </footer>
-
+    <div className='mainContent'>
+      <header>
+        <Navigation {...props.routing.location} />
+      </header>
+      <main>
+        <Switch>
+          <Route path='/' exact={true} render={() => (<Home {...props}><Projects {...props} /></Home>)} />
+          <Route path='/projects' render={() => <Projects {...props} />} />
+          <Route path='/music' render={() => <Music {...props} />} />
+          <Route component={NoMatch404} />
+        </Switch>
+      </main>
     </div>
-  );
-}
+
+    {props.selectedMusic &&
+      <Player {...props.selectedMusic} />}
+
+    <footer className='mainFooter'>
+      <Footer />
+    </footer>
+
+  </div>
+);
 
 
 export default Main;

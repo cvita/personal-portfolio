@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { push } from 'react-router-redux';
 import store from '../../redux/store';
@@ -8,7 +8,7 @@ import SelectedProject from './SelectedProject';
 import NoMatch404 from '../helper/NoMatch404';
 
 
-class Projects extends PureComponent {
+class Projects extends Component {
   componentDidMount() {
     if (this.props.projects.length === 0) {
       this.props.fetchProjects();
