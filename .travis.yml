@@ -18,7 +18,5 @@ deploy:
   skip_cleanup: true
   api_key: $heroku_api_key
   app: chris-vita-portfolio
-  on:
-    all_branches: true
   run:
     - restart
