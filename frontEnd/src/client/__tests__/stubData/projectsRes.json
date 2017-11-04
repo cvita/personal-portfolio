@@ -1,67 +1,70 @@
 [
   {
     "id": 5,
-    "date": "2017-10-03T15:35:56",
-    "date_gmt": "2017-10-03T15:35:56",
+    "date": "2017-10-24T19:47:23",
+    "date_gmt": "2017-10-24T19:47:23",
     "guid": {
-      "rendered": "http://localhost:8888/?post_type=projects&#038;p=5"
+      "rendered": "http://chris-vita-portfolio-wp.herokuapp.com/?post_type=projects&#038;p=5"
     },
-    "modified": "2017-10-23T17:44:03",
-    "modified_gmt": "2017-10-23T17:44:03",
+    "modified": "2017-10-26T16:22:28",
+    "modified_gmt": "2017-10-26T16:22:28",
     "slug": "game-price-tracker",
     "status": "publish",
     "type": "projects",
-    "link": "http://localhost:8888/projects/game-price-tracker/",
+    "link": "https://chris-vita-portfolio.herokuapp.com/projects/game-price-tracker/",
     "title": {
       "rendered": "Game Price Tracker"
     },
     "content": {
-      "rendered": "<p>Since it came out in 2012, I wanted to play the survival-horror game, Zombi. The game&#8217;s reviews were tepid, but it still intrigued me. To justify a purchase, I knew I&#8217;d need to find a sale price. And just like that, an excuse to build to build an app!</p>\n<h3>My initial requirements</h3>\n<ul>\n<li>It should have a way to select a game on the Sony PlayStation Store</li>\n<li>It should have a place to save the game&#8217;s initial price</li>\n<li>It should have a place to save my email address</li>\n<li>It should have a way to determine a sale price</li>\n<li>It should have a way to email me in case of a sale price</li>\n</ul>\n<p>I satisfied these requirements with a few routes, a simple MongoDB schema, and the use of Postman. A week or so later, I received an email from the app. Zombi was on sale! With a working proof of concept, I added more advanced requirements and moved forward.</p>\n<figure><img class=\"alignnone wp-image-29 size-full\" src=\"http://localhost:8888/wp-content/uploads/2017/10/postmanExample5_31_2017.png\" alt=\"\" width=\"2234\" height=\"606\" srcset=\"http://localhost:8888/wp-content/uploads/2017/10/postmanExample5_31_2017.png 2234w, http://localhost:8888/wp-content/uploads/2017/10/postmanExample5_31_2017-300x81.png 300w, http://localhost:8888/wp-content/uploads/2017/10/postmanExample5_31_2017-768x208.png 768w, http://localhost:8888/wp-content/uploads/2017/10/postmanExample5_31_2017-1024x278.png 1024w\" sizes=\"(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px\" /><figcaption>First using Postman in lieu of a proper UI.</figcaption></figure>\n",
+      "rendered": "",
       "protected": false
     },
-    "featured_media": 7,
+    "featured_media": 11,
     "template": "",
     "acf": {
       "title": "game-price-tracker",
-      "": false,
-      "github_url": "https://github.com/VitaC123/game-price-tracker",
-      "tech_stack": "React, Redux, Node, Express, MongoDB",
-      "short_description": "A full stack progressive web app, which alerts users to price drops in the Sony PlayStation store.",
-      "long_description": "The app allows a user to search for a PlayStation game, and to submit their email address to sign up for a notification if the game goes on sale. The game and user info are stored in a MongoDB collection as a &#039;price alert.&#039;<br />\r\n<br />\r\nOnce a day, the app&#039;s back-end iterates through the database and queries the PlayStation store, comparing prices to determine if the game is on sale. If the game is on sale, the user will receive an email. If the game hasn&#039;t gone on sale for 18 weeks, the user&#039;s price alert is deleted, and the user is invited to sign up again.",
-      "video": "pekA4Ye9-9E",
-      "travis": true,
-      "demo_url": "https://game-price-tracker.herokuapp.com/",
-      "featured": true,
+      "title_pretty": "Game Price Tracker",
+      "featured_project": true,
       "primary_language": "JavaScript",
-      "testing_framework": "Jest",
-      "project_background": "",
-      "tech_stack_full": "JavaScript, React, Redux, Node, Express, MongoDB, Babel, ESLint, Jest, REST API (consume), REST API (serve), Lighthouse, Travis-CI, Bootstrap, CSS, HTML, Git, GitHub, NPM"
+      "tech_stack": "ES6+ JavaScript, React, Redux, Node, MongoDB, Jest",
+      "tech_stack_full": "JavaScript, HTML, CSS, React, Redux, Node, Express, MongoDB, REST API, Jest",
+      "travis": true,
+      "github_url": "https://github.com/VitaC123/game-price-tracker",
+      "demo_url": "https://game-price-tracker.herokuapp.com/",
+      "video": "pekA4Ye9-9E",
+      "short_description": "A full stack progressive web app, which alerts users to price drops in the Sony PlayStation store. I reverse-engineered Sony's internal REST API. Extensive testing via Jest.",
+      "long_description": "The app allows a user to search for a PlayStation game, and to submit their email address to sign up for a notification if the game goes on sale. The game and user info are stored in a MongoDB collection as a &#039;price alert.&#039;<br />\r\n<br />\r\nOnce a day, the app&#039;s back-end iterates through the database and queries the PlayStation store, comparing prices to determine if the game is on sale. If the game is on sale, the user will receive an email. If the game hasn&#039;t gone on sale for 18 weeks, the user&#039;s price alert is deleted, and the user is invited to sign up again.",
+      "secondary_text": "",
+      "secondary_image": false,
+      "gif": false,
+      "secondary_text_heading": "",
+      "secondary_gif": false
     },
     "_links": {
       "self": [
         {
-          "href": "http://localhost:8888/wp-json/wp/v2/projects/5"
+          "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/projects/5"
         }
       ],
       "collection": [
         {
-          "href": "http://localhost:8888/wp-json/wp/v2/projects"
+          "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/projects"
         }
       ],
       "about": [
         {
-          "href": "http://localhost:8888/wp-json/wp/v2/types/projects"
+          "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/types/projects"
         }
       ],
       "wp:featuredmedia": [
         {
           "embeddable": true,
-          "href": "http://localhost:8888/wp-json/wp/v2/media/7"
+          "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/media/11"
         }
       ],
       "wp:attachment": [
         {
-          "href": "http://localhost:8888/wp-json/wp/v2/media?parent=5"
+          "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/media?parent=5"
         }
       ],
       "curies": [
@@ -75,13 +78,13 @@
     "_embedded": {
       "wp:featuredmedia": [
         {
-          "id": 7,
-          "date": "2017-10-03T17:41:11",
-          "slug": "screen-shot-2017-10-03-at-10-40-28-am",
+          "id": 11,
+          "date": "2017-10-26T15:00:49",
+          "slug": "game-price-tracker-featured",
           "type": "attachment",
-          "link": "http://localhost:8888/projects/game-price-tracker/screen-shot-2017-10-03-at-10-40-28-am/",
+          "link": "https://chris-vita-portfolio.herokuapp.com/projects/game-price-tracker/game-price-tracker-featured/",
           "title": {
-            "rendered": "game-price-tracker screenshot(2)"
+            "rendered": "game-price-tracker-featured"
           },
           "author": 1,
           "acf": false,
@@ -92,51 +95,58 @@
           "media_type": "image",
           "mime_type": "image/png",
           "media_details": {
-            "width": 1102,
-            "height": 810,
-            "file": "2017/10/Screen-Shot-2017-10-03-at-10.40.28-AM.png",
+            "width": 2256,
+            "height": 1624,
+            "file": "2017/10/game-price-tracker-featured.png",
             "sizes": {
               "thumbnail": {
-                "file": "Screen-Shot-2017-10-03-at-10.40.28-AM-150x150.png",
+                "file": "game-price-tracker-featured-150x150.png",
                 "width": 150,
                 "height": 150,
                 "mime_type": "image/png",
-                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/Screen-Shot-2017-10-03-at-10.40.28-AM-150x150.png"
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/game-price-tracker-featured-150x150.png"
               },
               "medium": {
-                "file": "Screen-Shot-2017-10-03-at-10.40.28-AM-300x221.png",
+                "file": "game-price-tracker-featured-300x216.png",
                 "width": 300,
-                "height": 221,
+                "height": 216,
                 "mime_type": "image/png",
-                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/Screen-Shot-2017-10-03-at-10.40.28-AM-300x221.png"
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/game-price-tracker-featured-300x216.png"
               },
               "medium_large": {
-                "file": "Screen-Shot-2017-10-03-at-10.40.28-AM-768x565.png",
+                "file": "game-price-tracker-featured-768x553.png",
                 "width": 768,
-                "height": 565,
+                "height": 553,
                 "mime_type": "image/png",
-                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/Screen-Shot-2017-10-03-at-10.40.28-AM-768x565.png"
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/game-price-tracker-featured-768x553.png"
               },
               "large": {
-                "file": "Screen-Shot-2017-10-03-at-10.40.28-AM-1024x753.png",
+                "file": "game-price-tracker-featured-1024x737.png",
                 "width": 1024,
-                "height": 753,
+                "height": 737,
                 "mime_type": "image/png",
-                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/Screen-Shot-2017-10-03-at-10.40.28-AM-1024x753.png"
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/game-price-tracker-featured-1024x737.png"
+              },
+              "twentyseventeen-featured-image": {
+                "file": "game-price-tracker-featured-2000x1200.png",
+                "width": 2000,
+                "height": 1200,
+                "mime_type": "image/png",
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/game-price-tracker-featured-2000x1200.png"
               },
               "twentyseventeen-thumbnail-avatar": {
-                "file": "Screen-Shot-2017-10-03-at-10.40.28-AM-100x100.png",
+                "file": "game-price-tracker-featured-100x100.png",
                 "width": 100,
                 "height": 100,
                 "mime_type": "image/png",
-                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/Screen-Shot-2017-10-03-at-10.40.28-AM-100x100.png"
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/game-price-tracker-featured-100x100.png"
               },
               "full": {
-                "file": "Screen-Shot-2017-10-03-at-10.40.28-AM.png",
-                "width": 1102,
-                "height": 810,
+                "file": "game-price-tracker-featured.png",
+                "width": 2256,
+                "height": 1624,
                 "mime_type": "image/png",
-                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/Screen-Shot-2017-10-03-at-10.40.28-AM.png"
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/game-price-tracker-featured.png"
               }
             },
             "image_meta": {
@@ -154,33 +164,33 @@
               "keywords": []
             }
           },
-          "source_url": "http://localhost:8888/wp-content/uploads/2017/10/Screen-Shot-2017-10-03-at-10.40.28-AM.png",
+          "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/game-price-tracker-featured.png",
           "_links": {
             "self": [
               {
-                "href": "http://localhost:8888/wp-json/wp/v2/media/7"
+                "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/media/11"
               }
             ],
             "collection": [
               {
-                "href": "http://localhost:8888/wp-json/wp/v2/media"
+                "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/media"
               }
             ],
             "about": [
               {
-                "href": "http://localhost:8888/wp-json/wp/v2/types/attachment"
+                "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/types/attachment"
               }
             ],
             "author": [
               {
                 "embeddable": true,
-                "href": "http://localhost:8888/wp-json/wp/v2/users/1"
+                "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/users/1"
               }
             ],
             "replies": [
               {
                 "embeddable": true,
-                "href": "http://localhost:8888/wp-json/wp/v2/comments?post=7"
+                "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/comments?post=11"
               }
             ]
           }
@@ -189,18 +199,18 @@
     }
   },
   {
-    "id": 9,
-    "date": "2017-09-10T22:13:01",
-    "date_gmt": "2017-09-10T22:13:01",
+    "id": 8,
+    "date": "2017-06-01T14:54:16",
+    "date_gmt": "2017-06-01T14:54:16",
     "guid": {
-      "rendered": "http://localhost:8888/?post_type=projects&#038;p=9"
+      "rendered": "http://chris-vita-portfolio-wp.herokuapp.com/?post_type=projects&#038;p=8"
     },
-    "modified": "2017-10-10T22:17:35",
-    "modified_gmt": "2017-10-10T22:17:35",
+    "modified": "2017-10-26T16:19:17",
+    "modified_gmt": "2017-10-26T16:19:17",
     "slug": "youtube-mixtape",
     "status": "publish",
     "type": "projects",
-    "link": "http://localhost:8888/projects/youtube-mixtape/",
+    "link": "https://chris-vita-portfolio.herokuapp.com/projects/youtube-mixtape/",
     "title": {
       "rendered": "YouTube Mixtape"
     },
@@ -208,42 +218,82 @@
       "rendered": "",
       "protected": false
     },
-    "featured_media": 10,
+    "featured_media": 9,
     "template": "",
     "acf": {
-      "": false,
       "title": "youtube-mixtape",
-      "tech_stack": "jQuery-UI, Node, Express, Spotify API, YouTube API",
+      "title_pretty": "YouTube Mixtape",
+      "featured_project": false,
+      "primary_language": "JavaScript",
+      "tech_stack": "JavaScript, jQuery-UI, Node, REST API",
+      "tech_stack_full": "jQuery, jQuery-UI, Node, Express, REST API, Spotify API, YouTube API",
       "travis": false,
-      "github_url": false,
+      "github_url": "https://youtube-mixtape.herokuapp.com/",
       "demo_url": "https://youtube-mixtape.herokuapp.com/",
-      "short_description": "Combining Spotify genera search with YouTube video results."
+      "video": "",
+      "short_description": "A new music app using Spotify to generate a list of similar artists, and YouTube to find and play their songs.",
+      "long_description": "The app first uses Spotify&#039;s API to validate your search as a known artist. Immediately after this validation, the app uses YouTube&#039;s API to search for a short, music category video result, and begins playing.<br />\r\n<br />\r\nNow that music is playing, the app continues to make calls to Spotify&#039;s API with a search algorithm to generate a list of similar artists based on one or more common genres. Currently, the results are presented by the number of common genres. Find this code in &#039;./views/js/searchSpotify.js&#039;<br />\r\n<br />\r\nAs each video finishes playing, the app advances to the next artist result, and retrieves a new video result from YouTube.<br />\r\n<br />\r\nThe app also offers the ability to create/view/edit a YouTube playlist. Get started with this feature by clicking + Add to Mixtape. Note that to save your playlist, you will be required to sign into your Google account.<br />\r\n<br />\r\nTL;DR<br />\r\nThe app chains calls to Spotify&#039;s API to generate a hierarchical list of similar artists, and uses YouTube&#039;s API to find and play corresponding music videos. The user can also create and modify a &quot;mixtape&quot; via drag-and-drop.",
+      "secondary_text": "Drag and drop artist results to change mix order. (Not yet supported for touch devices.), Remove a specific artist result with the X button., Directly clicking an artist result will trigger a YouTube search and begin playing a resulting video., Show/hide video player., Select the Lock artist button to keep listening to videos from the same artist., The app keeps track of your listen history and avoids replaying the same song in a given session., Quietly retrieves an access token to Spotify&#039;s API via a back-end Node/Express server. (From a UX perspective, I feel this is better than requiring users to sign-in to their Spotify accounts just to try out the app.), Responsive design.",
+      "secondary_image": {
+        "id": 10,
+        "alt": "",
+        "title": "youtube-mixtape-secondary",
+        "caption": "",
+        "description": "",
+        "mime_type": "image/jpeg",
+        "url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/youtube-mixtape-secondary.jpg",
+        "width": 360,
+        "height": 640,
+        "sizes": {
+          "thumbnail": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/youtube-mixtape-secondary-150x150.jpg",
+          "thumbnail-width": 150,
+          "thumbnail-height": 150,
+          "medium": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/youtube-mixtape-secondary-169x300.jpg",
+          "medium-width": 169,
+          "medium-height": 300,
+          "medium_large": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/youtube-mixtape-secondary.jpg",
+          "medium_large-width": 360,
+          "medium_large-height": 640,
+          "large": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/youtube-mixtape-secondary.jpg",
+          "large-width": 360,
+          "large-height": 640,
+          "twentyseventeen-featured-image": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/youtube-mixtape-secondary.jpg",
+          "twentyseventeen-featured-image-width": 360,
+          "twentyseventeen-featured-image-height": 640,
+          "twentyseventeen-thumbnail-avatar": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/youtube-mixtape-secondary-100x100.jpg",
+          "twentyseventeen-thumbnail-avatar-width": 100,
+          "twentyseventeen-thumbnail-avatar-height": 100
+        }
+      },
+      "gif": false,
+      "secondary_text_heading": "Other features",
+      "secondary_gif": false
     },
     "_links": {
       "self": [
         {
-          "href": "http://localhost:8888/wp-json/wp/v2/projects/9"
+          "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/projects/8"
         }
       ],
       "collection": [
         {
-          "href": "http://localhost:8888/wp-json/wp/v2/projects"
+          "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/projects"
         }
       ],
       "about": [
         {
-          "href": "http://localhost:8888/wp-json/wp/v2/types/projects"
+          "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/types/projects"
         }
       ],
       "wp:featuredmedia": [
         {
           "embeddable": true,
-          "href": "http://localhost:8888/wp-json/wp/v2/media/10"
+          "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/media/9"
         }
       ],
       "wp:attachment": [
         {
-          "href": "http://localhost:8888/wp-json/wp/v2/media?parent=9"
+          "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/media?parent=8"
         }
       ],
       "curies": [
@@ -257,13 +307,13 @@
     "_embedded": {
       "wp:featuredmedia": [
         {
-          "id": 10,
-          "date": "2017-10-10T22:14:38",
-          "slug": "homepage6_2_17",
+          "id": 9,
+          "date": "2017-10-26T14:59:06",
+          "slug": "youtube-mixtape-featured",
           "type": "attachment",
-          "link": "http://localhost:8888/projects/youtube-mixtape/homepage6_2_17/",
+          "link": "https://chris-vita-portfolio.herokuapp.com/projects/youtube-mixtape/youtube-mixtape-featured/",
           "title": {
-            "rendered": "YouTube Mixtape screenshot"
+            "rendered": "youtube-mixtape-featured"
           },
           "author": 1,
           "acf": false,
@@ -274,58 +324,58 @@
           "media_type": "image",
           "mime_type": "image/png",
           "media_details": {
-            "width": 1696,
-            "height": 1564,
-            "file": "2017/10/homePage6_2_17.png",
+            "width": 2248,
+            "height": 1876,
+            "file": "2017/10/youtube-mixtape-featured.png",
             "sizes": {
               "thumbnail": {
-                "file": "homePage6_2_17-150x150.png",
+                "file": "youtube-mixtape-featured-150x150.png",
                 "width": 150,
                 "height": 150,
                 "mime_type": "image/png",
-                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/homePage6_2_17-150x150.png"
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/youtube-mixtape-featured-150x150.png"
               },
               "medium": {
-                "file": "homePage6_2_17-300x277.png",
+                "file": "youtube-mixtape-featured-300x250.png",
                 "width": 300,
-                "height": 277,
+                "height": 250,
                 "mime_type": "image/png",
-                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/homePage6_2_17-300x277.png"
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/youtube-mixtape-featured-300x250.png"
               },
               "medium_large": {
-                "file": "homePage6_2_17-768x708.png",
+                "file": "youtube-mixtape-featured-768x641.png",
                 "width": 768,
-                "height": 708,
+                "height": 641,
                 "mime_type": "image/png",
-                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/homePage6_2_17-768x708.png"
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/youtube-mixtape-featured-768x641.png"
               },
               "large": {
-                "file": "homePage6_2_17-1024x944.png",
+                "file": "youtube-mixtape-featured-1024x855.png",
                 "width": 1024,
-                "height": 944,
+                "height": 855,
                 "mime_type": "image/png",
-                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/homePage6_2_17-1024x944.png"
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/youtube-mixtape-featured-1024x855.png"
               },
               "twentyseventeen-featured-image": {
-                "file": "homePage6_2_17-1696x1200.png",
-                "width": 1696,
+                "file": "youtube-mixtape-featured-2000x1200.png",
+                "width": 2000,
                 "height": 1200,
                 "mime_type": "image/png",
-                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/homePage6_2_17-1696x1200.png"
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/youtube-mixtape-featured-2000x1200.png"
               },
               "twentyseventeen-thumbnail-avatar": {
-                "file": "homePage6_2_17-100x100.png",
+                "file": "youtube-mixtape-featured-100x100.png",
                 "width": 100,
                 "height": 100,
                 "mime_type": "image/png",
-                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/homePage6_2_17-100x100.png"
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/youtube-mixtape-featured-100x100.png"
               },
               "full": {
-                "file": "homePage6_2_17.png",
-                "width": 1696,
-                "height": 1564,
+                "file": "youtube-mixtape-featured.png",
+                "width": 2248,
+                "height": 1876,
                 "mime_type": "image/png",
-                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/homePage6_2_17.png"
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/youtube-mixtape-featured.png"
               }
             },
             "image_meta": {
@@ -343,33 +393,33 @@
               "keywords": []
             }
           },
-          "source_url": "http://localhost:8888/wp-content/uploads/2017/10/homePage6_2_17.png",
+          "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/youtube-mixtape-featured.png",
           "_links": {
             "self": [
               {
-                "href": "http://localhost:8888/wp-json/wp/v2/media/10"
+                "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/media/9"
               }
             ],
             "collection": [
               {
-                "href": "http://localhost:8888/wp-json/wp/v2/media"
+                "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/media"
               }
             ],
             "about": [
               {
-                "href": "http://localhost:8888/wp-json/wp/v2/types/attachment"
+                "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/types/attachment"
               }
             ],
             "author": [
               {
                 "embeddable": true,
-                "href": "http://localhost:8888/wp-json/wp/v2/users/1"
+                "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/users/1"
               }
             ],
             "replies": [
               {
                 "embeddable": true,
-                "href": "http://localhost:8888/wp-json/wp/v2/comments?post=10"
+                "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/comments?post=9"
               }
             ]
           }
@@ -378,18 +428,18 @@
     }
   },
   {
-    "id": 11,
-    "date": "2017-08-13T15:16:15",
-    "date_gmt": "2017-08-13T15:16:15",
+    "id": 16,
+    "date": "2017-05-01T15:25:49",
+    "date_gmt": "2017-05-01T15:25:49",
     "guid": {
-      "rendered": "http://localhost:8888/?post_type=projects&#038;p=11"
+      "rendered": "http://chris-vita-portfolio-wp.herokuapp.com/?post_type=projects&#038;p=16"
     },
-    "modified": "2017-10-13T15:18:27",
-    "modified_gmt": "2017-10-13T15:18:27",
+    "modified": "2017-10-26T16:20:18",
+    "modified_gmt": "2017-10-26T16:20:18",
     "slug": "this-vs-that",
     "status": "publish",
     "type": "projects",
-    "link": "http://localhost:8888/projects/this-vs-that/",
+    "link": "https://chris-vita-portfolio.herokuapp.com/projects/this-vs-that/",
     "title": {
       "rendered": "This vs That"
     },
@@ -397,42 +447,82 @@
       "rendered": "",
       "protected": false
     },
-    "featured_media": 12,
+    "featured_media": 18,
     "template": "",
     "acf": {
-      "": false,
       "title": "this-vs-that",
-      "tech_stack": "vanilla JavaScript, jQuery",
+      "title_pretty": "This vs That",
+      "featured_project": false,
+      "primary_language": "JavaScript",
+      "tech_stack": "JavaScript, jQuery, Bootstrap, REST API",
+      "tech_stack_full": "JavaScript, jQuery, HTML, CSS, Bootstrap, REST API, Autosuggestion API",
       "travis": false,
-      "github_url": false,
+      "github_url": "https://github.com/VitaC123/this-vs-that",
       "demo_url": "https://rawgit.com/VitaC123/This-vs-That/master/index.html",
-      "short_description": "Chaining Google autosuggestions."
+      "video": "",
+      "short_description": "An automated Google search, which appends commonly used conjunction keywords, (i.e. \"vs\"), and chains the resulting Google autocomplete suggestions.",
+      "long_description": "The app searches through each of Google&#039;s autosuggestions, creating a chain of results that terminates upon finding a duplicate result.",
+      "secondary_text_heading": "Other features",
+      "secondary_text": "A search history, which allows the user to revisit their results without additional API calls., Clickable results., Each result item is a link to an actual Google search., The exact search terms include the previous result, plus the conjunction keyword.",
+      "secondary_image": {
+        "id": 17,
+        "alt": "",
+        "title": "example-chart-spiderman",
+        "caption": "",
+        "description": "",
+        "mime_type": "image/png",
+        "url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/example-chart-spiderman.png",
+        "width": 1075,
+        "height": 1227,
+        "sizes": {
+          "thumbnail": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/example-chart-spiderman-150x150.png",
+          "thumbnail-width": 150,
+          "thumbnail-height": 150,
+          "medium": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/example-chart-spiderman-263x300.png",
+          "medium-width": 263,
+          "medium-height": 300,
+          "medium_large": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/example-chart-spiderman-768x877.png",
+          "medium_large-width": 525,
+          "medium_large-height": 600,
+          "large": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/example-chart-spiderman-897x1024.png",
+          "large-width": 525,
+          "large-height": 599,
+          "twentyseventeen-featured-image": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/example-chart-spiderman-1075x1200.png",
+          "twentyseventeen-featured-image-width": 1075,
+          "twentyseventeen-featured-image-height": 1200,
+          "twentyseventeen-thumbnail-avatar": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/example-chart-spiderman-100x100.png",
+          "twentyseventeen-thumbnail-avatar-width": 100,
+          "twentyseventeen-thumbnail-avatar-height": 100
+        }
+      },
+      "gif": false,
+      "secondary_gif": false
     },
     "_links": {
       "self": [
         {
-          "href": "http://localhost:8888/wp-json/wp/v2/projects/11"
+          "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/projects/16"
         }
       ],
       "collection": [
         {
-          "href": "http://localhost:8888/wp-json/wp/v2/projects"
+          "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/projects"
         }
       ],
       "about": [
         {
-          "href": "http://localhost:8888/wp-json/wp/v2/types/projects"
+          "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/types/projects"
         }
       ],
       "wp:featuredmedia": [
         {
           "embeddable": true,
-          "href": "http://localhost:8888/wp-json/wp/v2/media/12"
+          "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/media/18"
         }
       ],
       "wp:attachment": [
         {
-          "href": "http://localhost:8888/wp-json/wp/v2/media?parent=11"
+          "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/media?parent=16"
         }
       ],
       "curies": [
@@ -446,13 +536,13 @@
     "_embedded": {
       "wp:featuredmedia": [
         {
-          "id": 12,
-          "date": "2017-10-13T15:16:47",
-          "slug": "this-vs-that-screenshot",
+          "id": 18,
+          "date": "2017-10-26T15:25:37",
+          "slug": "this-vs-that-featured",
           "type": "attachment",
-          "link": "http://localhost:8888/projects/this-vs-that/this-vs-that-screenshot/",
+          "link": "https://chris-vita-portfolio.herokuapp.com/projects/this-vs-that/this-vs-that-featured/",
           "title": {
-            "rendered": "this-vs-that-screenshot"
+            "rendered": "this-vs-that-featured"
           },
           "author": 1,
           "acf": false,
@@ -465,56 +555,56 @@
           "media_details": {
             "width": 1672,
             "height": 1438,
-            "file": "2017/10/this-vs-that-screenshot.png",
+            "file": "2017/10/this-vs-that-featured.png",
             "sizes": {
               "thumbnail": {
-                "file": "this-vs-that-screenshot-150x150.png",
+                "file": "this-vs-that-featured-150x150.png",
                 "width": 150,
                 "height": 150,
                 "mime_type": "image/png",
-                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/this-vs-that-screenshot-150x150.png"
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/this-vs-that-featured-150x150.png"
               },
               "medium": {
-                "file": "this-vs-that-screenshot-300x258.png",
+                "file": "this-vs-that-featured-300x258.png",
                 "width": 300,
                 "height": 258,
                 "mime_type": "image/png",
-                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/this-vs-that-screenshot-300x258.png"
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/this-vs-that-featured-300x258.png"
               },
               "medium_large": {
-                "file": "this-vs-that-screenshot-768x661.png",
+                "file": "this-vs-that-featured-768x661.png",
                 "width": 768,
                 "height": 661,
                 "mime_type": "image/png",
-                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/this-vs-that-screenshot-768x661.png"
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/this-vs-that-featured-768x661.png"
               },
               "large": {
-                "file": "this-vs-that-screenshot-1024x881.png",
+                "file": "this-vs-that-featured-1024x881.png",
                 "width": 1024,
                 "height": 881,
                 "mime_type": "image/png",
-                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/this-vs-that-screenshot-1024x881.png"
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/this-vs-that-featured-1024x881.png"
               },
               "twentyseventeen-featured-image": {
-                "file": "this-vs-that-screenshot-1672x1200.png",
+                "file": "this-vs-that-featured-1672x1200.png",
                 "width": 1672,
                 "height": 1200,
                 "mime_type": "image/png",
-                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/this-vs-that-screenshot-1672x1200.png"
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/this-vs-that-featured-1672x1200.png"
               },
               "twentyseventeen-thumbnail-avatar": {
-                "file": "this-vs-that-screenshot-100x100.png",
+                "file": "this-vs-that-featured-100x100.png",
                 "width": 100,
                 "height": 100,
                 "mime_type": "image/png",
-                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/this-vs-that-screenshot-100x100.png"
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/this-vs-that-featured-100x100.png"
               },
               "full": {
-                "file": "this-vs-that-screenshot.png",
+                "file": "this-vs-that-featured.png",
                 "width": 1672,
                 "height": 1438,
                 "mime_type": "image/png",
-                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/this-vs-that-screenshot.png"
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/this-vs-that-featured.png"
               }
             },
             "image_meta": {
@@ -532,33 +622,33 @@
               "keywords": []
             }
           },
-          "source_url": "http://localhost:8888/wp-content/uploads/2017/10/this-vs-that-screenshot.png",
+          "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/this-vs-that-featured.png",
           "_links": {
             "self": [
               {
-                "href": "http://localhost:8888/wp-json/wp/v2/media/12"
+                "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/media/18"
               }
             ],
             "collection": [
               {
-                "href": "http://localhost:8888/wp-json/wp/v2/media"
+                "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/media"
               }
             ],
             "about": [
               {
-                "href": "http://localhost:8888/wp-json/wp/v2/types/attachment"
+                "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/types/attachment"
               }
             ],
             "author": [
               {
                 "embeddable": true,
-                "href": "http://localhost:8888/wp-json/wp/v2/users/1"
+                "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/users/1"
               }
             ],
             "replies": [
               {
                 "embeddable": true,
-                "href": "http://localhost:8888/wp-json/wp/v2/comments?post=12"
+                "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/comments?post=18"
               }
             ]
           }
@@ -567,20 +657,20 @@
     }
   },
   {
-    "id": 13,
-    "date": "2017-01-13T15:22:16",
-    "date_gmt": "2017-01-13T15:22:16",
+    "id": 12,
+    "date": "2017-04-01T15:17:47",
+    "date_gmt": "2017-04-01T15:17:47",
     "guid": {
-      "rendered": "http://localhost:8888/?post_type=projects&#038;p=13"
+      "rendered": "http://chris-vita-portfolio-wp.herokuapp.com/?post_type=projects&#038;p=12"
     },
-    "modified": "2017-10-13T15:23:37",
-    "modified_gmt": "2017-10-13T15:23:37",
-    "slug": "winter-beer-conditions-checker",
+    "modified": "2017-10-26T16:20:54",
+    "modified_gmt": "2017-10-26T16:20:54",
+    "slug": "tic-tac-toe-javascript",
     "status": "publish",
     "type": "projects",
-    "link": "http://localhost:8888/projects/winter-beer-conditions-checker/",
+    "link": "https://chris-vita-portfolio.herokuapp.com/projects/tic-tac-toe-javascript/",
     "title": {
-      "rendered": "Winter Beer Conditions Checker"
+      "rendered": "Tic-Tac-Toe JavaScript"
     },
     "content": {
       "rendered": "",
@@ -589,39 +679,65 @@
     "featured_media": 14,
     "template": "",
     "acf": {
-      "": false,
-      "title": "winter-beer-conditions-checker",
-      "tech_stack": "vanilla JavaScript, jQuery, CSS",
+      "title": "tic-tac-toe-javascript",
+      "title_pretty": "Tic-Tac-Toe JavaScript",
+      "featured_project": false,
+      "primary_language": "JavaScript",
+      "tech_stack": "JavaScript, jQuery, HTML5 <Canvas>, CSS",
+      "tech_stack_full": "JavaScript, jQuery, HTML, CSS",
       "travis": false,
-      "github_url": false,
-      "demo_url": "http://rawgit.com/VitaC123/Winter-Beer-Conditions-Checker/master/index.html",
-      "short_description": "Determines location and weather."
+      "github_url": "https://github.com/VitaC123/tic-tac-toe-javascript",
+      "demo_url": "https://rawgit.com/VitaC123/Tic-Tac-Toe-javascript/master/index.html",
+      "video": "",
+      "short_description": "The classic, with custom animations and a responsive game board",
+      "long_description": "Programming Tic-Tac-Toe seems like a developer&#039;s right of passage. I reached a workable game fairly quickly, so I took the design and UX a little further with animates x&#039;s and o&#039;s via &lt;canvas&gt; and a responsive game board.",
+      "secondary_text_heading": "My requirements",
+      "secondary_text": "It should let me play a game of Tic Tac Toe with the computer., It should let me play a game of Tic Tac Toe with another human., It should let me pit the computer against itself., It should keep score of consecutive games., It should scale the size of the scoreboard to the viewport., It should animate the drawing of X&#039;s and O&#039;x., It should display a &quot;start&quot; screen, like on an old video game.",
+      "secondary_image": false,
+      "gif": {
+        "id": 13,
+        "alt": "",
+        "title": "responsive-demo",
+        "caption": "",
+        "description": "",
+        "mime_type": "image/gif",
+        "url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/responsive-demo-1.gif"
+      },
+      "secondary_gif": {
+        "id": 15,
+        "alt": "",
+        "title": "scoreboard-demo",
+        "caption": "",
+        "description": "",
+        "mime_type": "image/gif",
+        "url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/scoreboard-demo.gif"
+      }
     },
     "_links": {
       "self": [
         {
-          "href": "http://localhost:8888/wp-json/wp/v2/projects/13"
+          "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/projects/12"
         }
       ],
       "collection": [
         {
-          "href": "http://localhost:8888/wp-json/wp/v2/projects"
+          "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/projects"
         }
       ],
       "about": [
         {
-          "href": "http://localhost:8888/wp-json/wp/v2/types/projects"
+          "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/types/projects"
         }
       ],
       "wp:featuredmedia": [
         {
           "embeddable": true,
-          "href": "http://localhost:8888/wp-json/wp/v2/media/14"
+          "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/media/14"
         }
       ],
       "wp:attachment": [
         {
-          "href": "http://localhost:8888/wp-json/wp/v2/media?parent=13"
+          "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/media?parent=12"
         }
       ],
       "curies": [
@@ -636,12 +752,12 @@
       "wp:featuredmedia": [
         {
           "id": 14,
-          "date": "2017-10-13T15:22:24",
-          "slug": "winter-beer-conditions-checker-sceenshot",
+          "date": "2017-10-26T15:17:35",
+          "slug": "tic-tac-toe-javascript-featured",
           "type": "attachment",
-          "link": "http://localhost:8888/projects/winter-beer-conditions-checker/winter-beer-conditions-checker-sceenshot/",
+          "link": "https://chris-vita-portfolio.herokuapp.com/projects/tic-tac-toe-javascript/tic-tac-toe-javascript-featured/",
           "title": {
-            "rendered": "winter-beer-conditions-checker-sceenshot"
+            "rendered": "tic-tac-toe-javascript-featured"
           },
           "author": 1,
           "acf": false,
@@ -652,58 +768,51 @@
           "media_type": "image",
           "mime_type": "image/png",
           "media_details": {
-            "width": 2210,
-            "height": 1342,
-            "file": "2017/10/winter-beer-conditions-checker-sceenshot.png",
+            "width": 1100,
+            "height": 983,
+            "file": "2017/10/tic-tac-toe-javascript-featured.png",
             "sizes": {
               "thumbnail": {
-                "file": "winter-beer-conditions-checker-sceenshot-150x150.png",
+                "file": "tic-tac-toe-javascript-featured-150x150.png",
                 "width": 150,
                 "height": 150,
                 "mime_type": "image/png",
-                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/winter-beer-conditions-checker-sceenshot-150x150.png"
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/tic-tac-toe-javascript-featured-150x150.png"
               },
               "medium": {
-                "file": "winter-beer-conditions-checker-sceenshot-300x182.png",
+                "file": "tic-tac-toe-javascript-featured-300x268.png",
                 "width": 300,
-                "height": 182,
+                "height": 268,
                 "mime_type": "image/png",
-                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/winter-beer-conditions-checker-sceenshot-300x182.png"
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/tic-tac-toe-javascript-featured-300x268.png"
               },
               "medium_large": {
-                "file": "winter-beer-conditions-checker-sceenshot-768x466.png",
+                "file": "tic-tac-toe-javascript-featured-768x686.png",
                 "width": 768,
-                "height": 466,
+                "height": 686,
                 "mime_type": "image/png",
-                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/winter-beer-conditions-checker-sceenshot-768x466.png"
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/tic-tac-toe-javascript-featured-768x686.png"
               },
               "large": {
-                "file": "winter-beer-conditions-checker-sceenshot-1024x622.png",
+                "file": "tic-tac-toe-javascript-featured-1024x915.png",
                 "width": 1024,
-                "height": 622,
+                "height": 915,
                 "mime_type": "image/png",
-                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/winter-beer-conditions-checker-sceenshot-1024x622.png"
-              },
-              "twentyseventeen-featured-image": {
-                "file": "winter-beer-conditions-checker-sceenshot-2000x1200.png",
-                "width": 2000,
-                "height": 1200,
-                "mime_type": "image/png",
-                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/winter-beer-conditions-checker-sceenshot-2000x1200.png"
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/tic-tac-toe-javascript-featured-1024x915.png"
               },
               "twentyseventeen-thumbnail-avatar": {
-                "file": "winter-beer-conditions-checker-sceenshot-100x100.png",
+                "file": "tic-tac-toe-javascript-featured-100x100.png",
                 "width": 100,
                 "height": 100,
                 "mime_type": "image/png",
-                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/winter-beer-conditions-checker-sceenshot-100x100.png"
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/tic-tac-toe-javascript-featured-100x100.png"
               },
               "full": {
-                "file": "winter-beer-conditions-checker-sceenshot.png",
-                "width": 2210,
-                "height": 1342,
+                "file": "tic-tac-toe-javascript-featured.png",
+                "width": 1100,
+                "height": 983,
                 "mime_type": "image/png",
-                "source_url": "http://localhost:8888/wp-content/uploads/2017/10/winter-beer-conditions-checker-sceenshot.png"
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/tic-tac-toe-javascript-featured.png"
               }
             },
             "image_meta": {
@@ -721,33 +830,912 @@
               "keywords": []
             }
           },
-          "source_url": "http://localhost:8888/wp-content/uploads/2017/10/winter-beer-conditions-checker-sceenshot.png",
+          "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/tic-tac-toe-javascript-featured.png",
           "_links": {
             "self": [
               {
-                "href": "http://localhost:8888/wp-json/wp/v2/media/14"
+                "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/media/14"
               }
             ],
             "collection": [
               {
-                "href": "http://localhost:8888/wp-json/wp/v2/media"
+                "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/media"
               }
             ],
             "about": [
               {
-                "href": "http://localhost:8888/wp-json/wp/v2/types/attachment"
+                "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/types/attachment"
               }
             ],
             "author": [
               {
                 "embeddable": true,
-                "href": "http://localhost:8888/wp-json/wp/v2/users/1"
+                "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/users/1"
               }
             ],
             "replies": [
               {
                 "embeddable": true,
-                "href": "http://localhost:8888/wp-json/wp/v2/comments?post=14"
+                "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/comments?post=14"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 19,
+    "date": "2017-03-01T15:32:40",
+    "date_gmt": "2017-03-01T15:32:40",
+    "guid": {
+      "rendered": "http://chris-vita-portfolio-wp.herokuapp.com/?post_type=projects&#038;p=19"
+    },
+    "modified": "2017-10-26T16:23:42",
+    "modified_gmt": "2017-10-26T16:23:42",
+    "slug": "simon-the-game",
+    "status": "publish",
+    "type": "projects",
+    "link": "https://chris-vita-portfolio.herokuapp.com/projects/simon-the-game/",
+    "title": {
+      "rendered": "Simon the game"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 20,
+    "template": "",
+    "acf": {
+      "title": "simon-the-game",
+      "title_pretty": "Simon the game",
+      "featured_project": false,
+      "primary_language": "JavaScript",
+      "tech_stack": "JavaScript, jQuery, HTML5 <audio>, CSS",
+      "tech_stack_full": "JavaScript, jQuery, CSS, HTML, <audio>",
+      "travis": false,
+      "github_url": "https://github.com/VitaC123/simon-the-game",
+      "demo_url": "https://rawgit.com/VitaC123/Simon-the-game/master/index.html",
+      "video": "",
+      "short_description": "My interpretation of the 1980's memory game in JavaScript",
+      "long_description": "",
+      "secondary_text_heading": "",
+      "secondary_text": "",
+      "secondary_image": {
+        "id": 22,
+        "alt": "",
+        "title": "simonGameBox",
+        "caption": "",
+        "description": "",
+        "mime_type": "image/jpeg",
+        "url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/simonGameBox.jpg",
+        "width": 313,
+        "height": 320,
+        "sizes": {
+          "thumbnail": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/simonGameBox-150x150.jpg",
+          "thumbnail-width": 150,
+          "thumbnail-height": 150,
+          "medium": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/simonGameBox-293x300.jpg",
+          "medium-width": 293,
+          "medium-height": 300,
+          "medium_large": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/simonGameBox.jpg",
+          "medium_large-width": 313,
+          "medium_large-height": 320,
+          "large": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/simonGameBox.jpg",
+          "large-width": 313,
+          "large-height": 320,
+          "twentyseventeen-featured-image": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/simonGameBox.jpg",
+          "twentyseventeen-featured-image-width": 313,
+          "twentyseventeen-featured-image-height": 320,
+          "twentyseventeen-thumbnail-avatar": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/simonGameBox-100x100.jpg",
+          "twentyseventeen-thumbnail-avatar-width": 100,
+          "twentyseventeen-thumbnail-avatar-height": 100
+        }
+      },
+      "gif": false,
+      "secondary_gif": false
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/projects/19"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/projects"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/types/projects"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/media/20"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/media?parent=19"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    },
+    "_embedded": {
+      "wp:featuredmedia": [
+        {
+          "id": 20,
+          "date": "2017-10-26T15:31:41",
+          "slug": "simon-featured",
+          "type": "attachment",
+          "link": "https://chris-vita-portfolio.herokuapp.com/projects/simon-the-game/simon-featured/",
+          "title": {
+            "rendered": "simon-featured"
+          },
+          "author": 1,
+          "acf": false,
+          "caption": {
+            "rendered": ""
+          },
+          "alt_text": "",
+          "media_type": "image",
+          "mime_type": "image/png",
+          "media_details": {
+            "width": 2116,
+            "height": 1522,
+            "file": "2017/10/simon-featured.png",
+            "sizes": {
+              "thumbnail": {
+                "file": "simon-featured-150x150.png",
+                "width": 150,
+                "height": 150,
+                "mime_type": "image/png",
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/simon-featured-150x150.png"
+              },
+              "medium": {
+                "file": "simon-featured-300x216.png",
+                "width": 300,
+                "height": 216,
+                "mime_type": "image/png",
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/simon-featured-300x216.png"
+              },
+              "medium_large": {
+                "file": "simon-featured-768x552.png",
+                "width": 768,
+                "height": 552,
+                "mime_type": "image/png",
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/simon-featured-768x552.png"
+              },
+              "large": {
+                "file": "simon-featured-1024x737.png",
+                "width": 1024,
+                "height": 737,
+                "mime_type": "image/png",
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/simon-featured-1024x737.png"
+              },
+              "twentyseventeen-featured-image": {
+                "file": "simon-featured-2000x1200.png",
+                "width": 2000,
+                "height": 1200,
+                "mime_type": "image/png",
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/simon-featured-2000x1200.png"
+              },
+              "twentyseventeen-thumbnail-avatar": {
+                "file": "simon-featured-100x100.png",
+                "width": 100,
+                "height": 100,
+                "mime_type": "image/png",
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/simon-featured-100x100.png"
+              },
+              "full": {
+                "file": "simon-featured.png",
+                "width": 2116,
+                "height": 1522,
+                "mime_type": "image/png",
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/simon-featured.png"
+              }
+            },
+            "image_meta": {
+              "aperture": "0",
+              "credit": "",
+              "camera": "",
+              "caption": "",
+              "created_timestamp": "0",
+              "copyright": "",
+              "focal_length": "0",
+              "iso": "0",
+              "shutter_speed": "0",
+              "title": "",
+              "orientation": "0",
+              "keywords": []
+            }
+          },
+          "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/simon-featured.png",
+          "_links": {
+            "self": [
+              {
+                "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/media/20"
+              }
+            ],
+            "collection": [
+              {
+                "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/media"
+              }
+            ],
+            "about": [
+              {
+                "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/types/attachment"
+              }
+            ],
+            "author": [
+              {
+                "embeddable": true,
+                "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/users/1"
+              }
+            ],
+            "replies": [
+              {
+                "embeddable": true,
+                "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/comments?post=20"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 25,
+    "date": "2017-02-01T15:44:07",
+    "date_gmt": "2017-02-01T15:44:07",
+    "guid": {
+      "rendered": "http://chris-vita-portfolio-wp.herokuapp.com/?post_type=projects&#038;p=25"
+    },
+    "modified": "2017-10-26T16:21:29",
+    "modified_gmt": "2017-10-26T16:21:29",
+    "slug": "pomodoro-clock",
+    "status": "publish",
+    "type": "projects",
+    "link": "https://chris-vita-portfolio.herokuapp.com/projects/pomodoro-clock/",
+    "title": {
+      "rendered": "Pomodoro Clock"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 26,
+    "template": "",
+    "acf": {
+      "title": "pomodoro-clock",
+      "title_pretty": "Pomodoro Clock",
+      "featured_project": false,
+      "primary_language": "JavaScript",
+      "tech_stack": "JavaScript, jQuery, CSS, Bootstrap",
+      "tech_stack_full": "JavaScript, jQuery, CSS, HTML, Bootstrap",
+      "travis": false,
+      "github_url": "https://github.com/VitaC123/pomodoro-clock",
+      "demo_url": "https://rawgit.com/VitaC123/Pomodoro-Clock/master/index.html",
+      "video": "",
+      "short_description": "Work/break timer cycle with a nifty minimal UI",
+      "long_description": "My implementation of a Pomodoro clock. Click the settings icon to play with faster intervals (useful for demo).",
+      "secondary_text_heading": "",
+      "secondary_text": "",
+      "secondary_image": {
+        "id": 27,
+        "alt": "",
+        "title": "pomodoro-clock-secondary",
+        "caption": "",
+        "description": "",
+        "mime_type": "image/png",
+        "url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/pomodoro-clock-secondary.png",
+        "width": 276,
+        "height": 744,
+        "sizes": {
+          "thumbnail": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/pomodoro-clock-secondary-150x150.png",
+          "thumbnail-width": 150,
+          "thumbnail-height": 150,
+          "medium": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/pomodoro-clock-secondary-111x300.png",
+          "medium-width": 111,
+          "medium-height": 300,
+          "medium_large": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/pomodoro-clock-secondary.png",
+          "medium_large-width": 276,
+          "medium_large-height": 744,
+          "large": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/pomodoro-clock-secondary.png",
+          "large-width": 276,
+          "large-height": 744,
+          "twentyseventeen-featured-image": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/pomodoro-clock-secondary.png",
+          "twentyseventeen-featured-image-width": 276,
+          "twentyseventeen-featured-image-height": 744,
+          "twentyseventeen-thumbnail-avatar": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/pomodoro-clock-secondary-100x100.png",
+          "twentyseventeen-thumbnail-avatar-width": 100,
+          "twentyseventeen-thumbnail-avatar-height": 100
+        }
+      },
+      "gif": false,
+      "secondary_gif": false
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/projects/25"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/projects"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/types/projects"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/media/26"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/media?parent=25"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    },
+    "_embedded": {
+      "wp:featuredmedia": [
+        {
+          "id": 26,
+          "date": "2017-10-26T15:43:37",
+          "slug": "pomodoro-clock-featured",
+          "type": "attachment",
+          "link": "https://chris-vita-portfolio.herokuapp.com/projects/pomodoro-clock/pomodoro-clock-featured/",
+          "title": {
+            "rendered": "pomodoro-clock-featured"
+          },
+          "author": 1,
+          "acf": false,
+          "caption": {
+            "rendered": ""
+          },
+          "alt_text": "",
+          "media_type": "image",
+          "mime_type": "image/png",
+          "media_details": {
+            "width": 1748,
+            "height": 1434,
+            "file": "2017/10/pomodoro-clock-featured.png",
+            "sizes": {
+              "thumbnail": {
+                "file": "pomodoro-clock-featured-150x150.png",
+                "width": 150,
+                "height": 150,
+                "mime_type": "image/png",
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/pomodoro-clock-featured-150x150.png"
+              },
+              "medium": {
+                "file": "pomodoro-clock-featured-300x246.png",
+                "width": 300,
+                "height": 246,
+                "mime_type": "image/png",
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/pomodoro-clock-featured-300x246.png"
+              },
+              "medium_large": {
+                "file": "pomodoro-clock-featured-768x630.png",
+                "width": 768,
+                "height": 630,
+                "mime_type": "image/png",
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/pomodoro-clock-featured-768x630.png"
+              },
+              "large": {
+                "file": "pomodoro-clock-featured-1024x840.png",
+                "width": 1024,
+                "height": 840,
+                "mime_type": "image/png",
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/pomodoro-clock-featured-1024x840.png"
+              },
+              "twentyseventeen-featured-image": {
+                "file": "pomodoro-clock-featured-1748x1200.png",
+                "width": 1748,
+                "height": 1200,
+                "mime_type": "image/png",
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/pomodoro-clock-featured-1748x1200.png"
+              },
+              "twentyseventeen-thumbnail-avatar": {
+                "file": "pomodoro-clock-featured-100x100.png",
+                "width": 100,
+                "height": 100,
+                "mime_type": "image/png",
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/pomodoro-clock-featured-100x100.png"
+              },
+              "full": {
+                "file": "pomodoro-clock-featured.png",
+                "width": 1748,
+                "height": 1434,
+                "mime_type": "image/png",
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/pomodoro-clock-featured.png"
+              }
+            },
+            "image_meta": {
+              "aperture": "0",
+              "credit": "",
+              "camera": "",
+              "caption": "",
+              "created_timestamp": "0",
+              "copyright": "",
+              "focal_length": "0",
+              "iso": "0",
+              "shutter_speed": "0",
+              "title": "",
+              "orientation": "0",
+              "keywords": []
+            }
+          },
+          "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/pomodoro-clock-featured.png",
+          "_links": {
+            "self": [
+              {
+                "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/media/26"
+              }
+            ],
+            "collection": [
+              {
+                "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/media"
+              }
+            ],
+            "about": [
+              {
+                "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/types/attachment"
+              }
+            ],
+            "author": [
+              {
+                "embeddable": true,
+                "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/users/1"
+              }
+            ],
+            "replies": [
+              {
+                "embeddable": true,
+                "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/comments?post=26"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 23,
+    "date": "2017-01-01T15:39:27",
+    "date_gmt": "2017-01-01T15:39:27",
+    "guid": {
+      "rendered": "http://chris-vita-portfolio-wp.herokuapp.com/?post_type=projects&#038;p=23"
+    },
+    "modified": "2017-10-26T16:21:42",
+    "modified_gmt": "2017-10-26T16:21:42",
+    "slug": "javascript-calculator",
+    "status": "publish",
+    "type": "projects",
+    "link": "https://chris-vita-portfolio.herokuapp.com/projects/javascript-calculator/",
+    "title": {
+      "rendered": "JavaScript Calculator"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 24,
+    "template": "",
+    "acf": {
+      "title": "javascript-calculator",
+      "title_pretty": "JavaScript Calculator",
+      "featured_project": false,
+      "primary_language": "JavaScript",
+      "tech_stack": "JavaScript, jQuery, CSS",
+      "tech_stack_full": "JavaScript, jQuery, CSS, HTML",
+      "travis": false,
+      "github_url": "https://github.com/VitaC123/javascript-calculator",
+      "demo_url": "https://rawgit.com/VitaC123/JavaScript-Calculator/master/index.html",
+      "video": "",
+      "short_description": "A simple calculator coded in JS, emulating the appearance of a TI-108",
+      "long_description": "I remember using the TI-108 in elementary school. The teacher had a big box of these calculators, which were only made available for special math assignments. Well, now you can enjoy the patriotic color scheme of this classroom classic whenever the mood strikes!<br />\r\n<br />\r\n",
+      "secondary_text_heading": "Nifty feature",
+      "secondary_text": "Because we have the benefit of using this TI-108 in a powerful modern browser, the font-size of the screen will automatically decrement to accommodate as many digits as are required. (So there&#039;s no pesky truncation of long numbers.)",
+      "secondary_image": false,
+      "gif": false,
+      "secondary_gif": false
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/projects/23"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/projects"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/types/projects"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/media/24"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/media?parent=23"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    },
+    "_embedded": {
+      "wp:featuredmedia": [
+        {
+          "id": 24,
+          "date": "2017-10-26T15:39:10",
+          "slug": "javascript-calculator-featured",
+          "type": "attachment",
+          "link": "https://chris-vita-portfolio.herokuapp.com/projects/javascript-calculator/javascript-calculator-featured/",
+          "title": {
+            "rendered": "javascript-calculator-featured"
+          },
+          "author": 1,
+          "acf": false,
+          "caption": {
+            "rendered": ""
+          },
+          "alt_text": "",
+          "media_type": "image",
+          "mime_type": "image/png",
+          "media_details": {
+            "width": 2160,
+            "height": 1400,
+            "file": "2017/10/javascript-calculator-featured.png",
+            "sizes": {
+              "thumbnail": {
+                "file": "javascript-calculator-featured-150x150.png",
+                "width": 150,
+                "height": 150,
+                "mime_type": "image/png",
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/javascript-calculator-featured-150x150.png"
+              },
+              "medium": {
+                "file": "javascript-calculator-featured-300x194.png",
+                "width": 300,
+                "height": 194,
+                "mime_type": "image/png",
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/javascript-calculator-featured-300x194.png"
+              },
+              "medium_large": {
+                "file": "javascript-calculator-featured-768x498.png",
+                "width": 768,
+                "height": 498,
+                "mime_type": "image/png",
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/javascript-calculator-featured-768x498.png"
+              },
+              "large": {
+                "file": "javascript-calculator-featured-1024x664.png",
+                "width": 1024,
+                "height": 664,
+                "mime_type": "image/png",
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/javascript-calculator-featured-1024x664.png"
+              },
+              "twentyseventeen-featured-image": {
+                "file": "javascript-calculator-featured-2000x1200.png",
+                "width": 2000,
+                "height": 1200,
+                "mime_type": "image/png",
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/javascript-calculator-featured-2000x1200.png"
+              },
+              "twentyseventeen-thumbnail-avatar": {
+                "file": "javascript-calculator-featured-100x100.png",
+                "width": 100,
+                "height": 100,
+                "mime_type": "image/png",
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/javascript-calculator-featured-100x100.png"
+              },
+              "full": {
+                "file": "javascript-calculator-featured.png",
+                "width": 2160,
+                "height": 1400,
+                "mime_type": "image/png",
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/javascript-calculator-featured.png"
+              }
+            },
+            "image_meta": {
+              "aperture": "0",
+              "credit": "",
+              "camera": "",
+              "caption": "",
+              "created_timestamp": "0",
+              "copyright": "",
+              "focal_length": "0",
+              "iso": "0",
+              "shutter_speed": "0",
+              "title": "",
+              "orientation": "0",
+              "keywords": []
+            }
+          },
+          "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/javascript-calculator-featured.png",
+          "_links": {
+            "self": [
+              {
+                "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/media/24"
+              }
+            ],
+            "collection": [
+              {
+                "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/media"
+              }
+            ],
+            "about": [
+              {
+                "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/types/attachment"
+              }
+            ],
+            "author": [
+              {
+                "embeddable": true,
+                "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/users/1"
+              }
+            ],
+            "replies": [
+              {
+                "embeddable": true,
+                "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/comments?post=24"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 28,
+    "date": "2016-12-01T15:55:58",
+    "date_gmt": "2016-12-01T15:55:58",
+    "guid": {
+      "rendered": "http://chris-vita-portfolio-wp.herokuapp.com/?post_type=projects&#038;p=28"
+    },
+    "modified": "2017-10-26T16:21:55",
+    "modified_gmt": "2017-10-26T16:21:55",
+    "slug": "winter-beer-conditions-checker",
+    "status": "publish",
+    "type": "projects",
+    "link": "https://chris-vita-portfolio.herokuapp.com/projects/winter-beer-conditions-checker/",
+    "title": {
+      "rendered": "Winter Beer Conditions Checker"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 30,
+    "template": "",
+    "acf": {
+      "title": "winter-beer-conditions-checker",
+      "title_pretty": "Winter Beer Conditions Checker",
+      "featured_project": false,
+      "primary_language": "JavaScript",
+      "tech_stack": "JavaScript, jQuery, CSS, REST API",
+      "tech_stack_full": "JavaScript, jQuery, CSS, HTML, REST API, OpenWeather API",
+      "travis": false,
+      "github_url": "https://github.com/VitaC123/winter-beer-conditions-checker",
+      "demo_url": "http://rawgit.com/VitaC123/Winter-Beer-Conditions-Checker/master/index.html",
+      "video": "",
+      "short_description": "Checks the weather, date, and time to determine if it's time for a Snow Cap.",
+      "long_description": "As winter approaches, so does the most wonderful of seasonal beers... Pyramid Snow Cap.",
+      "secondary_text_heading": "",
+      "secondary_text": "",
+      "secondary_image": {
+        "id": 29,
+        "alt": "",
+        "title": "winter-beer-secondary",
+        "caption": "",
+        "description": "",
+        "mime_type": "image/png",
+        "url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/winter-beer-secondary.png",
+        "width": 760,
+        "height": 500,
+        "sizes": {
+          "thumbnail": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/winter-beer-secondary-150x150.png",
+          "thumbnail-width": 150,
+          "thumbnail-height": 150,
+          "medium": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/winter-beer-secondary-300x197.png",
+          "medium-width": 300,
+          "medium-height": 197,
+          "medium_large": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/winter-beer-secondary.png",
+          "medium_large-width": 525,
+          "medium_large-height": 345,
+          "large": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/winter-beer-secondary.png",
+          "large-width": 525,
+          "large-height": 345,
+          "twentyseventeen-featured-image": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/winter-beer-secondary.png",
+          "twentyseventeen-featured-image-width": 760,
+          "twentyseventeen-featured-image-height": 500,
+          "twentyseventeen-thumbnail-avatar": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/winter-beer-secondary-100x100.png",
+          "twentyseventeen-thumbnail-avatar-width": 100,
+          "twentyseventeen-thumbnail-avatar-height": 100
+        }
+      },
+      "gif": false,
+      "secondary_gif": false
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/projects/28"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/projects"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/types/projects"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/media/30"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/media?parent=28"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    },
+    "_embedded": {
+      "wp:featuredmedia": [
+        {
+          "id": 30,
+          "date": "2017-10-26T15:55:40",
+          "slug": "winter-beer-primary",
+          "type": "attachment",
+          "link": "https://chris-vita-portfolio.herokuapp.com/projects/winter-beer-conditions-checker/winter-beer-primary/",
+          "title": {
+            "rendered": "winter-beer-primary"
+          },
+          "author": 1,
+          "acf": false,
+          "caption": {
+            "rendered": ""
+          },
+          "alt_text": "",
+          "media_type": "image",
+          "mime_type": "image/png",
+          "media_details": {
+            "width": 1440,
+            "height": 1064,
+            "file": "2017/10/winter-beer-primary.png",
+            "sizes": {
+              "thumbnail": {
+                "file": "winter-beer-primary-150x150.png",
+                "width": 150,
+                "height": 150,
+                "mime_type": "image/png",
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/winter-beer-primary-150x150.png"
+              },
+              "medium": {
+                "file": "winter-beer-primary-300x222.png",
+                "width": 300,
+                "height": 222,
+                "mime_type": "image/png",
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/winter-beer-primary-300x222.png"
+              },
+              "medium_large": {
+                "file": "winter-beer-primary-768x567.png",
+                "width": 768,
+                "height": 567,
+                "mime_type": "image/png",
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/winter-beer-primary-768x567.png"
+              },
+              "large": {
+                "file": "winter-beer-primary-1024x757.png",
+                "width": 1024,
+                "height": 757,
+                "mime_type": "image/png",
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/winter-beer-primary-1024x757.png"
+              },
+              "twentyseventeen-thumbnail-avatar": {
+                "file": "winter-beer-primary-100x100.png",
+                "width": 100,
+                "height": 100,
+                "mime_type": "image/png",
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/winter-beer-primary-100x100.png"
+              },
+              "full": {
+                "file": "winter-beer-primary.png",
+                "width": 1440,
+                "height": 1064,
+                "mime_type": "image/png",
+                "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/winter-beer-primary.png"
+              }
+            },
+            "image_meta": {
+              "aperture": "0",
+              "credit": "",
+              "camera": "",
+              "caption": "",
+              "created_timestamp": "0",
+              "copyright": "",
+              "focal_length": "0",
+              "iso": "0",
+              "shutter_speed": "0",
+              "title": "",
+              "orientation": "0",
+              "keywords": []
+            }
+          },
+          "source_url": "https://cvportoliobucket.s3.amazonaws.com/uploads/2017/10/winter-beer-primary.png",
+          "_links": {
+            "self": [
+              {
+                "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/media/30"
+              }
+            ],
+            "collection": [
+              {
+                "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/media"
+              }
+            ],
+            "about": [
+              {
+                "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/types/attachment"
+              }
+            ],
+            "author": [
+              {
+                "embeddable": true,
+                "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/users/1"
+              }
+            ],
+            "replies": [
+              {
+                "embeddable": true,
+                "href": "https://chris-vita-portfolio.herokuapp.com/wp-json/wp/v2/comments?post=30"
               }
             ]
           }

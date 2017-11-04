@@ -16,21 +16,34 @@ if (process.env.NODE_ENV === 'production') {
     } else {
       next();
     }
+  });
 
-    app.get('*', (req, res, next) => {
-      if (req.url.indexOf('main.') !== -1) {
-        req.url = req.url + '.gz';
-        res.set('Content-Encoding', 'gzip');
-        const contentType = req.url.indexOf('.css') !== -1 ? 'text/css' : 'application/javascript';
-        res.set('Content-Type', contentType);
-      }
-      next();
-    });
+  app.use((req, res, next) => {
+    const allowedOrigins = [
+      'https://www.chrisvita.com',
+      'https://chrisvita.com',
+      'https://chris-vita-portfolio.herokuapp.com'
+    ];
+    const reqOrigin = req.headers.origin;
+    if (allowedOrigins.indexOf(reqOrigin) !== -1) {
+      res.setHeader('Access-Control-Allow-Origin', reqOrigin);
+    }
+    next();
+  });
 
-    app.use(expressStatic('frontEnd/build'));
+  app.get('*', (req, res, next) => {
+    if (req.url.indexOf('main.') !== -1) {
+      req.url = req.url + '.gz';
+      res.set('Content-Encoding', 'gzip');
+      const contentType = req.url.indexOf('.css') !== -1 ? 'text/css' : 'application/javascript';
+      res.set('Content-Type', contentType);
+    }
+    next();
+  });
 
-    app.get('*', (req, res) => {
-      res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-    });
+  app.use(expressStatic('frontEnd/build'));
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
   });
 }

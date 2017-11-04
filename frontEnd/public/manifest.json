@@ -4,7 +4,7 @@
   "icons": [
     {
       "src": "favicon.ico",
-      "sizes": "192x192",
+      "sizes": "16x16",
       "type": "image/png"
     },
     {
@@ -14,11 +14,11 @@
     },
     {
       "src": "logo-512.png",
-      "sizes": "192x192",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ],
-  "start_url": "./index.html",
+  "start_url": "./",
   "display": "standalone",
   "theme_color": "#ffa500",
   "background_color": "#c9f5f8"

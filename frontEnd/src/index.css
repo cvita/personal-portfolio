@@ -30,10 +30,24 @@ body {
 }
 
 .sectionHeading {
+  margin-top: 2.5em;
   font-size: 0.8em;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: rgb(106, 116, 126);
+}
+
+.renderedHTML a {
+  color: #6D7C8B;
+}
+
+.linkUnstyled {
+  text-decoration: none;
+  color: #6D7C8B;
+}
+
+.linkUnstyled:hover {
+  color: #6D7C8B;
 }
 
 /* CSSTransitionGroup settings to compliment lazy loading */

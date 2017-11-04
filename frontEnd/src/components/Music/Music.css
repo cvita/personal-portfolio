@@ -24,12 +24,14 @@
   transform: scale(1.2);
 }
 
-.artistAndTitle span {
-  font-size: 0.6em;
+.recordingTitle {
+  font-size: 1em;
   letter-spacing: 0.03em;
 }
 
 .genreList {
+  font-size: 0.9em;
+  letter-spacing: 0.02em;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;

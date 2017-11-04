@@ -1,7 +1,18 @@
-import { projects, musics, selectedProject, selectedMusic, errors } from '../reducers';
+import { siteText, projects, musics, selectedProject, selectedMusic, errors } from '../reducers';
 import initialState from '../initialState';
 import * as types from '../actionTypes';
 
+
+describe('reducers: `siteText`', () => {
+  it('should return the initial state', () => {
+    expect(siteText(undefined, {})).toEqual(initialState.siteText)
+  });
+
+  it(`should handle ${types.FETCH_SITE_TEXT_SUCCEEDED}`, () => {
+    const stubData = [{}];
+    expect(siteText(stubData, types.FETCH_SITE_TEXT_SUCCEEDED)).toEqual(stubData);
+  });
+});
 
 describe('reducers: `projects`', () => {
   it('should return the initial state', () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import Home from '../Home/Home';
 import Projects from '../Projects/Projects';
@@ -21,10 +21,9 @@ const Main = props => (
       </header>
       <main>
         <Switch>
-          <Route path='/' exact={true} render={() => <div><Home /><Projects {...props} /></div>} />
+          <Route path='/' exact={true} render={() => (<Home {...props}><Projects {...props} /></Home>)} />
           <Route path='/projects' render={() => <Projects {...props} />} />
           <Route path='/music' render={() => <Music {...props} />} />
-          <Redirect from='/personal-portfolio' to='/'/>
           <Route component={NoMatch404} />
         </Switch>
       </main>

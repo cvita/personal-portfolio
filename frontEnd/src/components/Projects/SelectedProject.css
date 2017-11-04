@@ -1,64 +1,23 @@
 .selectedProject {
-  margin-bottom: 6em;
+  margin-bottom: 5em;
 }
 
-.featuredMedia {
-  margin-bottom: 2em;
-  border: 1px solid rgb(204, 209, 218);
-}
-
-.featuredMedia img {
+.featuredImage {
   max-width: 100%;
-}
-
-.subtitle.select {
-  font-size: 0.9em;
-  padding-left: 0;
-  border: none;
-}
-
-.viewButtonContainer {
-  margin-bottom: 2em;
-}
-
-.sectionHeading.selected.view {
-  margin-bottom: -0.1em;
-}
-
-.viewButton {
-  padding-left: 0;
-  text-align: left;
-}
-
-.bodyText.selected {
-  margin-bottom: 3em;
-}
-
-.projectBackground p, ul, figure {
-  margin-bottom: 2em;
-}
-
-.projectBackground h3{
-  font-size: 0.9em;
-  letter-spacing: 0.03em;
-  font-weight: bold;
-}
-
-.projectBackground img {
-  max-width: 100%;
-  height: auto;
-}
-
-.projectBackground figure > img, figure > a > img {
   padding: 1em;
   border: 1px solid rgb(221, 226, 231);
 }
 
-.projectBackground figcaption {
-  margin-top: 0.15em;
-  text-align: center;
-  font-size: 0.9em;
-  letter-spacing: 0.03em;
-  font-style: italic;
-  color: #6D7C8B;
+.viewButton {
+  margin: 0 0.5em 1em 0;
+  padding: 0 0.5em 0.5em 0;
+  text-align: left;
+}
+
+.secondaryImage {
+  max-width: 100%;
+  max-height: 25em;
+  margin-top: 1em;
+  padding: 1em;
+  border: 1px solid rgb(221, 226, 231);
 }
