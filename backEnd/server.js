@@ -18,19 +18,6 @@ if (process.env.NODE_ENV === 'production') {
     }
   });
 
-  app.use((req, res, next) => {
-    const allowedOrigins = [
-      'https://www.chrisvita.com',
-      'https://chrisvita.com',
-      'https://chris-vita-portfolio.herokuapp.com'
-    ];
-    const reqOrigin = req.headers.origin;
-    if (allowedOrigins.indexOf(reqOrigin) !== -1) {
-      res.setHeader('Access-Control-Allow-Origin', reqOrigin);
-    }
-    next();
-  });
-
   app.get('*', (req, res, next) => {
     if (req.url.indexOf('main.') !== -1) {
       req.url = req.url + '.gz';
