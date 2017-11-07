@@ -1,3 +1,3 @@
 module.exports = {
-  url: 'https://chris-vita-portfolio-wp.herokuapp.com/wp-json/wp/v2'
+  url: 'https://cv-wp-api.herokuapp.com/wp-json/wp/v2'
 };
