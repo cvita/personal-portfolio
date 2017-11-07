@@ -46,6 +46,7 @@
     "flow-bin": "^0.54.1",
     "flow-typed": "^2.1.5",
     "jest": "^21.1.0",
+    "lighthouse-ci": "https://github.com/ebidel/lighthouse-ci",
     "nodemon": "^1.12.1",
     "supertest": "^3.0.0"
   },
