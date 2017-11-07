@@ -8,7 +8,7 @@ const pathToStubData = './src/client/__tests__/stubData';
 
 it('fetches custom post types: `projects` and parses the response', () => {
   fetchMock.get(
-    `${url}/projects?_embed`,
+    `${url}/projects?_embed&nocache=1`,
     fs.readFileSync(`${pathToStubData}/projectsRes.json`, 'utf8')
   );
   return wpClient.fetchPosts('projects')
