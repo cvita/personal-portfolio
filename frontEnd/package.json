@@ -5,6 +5,7 @@
   "proxy": "http://localhost:3001/",
   "dependencies": {
     "history": "^4.7.2",
+    "raven-js": "^3.19.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-lazy-load": "^3.0.12",

@@ -8,6 +8,9 @@ import App from './App';
 
 import registerServiceWorker from './registerServiceWorker';
 
+import Raven from 'raven-js';
+Raven.config('https://d2a32c77f6f6419a9dfd0d09af5533cf@sentry.io/241485').install();
+
 
 ReactDOM.render(
   <Provider store={store}>
