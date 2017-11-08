@@ -63,8 +63,10 @@ export const testimonial = (state = initialState.testimonial, action) => {
 
 export const errors = (state = initialState.errors, action) => {
   if (action.type && action.type.indexOf('FAILED') !== -1) {
+    if (process.env.NODE_ENV === 'production') {
+      Raven.captureException(JSON.stringify(action));
+    }
     console.error(action);
-    Raven.captureException(JSON.stringify(action));
     return [...state, action];
   }
   return state;
