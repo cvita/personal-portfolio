@@ -1,0 +1,61 @@
+.standUp {
+  margin-top: 3em;
+}
+
+.standUpHeading {
+  position: relative;
+  z-index: 1;
+}
+
+.twitterContainer {
+  position: relative;
+  width: 100%;
+  min-width: 229px;
+  height: 45px;
+  top: 45px;
+  margin-top: -90px;
+  background: white;
+}
+
+@media (min-width: 475px) {
+  .twitterContainer {
+    height: 57px;
+    top: 57px;
+    margin-top: -114px;
+  }
+}
+
+@media (min-width: 768px) {
+  .twitterContainer {
+    height: 45px;
+    top: 45px;
+    margin-top: -90px;
+  }
+}
+
+@media (min-width: 991px) {
+  .twitterContainer {
+    height: 57px;
+    top: 57px;
+    margin-top: -114px;
+  }
+}
+
+
+
+.standUpDate {
+  font-size: 0.5em;
+}
+
+.standUpReport {
+  margin-left: 2em;
+}
+
+.twitterFooter {
+  position: relative;
+  width: 100%;
+  height: 47px;
+  top: -53px;
+  background: white;
+  z-index: 1;
+}
