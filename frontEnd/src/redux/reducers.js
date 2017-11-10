@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
 import initialState from './initialState';
 import * as types from './actionTypes';
-
+import Raven from 'raven-js';
 
 // Sync
 export const selectedProject = (state = initialState.selectedProject, action) => {
@@ -63,6 +63,9 @@ export const testimonial = (state = initialState.testimonial, action) => {
 
 export const errors = (state = initialState.errors, action) => {
   if (action.type && action.type.indexOf('FAILED') !== -1) {
+    if (process.env.NODE_ENV === 'production') {
+      Raven.captureException(JSON.stringify(action));
+    }
     console.error(action);
     return [...state, action];
   }
