@@ -1,0 +1,392 @@
+[
+  {
+    "sha": "d6d1c8442d60eefd442748c71cf0c839f83d058f",
+    "commit": {
+      "author": {
+        "name": "Chris Vita",
+        "email": "chris.vita@gmail.com",
+        "date": "2017-11-10T15:49:46Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2017-11-10T15:49:46Z"
+      },
+      "message": "Merge pull request #6 from VitaC123/active-development\n\nAdd Sentry error reporting",
+      "tree": {
+        "sha": "4c8e54d6586acf18c60cd2da33262b980485d5e1",
+        "url": "https://api.github.com/repos/VitaC123/personal-portfolio/git/trees/4c8e54d6586acf18c60cd2da33262b980485d5e1"
+      },
+      "url": "https://api.github.com/repos/VitaC123/personal-portfolio/git/commits/d6d1c8442d60eefd442748c71cf0c839f83d058f",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJaBcqaCRBK7hj4Ov3rIwAAdHIIAD36ssNlrU8PuUVWnFWdY1Hl\ni/ry019kqjD7LsroS+zgqNnhbYDu3P3B3ASM5kO94hTbpfUZmxigdOfmpi1jRm3z\nlHSP6MsbVcrQPwCI7c99sy6yUDK4mbPoz+gHPqymhlAMFPxh0bArg14hOATat3u8\niP06z0SyH/42aaPiNz2nEmAJ2YVqwj4jGJidaJw/JrWwYY+Znuu815lT2KlglD7H\nHqJlgBhyzLsagUhS+IN8OQrHtHyXH9/zJNqdeohK+OXGYYNX9j7rtPN1ti91Wj1V\nv1VU1oa3E65sDh+CFaa8gDVk/pJ+a+MZfcGbIGgc4vUlJF0Dp0Xov2EPU5J29A4=\n=f9WZ\n-----END PGP SIGNATURE-----\n",
+        "payload": "tree 4c8e54d6586acf18c60cd2da33262b980485d5e1\nparent 25dff075f811e4e99a95927acbab91c7bd2e11e9\nparent be6ecdde2b3ca1bbc6c12ad5b6eff172da1315de\nauthor Chris Vita <chris.vita@gmail.com> 1510328986 -0800\ncommitter GitHub <noreply@github.com> 1510328986 -0800\n\nMerge pull request #6 from VitaC123/active-development\n\nAdd Sentry error reporting"
+      }
+    },
+    "url": "https://api.github.com/repos/VitaC123/personal-portfolio/commits/d6d1c8442d60eefd442748c71cf0c839f83d058f",
+    "html_url": "https://github.com/VitaC123/personal-portfolio/commit/d6d1c8442d60eefd442748c71cf0c839f83d058f",
+    "comments_url": "https://api.github.com/repos/VitaC123/personal-portfolio/commits/d6d1c8442d60eefd442748c71cf0c839f83d058f/comments",
+    "author": {
+      "login": "VitaC123",
+      "id": 17498763,
+      "avatar_url": "https://avatars3.githubusercontent.com/u/17498763?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/VitaC123",
+      "html_url": "https://github.com/VitaC123",
+      "followers_url": "https://api.github.com/users/VitaC123/followers",
+      "following_url": "https://api.github.com/users/VitaC123/following{/other_user}",
+      "gists_url": "https://api.github.com/users/VitaC123/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/VitaC123/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/VitaC123/subscriptions",
+      "organizations_url": "https://api.github.com/users/VitaC123/orgs",
+      "repos_url": "https://api.github.com/users/VitaC123/repos",
+      "events_url": "https://api.github.com/users/VitaC123/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/VitaC123/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "25dff075f811e4e99a95927acbab91c7bd2e11e9",
+        "url": "https://api.github.com/repos/VitaC123/personal-portfolio/commits/25dff075f811e4e99a95927acbab91c7bd2e11e9",
+        "html_url": "https://github.com/VitaC123/personal-portfolio/commit/25dff075f811e4e99a95927acbab91c7bd2e11e9"
+      },
+      {
+        "sha": "be6ecdde2b3ca1bbc6c12ad5b6eff172da1315de",
+        "url": "https://api.github.com/repos/VitaC123/personal-portfolio/commits/be6ecdde2b3ca1bbc6c12ad5b6eff172da1315de",
+        "html_url": "https://github.com/VitaC123/personal-portfolio/commit/be6ecdde2b3ca1bbc6c12ad5b6eff172da1315de"
+      }
+    ]
+  },
+  {
+    "sha": "be6ecdde2b3ca1bbc6c12ad5b6eff172da1315de",
+    "commit": {
+      "author": {
+        "name": "Chris Vita",
+        "email": "chris.vita@gmail.com",
+        "date": "2017-11-08T19:43:51Z"
+      },
+      "committer": {
+        "name": "Chris Vita",
+        "email": "chris.vita@gmail.com",
+        "date": "2017-11-08T19:43:51Z"
+      },
+      "message": "Add production only condition for Raven\n\nNo need to send error reporting during development.",
+      "tree": {
+        "sha": "4c8e54d6586acf18c60cd2da33262b980485d5e1",
+        "url": "https://api.github.com/repos/VitaC123/personal-portfolio/git/trees/4c8e54d6586acf18c60cd2da33262b980485d5e1"
+      },
+      "url": "https://api.github.com/repos/VitaC123/personal-portfolio/git/commits/be6ecdde2b3ca1bbc6c12ad5b6eff172da1315de",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/VitaC123/personal-portfolio/commits/be6ecdde2b3ca1bbc6c12ad5b6eff172da1315de",
+    "html_url": "https://github.com/VitaC123/personal-portfolio/commit/be6ecdde2b3ca1bbc6c12ad5b6eff172da1315de",
+    "comments_url": "https://api.github.com/repos/VitaC123/personal-portfolio/commits/be6ecdde2b3ca1bbc6c12ad5b6eff172da1315de/comments",
+    "author": {
+      "login": "VitaC123",
+      "id": 17498763,
+      "avatar_url": "https://avatars3.githubusercontent.com/u/17498763?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/VitaC123",
+      "html_url": "https://github.com/VitaC123",
+      "followers_url": "https://api.github.com/users/VitaC123/followers",
+      "following_url": "https://api.github.com/users/VitaC123/following{/other_user}",
+      "gists_url": "https://api.github.com/users/VitaC123/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/VitaC123/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/VitaC123/subscriptions",
+      "organizations_url": "https://api.github.com/users/VitaC123/orgs",
+      "repos_url": "https://api.github.com/users/VitaC123/repos",
+      "events_url": "https://api.github.com/users/VitaC123/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/VitaC123/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "VitaC123",
+      "id": 17498763,
+      "avatar_url": "https://avatars3.githubusercontent.com/u/17498763?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/VitaC123",
+      "html_url": "https://github.com/VitaC123",
+      "followers_url": "https://api.github.com/users/VitaC123/followers",
+      "following_url": "https://api.github.com/users/VitaC123/following{/other_user}",
+      "gists_url": "https://api.github.com/users/VitaC123/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/VitaC123/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/VitaC123/subscriptions",
+      "organizations_url": "https://api.github.com/users/VitaC123/orgs",
+      "repos_url": "https://api.github.com/users/VitaC123/repos",
+      "events_url": "https://api.github.com/users/VitaC123/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/VitaC123/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "b1e0c933ffa9e13b522a1a68e223e54d3a2ae8cc",
+        "url": "https://api.github.com/repos/VitaC123/personal-portfolio/commits/b1e0c933ffa9e13b522a1a68e223e54d3a2ae8cc",
+        "html_url": "https://github.com/VitaC123/personal-portfolio/commit/b1e0c933ffa9e13b522a1a68e223e54d3a2ae8cc"
+      }
+    ]
+  },
+  {
+    "sha": "b1e0c933ffa9e13b522a1a68e223e54d3a2ae8cc",
+    "commit": {
+      "author": {
+        "name": "Chris Vita",
+        "email": "chris.vita@gmail.com",
+        "date": "2017-11-07T23:38:21Z"
+      },
+      "committer": {
+        "name": "Chris Vita",
+        "email": "chris.vita@gmail.com",
+        "date": "2017-11-07T23:38:21Z"
+      },
+      "message": "Add raven-js error reporting",
+      "tree": {
+        "sha": "7057ce8d8209bb4c494675bdebdf2573db10db43",
+        "url": "https://api.github.com/repos/VitaC123/personal-portfolio/git/trees/7057ce8d8209bb4c494675bdebdf2573db10db43"
+      },
+      "url": "https://api.github.com/repos/VitaC123/personal-portfolio/git/commits/b1e0c933ffa9e13b522a1a68e223e54d3a2ae8cc",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/VitaC123/personal-portfolio/commits/b1e0c933ffa9e13b522a1a68e223e54d3a2ae8cc",
+    "html_url": "https://github.com/VitaC123/personal-portfolio/commit/b1e0c933ffa9e13b522a1a68e223e54d3a2ae8cc",
+    "comments_url": "https://api.github.com/repos/VitaC123/personal-portfolio/commits/b1e0c933ffa9e13b522a1a68e223e54d3a2ae8cc/comments",
+    "author": {
+      "login": "VitaC123",
+      "id": 17498763,
+      "avatar_url": "https://avatars3.githubusercontent.com/u/17498763?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/VitaC123",
+      "html_url": "https://github.com/VitaC123",
+      "followers_url": "https://api.github.com/users/VitaC123/followers",
+      "following_url": "https://api.github.com/users/VitaC123/following{/other_user}",
+      "gists_url": "https://api.github.com/users/VitaC123/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/VitaC123/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/VitaC123/subscriptions",
+      "organizations_url": "https://api.github.com/users/VitaC123/orgs",
+      "repos_url": "https://api.github.com/users/VitaC123/repos",
+      "events_url": "https://api.github.com/users/VitaC123/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/VitaC123/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "VitaC123",
+      "id": 17498763,
+      "avatar_url": "https://avatars3.githubusercontent.com/u/17498763?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/VitaC123",
+      "html_url": "https://github.com/VitaC123",
+      "followers_url": "https://api.github.com/users/VitaC123/followers",
+      "following_url": "https://api.github.com/users/VitaC123/following{/other_user}",
+      "gists_url": "https://api.github.com/users/VitaC123/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/VitaC123/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/VitaC123/subscriptions",
+      "organizations_url": "https://api.github.com/users/VitaC123/orgs",
+      "repos_url": "https://api.github.com/users/VitaC123/repos",
+      "events_url": "https://api.github.com/users/VitaC123/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/VitaC123/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "25dff075f811e4e99a95927acbab91c7bd2e11e9",
+        "url": "https://api.github.com/repos/VitaC123/personal-portfolio/commits/25dff075f811e4e99a95927acbab91c7bd2e11e9",
+        "html_url": "https://github.com/VitaC123/personal-portfolio/commit/25dff075f811e4e99a95927acbab91c7bd2e11e9"
+      }
+    ]
+  },
+  {
+    "sha": "25dff075f811e4e99a95927acbab91c7bd2e11e9",
+    "commit": {
+      "author": {
+        "name": "Chris Vita",
+        "email": "chris.vita@gmail.com",
+        "date": "2017-11-07T21:27:43Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2017-11-07T21:27:43Z"
+      },
+      "message": "Merge pull request #5 from VitaC123/active-development\n\nFix failure to load response from WordPress app - CORS",
+      "tree": {
+        "sha": "3410403f2d45d87c37bfb55ad98774143a3d3b31",
+        "url": "https://api.github.com/repos/VitaC123/personal-portfolio/git/trees/3410403f2d45d87c37bfb55ad98774143a3d3b31"
+      },
+      "url": "https://api.github.com/repos/VitaC123/personal-portfolio/git/commits/25dff075f811e4e99a95927acbab91c7bd2e11e9",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJaAiVPCRBK7hj4Ov3rIwAAdHIIAK4MfgioI2FDxaHq4fGFS94d\nxOYcLkPJkbrLtz3P7sGAUdO6C6uIy7tVdfKFORqThDMLtNfNToOvqf314SlB21nK\nF7EHUGYNxiroj+Atsj5IEFB2yahEYY33rJnOTbV0J+0rO5KnlqSCHXh9xteE/9Rf\nxuFhqzMM7EHIO59R8pz0YTesKyN7bE0vQdev/lKAGROozC/iZWvO9uuJajKXRMLz\n4OdzbouvYIdViv/MUg+JVmXzOzkMS7cjKWGgjXZ3btUdXJqwrZsF1g77sgM8+C4T\nJUpKVmMi8a0RHA0CFZXb8wzQfXIN0Z01OHi1K70K1WXcsA9d0xI3JYn1MawyQQU=\n=22/m\n-----END PGP SIGNATURE-----\n",
+        "payload": "tree 3410403f2d45d87c37bfb55ad98774143a3d3b31\nparent e1fa74314cb5282e431cbdae44efb07ce2790fc9\nparent 63d78b62be1d161b959ecbe9ed00508b2071c297\nauthor Chris Vita <chris.vita@gmail.com> 1510090063 -0800\ncommitter GitHub <noreply@github.com> 1510090063 -0800\n\nMerge pull request #5 from VitaC123/active-development\n\nFix failure to load response from WordPress app - CORS"
+      }
+    },
+    "url": "https://api.github.com/repos/VitaC123/personal-portfolio/commits/25dff075f811e4e99a95927acbab91c7bd2e11e9",
+    "html_url": "https://github.com/VitaC123/personal-portfolio/commit/25dff075f811e4e99a95927acbab91c7bd2e11e9",
+    "comments_url": "https://api.github.com/repos/VitaC123/personal-portfolio/commits/25dff075f811e4e99a95927acbab91c7bd2e11e9/comments",
+    "author": {
+      "login": "VitaC123",
+      "id": 17498763,
+      "avatar_url": "https://avatars3.githubusercontent.com/u/17498763?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/VitaC123",
+      "html_url": "https://github.com/VitaC123",
+      "followers_url": "https://api.github.com/users/VitaC123/followers",
+      "following_url": "https://api.github.com/users/VitaC123/following{/other_user}",
+      "gists_url": "https://api.github.com/users/VitaC123/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/VitaC123/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/VitaC123/subscriptions",
+      "organizations_url": "https://api.github.com/users/VitaC123/orgs",
+      "repos_url": "https://api.github.com/users/VitaC123/repos",
+      "events_url": "https://api.github.com/users/VitaC123/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/VitaC123/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "e1fa74314cb5282e431cbdae44efb07ce2790fc9",
+        "url": "https://api.github.com/repos/VitaC123/personal-portfolio/commits/e1fa74314cb5282e431cbdae44efb07ce2790fc9",
+        "html_url": "https://github.com/VitaC123/personal-portfolio/commit/e1fa74314cb5282e431cbdae44efb07ce2790fc9"
+      },
+      {
+        "sha": "63d78b62be1d161b959ecbe9ed00508b2071c297",
+        "url": "https://api.github.com/repos/VitaC123/personal-portfolio/commits/63d78b62be1d161b959ecbe9ed00508b2071c297",
+        "html_url": "https://github.com/VitaC123/personal-portfolio/commit/63d78b62be1d161b959ecbe9ed00508b2071c297"
+      }
+    ]
+  },
+  {
+    "sha": "63d78b62be1d161b959ecbe9ed00508b2071c297",
+    "commit": {
+      "author": {
+        "name": "Chris Vita",
+        "email": "chris.vita@gmail.com",
+        "date": "2017-11-07T20:53:41Z"
+      },
+      "committer": {
+        "name": "Chris Vita",
+        "email": "chris.vita@gmail.com",
+        "date": "2017-11-07T20:53:41Z"
+      },
+      "message": "Add new path to new WP app\n\nFresh WP install as a new Heroku app.",
+      "tree": {
+        "sha": "3410403f2d45d87c37bfb55ad98774143a3d3b31",
+        "url": "https://api.github.com/repos/VitaC123/personal-portfolio/git/trees/3410403f2d45d87c37bfb55ad98774143a3d3b31"
+      },
+      "url": "https://api.github.com/repos/VitaC123/personal-portfolio/git/commits/63d78b62be1d161b959ecbe9ed00508b2071c297",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/VitaC123/personal-portfolio/commits/63d78b62be1d161b959ecbe9ed00508b2071c297",
+    "html_url": "https://github.com/VitaC123/personal-portfolio/commit/63d78b62be1d161b959ecbe9ed00508b2071c297",
+    "comments_url": "https://api.github.com/repos/VitaC123/personal-portfolio/commits/63d78b62be1d161b959ecbe9ed00508b2071c297/comments",
+    "author": {
+      "login": "VitaC123",
+      "id": 17498763,
+      "avatar_url": "https://avatars3.githubusercontent.com/u/17498763?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/VitaC123",
+      "html_url": "https://github.com/VitaC123",
+      "followers_url": "https://api.github.com/users/VitaC123/followers",
+      "following_url": "https://api.github.com/users/VitaC123/following{/other_user}",
+      "gists_url": "https://api.github.com/users/VitaC123/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/VitaC123/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/VitaC123/subscriptions",
+      "organizations_url": "https://api.github.com/users/VitaC123/orgs",
+      "repos_url": "https://api.github.com/users/VitaC123/repos",
+      "events_url": "https://api.github.com/users/VitaC123/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/VitaC123/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "VitaC123",
+      "id": 17498763,
+      "avatar_url": "https://avatars3.githubusercontent.com/u/17498763?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/VitaC123",
+      "html_url": "https://github.com/VitaC123",
+      "followers_url": "https://api.github.com/users/VitaC123/followers",
+      "following_url": "https://api.github.com/users/VitaC123/following{/other_user}",
+      "gists_url": "https://api.github.com/users/VitaC123/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/VitaC123/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/VitaC123/subscriptions",
+      "organizations_url": "https://api.github.com/users/VitaC123/orgs",
+      "repos_url": "https://api.github.com/users/VitaC123/repos",
+      "events_url": "https://api.github.com/users/VitaC123/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/VitaC123/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "e1fa74314cb5282e431cbdae44efb07ce2790fc9",
+        "url": "https://api.github.com/repos/VitaC123/personal-portfolio/commits/e1fa74314cb5282e431cbdae44efb07ce2790fc9",
+        "html_url": "https://github.com/VitaC123/personal-portfolio/commit/e1fa74314cb5282e431cbdae44efb07ce2790fc9"
+      }
+    ]
+  }
+]
