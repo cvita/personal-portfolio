@@ -1,54 +1,57 @@
 import React, { Component } from 'react';
 import Script from 'react-load-script';
-import { Container, Row, Col, Alert, Button } from 'reactstrap';
+import { Container, Row, Col, Alert, Badge } from 'reactstrap';
 import './StandUp.css';
 
 
-const Twitter = props => (
+const TwitterTimeline = props => (
   <div>
-    {props.twitterError &&
+    {props.scriptError &&
       <Alert color='danger'>
-        <p>There was a problem embedding the <i>daily stand-ups</i> from Twitter, but you can still <a href='https://twitter.com/cvpdx'>view it</a>.</p>
+        <p>There was a problem embedding the <i>daily stand-ups</i> from Twitter, but you can still <a href='https://twitter.com/cvpdx'>view them here</a>.</p>
       </Alert>}
 
-    {!props.twitterError && (
+    {!props.scriptError && (
       <div>
-        <div className='twitterContainer' />
-        <a
-          className="twitter-timeline"
-          data-height="600"
-          data-theme="dark"
-          href="https://twitter.com/cvpdx?ref_src=twsrc%5Etfw"
-        >
-          Tweets by cvpdx
-        </a>
-        <div className='twitterFooter' />
+        <div className='twitterHeader' />
+        <div className='twitterTimelineContainer'>
+          <a
+            className='twitter-timeline'
+            data-height='600'
+            data-theme='light'
+            href='https://twitter.com/cvpdx?ref_src=twsrc%5Etfw'
+          >
+            Tweets by cvpdx
+          </a>
+        </div>
+        {props.scriptLoaded &&
+          <div className='twitterFooter' />}
       </div>)}
   </div>
 );
 
-const StandUpLayout = props => {
-
+const RecentCommits = props => {
+  const { commits } = props;
   return (
-    <Container>
-      <Row>
-        <Col md='7' xs='12'>
-          <h1 className='sectionHeading standUpHeading'>Daily stand-up</h1>
-          <Twitter twitterError={props.twitterError} />
-        </Col>
-
-        <Col />
-
-        <Col md='4' xs='12'>
-          <h1 className='sectionHeading'>Placeholder section</h1>
-          <p>Perhaps display GitHub latest activity</p>
-        </Col>
-
-      </Row>
-    </Container>
+    <div>
+      <h1 className='sectionHeading'>Recent commits</h1>
+      <ul className='list-unstyled'>
+        {commits.map(commit => {
+          const mainMessageIndex = commit.message.indexOf('\n');
+          const mainMessage = mainMessageIndex > -1 ?
+            commit.message.slice(0, mainMessageIndex) :
+            commit.message;
+          return (
+            <li key={commit.date}>
+              <Badge className='subtitle' pill color='light'>{new Date(commit.date).toDateString()}</Badge>
+              <p><a className='linkUnstyled' href={commit.url}>{mainMessage}</a></p>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
   );
 };
-
 
 class StandUp extends Component {
   constructor(props) {
@@ -58,6 +61,11 @@ class StandUp extends Component {
       scriptError: false,
       scriptLoaded: false
     };
+  }
+  componentDidMount() {
+    if (this.props.commits.commits.length === 0) {
+      this.props.fetchCommits();
+    }
   }
   handleScriptCreate() {
     this.setState({ scriptCreated: true });
@@ -69,6 +77,8 @@ class StandUp extends Component {
     this.setState({ scriptLoaded: true });
   }
   render() {
+    const { scriptCreated } = this.state;
+    const { commits } = this.props.commits;
     return (
       <div className='standUp'>
         <Script
@@ -78,8 +88,24 @@ class StandUp extends Component {
           onError={this.handleScriptError.bind(this)}
           onLoad={this.handleScriptLoad.bind(this)}
         />
-        {this.state.scriptCreated &&
-          <StandUpLayout twitterError={this.state.scriptError} />}
+        <Container>
+          <Row>
+            <Col md='7' xs='12'>
+              <h1 className='sectionHeading standUpHeading'>Daily stand-up</h1>
+              {scriptCreated && (
+                <TwitterTimeline
+                  scriptError={this.state.scriptError}
+                  scriptLoaded={this.state.scriptLoaded}
+                />)}
+            </Col>
+
+            <Col />
+            {commits.length > 0 && (
+              <Col md='4' xs='12'>
+                <RecentCommits {...this.props.commits} />
+              </Col>)}
+          </Row>
+        </Container>
       </div>
     );
   }
