@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import FadeIn from '../helper/FadeIn';
 import LazyFadeIn from '../helper/LazyFadeIn';
 import { Row, Col } from 'reactstrap';
 import About from './About';
@@ -20,7 +21,10 @@ class Home extends Component {
           <div className='container-fluid'>
             <Row>
               <Col md='8' sm='12'>
-                <h1 className='display-3 heroText'>My name is Chris, and I <span>build</span> things with code.</h1>
+                {this.props.styleSheetLoaded && (
+                  <FadeIn>
+                    <h1 className='display-3 heroText'>My name is Chris, and I <span>build</span> things with code.</h1>
+                  </FadeIn>)}
               </Col>
             </Row>
           </div>
@@ -28,7 +32,9 @@ class Home extends Component {
         </div>
 
         {this.props.siteText.introduction &&
-          <About text={this.props.siteText.introduction} />}
+         <LazyFadeIn>
+            <About text={this.props.siteText.introduction} />
+          </LazyFadeIn>}
 
         <LazyFadeIn>
           <StandUp {...this.props} />
