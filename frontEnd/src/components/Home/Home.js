@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import LazyFadeIn from '../helper/LazyFadeIn';
 import { Row, Col } from 'reactstrap';
 import About from './About';
+import StandUp from './StandUp';
 import Testimonial from './Testimonial';
 import './Home.css';
 
@@ -28,10 +30,17 @@ class Home extends Component {
         {this.props.siteText.introduction &&
           <About text={this.props.siteText.introduction} />}
 
-        {this.props.children}
+        <LazyFadeIn>
+          <StandUp {...this.props} />
+        </LazyFadeIn>
 
-        <Testimonial testimonial={this.props.testimonial} fetchTestimonial={this.props.fetchTestimonial} />
+        <LazyFadeIn>
+          {this.props.children}
+        </LazyFadeIn>
 
+        <LazyFadeIn>
+          <Testimonial testimonial={this.props.testimonial} fetchTestimonial={this.props.fetchTestimonial} />
+        </LazyFadeIn>
       </div>
     );
   }

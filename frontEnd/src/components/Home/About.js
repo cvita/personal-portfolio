@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import List from '../helper/List';
-import './About.css';
 
 
 const About = props => {
