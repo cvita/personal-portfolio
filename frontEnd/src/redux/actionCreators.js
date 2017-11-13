@@ -19,6 +19,11 @@ export const makeSelectedMusic = (playerProps = defaultPlayerProps) => ({
   payload: playerProps
 });
 
+export const refreshStyleSheetStatus = () => ({
+  type: types.REFRESH_STYLESHEET_STATUS,
+  payload: null
+});
+
 // Async
 export const fetchSiteText = (customPostType, postId, embed = false) => ({
   type: types.FETCH_SITE_TEXT_REQUESTED,

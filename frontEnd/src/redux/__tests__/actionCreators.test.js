@@ -60,4 +60,12 @@ describe('action creators', () => {
     };
     expect(actions.fetchCommits()).toEqual(expectedAction);
   });
+
+  it('should create an action to refresh stylesheet status', () => {
+    const expectedAction = {
+      type: types.REFRESH_STYLESHEET_STATUS,
+      payload: null
+    };
+    expect(actions.refreshStyleSheetStatus()).toEqual(expectedAction);
+  });
 });

@@ -1,4 +1,4 @@
-import { siteText, projects, musics, selectedProject, selectedMusic, testimonial, commits, errors } from '../reducers';
+import { siteText, projects, musics, selectedProject, selectedMusic, testimonial, commits, styleSheetLoaded, errors } from '../reducers';
 import initialState from '../initialState';
 import * as types from '../actionTypes';
 
@@ -82,6 +82,18 @@ describe('reducers: `commits`', () => {
   it(`should handle ${types.FETCH_COMMITS_SUCCEEDED}`, () => {
     const stubData = [{}];
     expect(projects(stubData, types.FETCH_COMMITS_SUCCEEDED)).toEqual(stubData);
+  });
+});
+
+
+describe('reducers: `styleSheeLoaded`', () => {
+  it('should return the initial state', () => {
+    expect(styleSheetLoaded(undefined, {})).toEqual(initialState.styleSheetLoaded)
+  });
+
+  it(`should handle ${types.REFRESH_STYLESHEET_STATUS}`, () => {
+    const stubData = [{}];
+    expect(styleSheetLoaded(stubData, types.REFRESH_STYLESHEET_STATUS)).toEqual(stubData);
   });
 });
 

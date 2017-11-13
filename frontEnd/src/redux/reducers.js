@@ -70,6 +70,15 @@ export const commits = (state = initialState.commits, action) => {
   }
 };
 
+export const styleSheetLoaded = (state = initialState.styleSheetLoaded) => {
+  const styleSheetHref = 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css';
+  if (document.styleSheets.length > 0 && document.styleSheets[0].href === styleSheetHref) {
+    return true;
+  } else {
+    return state;
+  }
+};
+
 export const errors = (state = initialState.errors, action) => {
   if (action.type && action.type.indexOf('FAILED') !== -1) {
     if (process.env.NODE_ENV === 'production') {
@@ -81,6 +90,7 @@ export const errors = (state = initialState.errors, action) => {
   return state;
 };
 
+
 const rootReducer = combineReducers({
   siteText,
   selectedProject,
@@ -89,6 +99,7 @@ const rootReducer = combineReducers({
   musics,
   testimonial,
   commits,
+  styleSheetLoaded,
   errors,
   routing: routerReducer
 });

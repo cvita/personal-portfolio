@@ -24,6 +24,7 @@ const mapStateToProps = state => ({
   musics: state.musics,
   testimonial: state.testimonial,
   commits: state.commits,
+  styleSheetLoaded: state.styleSheetLoaded,
   errors: state.errors,
   routing: state.routing
 });
