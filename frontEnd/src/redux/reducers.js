@@ -61,6 +61,15 @@ export const testimonial = (state = initialState.testimonial, action) => {
   }
 };
 
+export const commits = (state = initialState.commits, action) => {
+  switch (action.type) {
+    case types.FETCH_COMMITS_SUCCEEDED:
+      return action.payload;
+    default:
+      return state;
+  }
+};
+
 export const errors = (state = initialState.errors, action) => {
   if (action.type && action.type.indexOf('FAILED') !== -1) {
     if (process.env.NODE_ENV === 'production') {
@@ -79,6 +88,7 @@ const rootReducer = combineReducers({
   selectedMusic,
   musics,
   testimonial,
+  commits,
   errors,
   routing: routerReducer
 });

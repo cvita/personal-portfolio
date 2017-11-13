@@ -39,3 +39,8 @@ export const fetchTestimonial = (customPostType, embed = true) => ({
   type: types.FETCH_TESTIMONIAL_REQUESTED,
   payload: [customPostType, embed]
 });
+
+export const fetchCommits = (maxResults = 5) => ({
+  type: types.FETCH_COMMITS_REQUESTED,
+  payload: maxResults
+});
