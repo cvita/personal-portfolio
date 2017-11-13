@@ -10,7 +10,7 @@
   width: 100%;
 }
 
-.playButton {
+#playButton {
   position: absolute;
   font-size: 2em;
   margin: 0.1em 0.75em;
@@ -20,7 +20,7 @@
   transition: 0.3s;
 }
 
-.playButton:hover {
+#playButton:hover {
   transform: scale(1.2);
 }
 
