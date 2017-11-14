@@ -31,7 +31,7 @@ class Main extends Component {
           </header>
           <main>
             <Switch>
-              <Route path='/' exact={true} render={() => (<Home {...this.props}><Projects {...this.props} /></Home>)} />
+              <Route path='/' exact={true} render={() => <Home {...this.props} />} />
               <Route path='/projects' render={() => <Projects {...this.props} />} />
               <Route path='/music' render={() => <Music {...this.props} />} />
               <Route component={NoMatch404} />

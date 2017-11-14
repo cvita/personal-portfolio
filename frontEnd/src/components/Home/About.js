@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import List from '../helper/List';
 
 
-const About = props => {
+const AboutLayout = props => {
   const {
     primary_heading,
     primary_text,
@@ -39,5 +39,21 @@ const About = props => {
   );
 };
 
+
+class About extends Component {
+  componentDidMount() {
+    if (!this.props.siteText.introduction) {
+      this.props.fetchSiteText('additional_text', '69');
+    }
+  }
+  render() {
+    return (
+      <div>
+        {this.props.siteText.introduction && (
+          <AboutLayout text={this.props.siteText.introduction} />)}
+      </div>
+    );
+  }
+}
 
 export default About;

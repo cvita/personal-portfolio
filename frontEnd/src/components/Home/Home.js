@@ -1,56 +1,49 @@
-import React, { Component } from 'react';
+import React from 'react';
 import FadeIn from '../helper/FadeIn';
 import LazyFadeIn from '../helper/LazyFadeIn';
 import { Row, Col } from 'reactstrap';
 import About from './About';
 import StandUp from './StandUp';
+import Projects from '../Projects/Projects';
 import Testimonial from './Testimonial';
 import './Home.css';
 
 
-class Home extends Component {
-  componentDidMount() {
-    if (!this.props.siteText.introduction) {
-      this.props.fetchSiteText('additional_text', '69');
-    }
-  }
-  render() {
-    return (
-      <div>
-        <div className='heroBanner'>
-          <div className='container-fluid'>
-            <Row>
-              <Col md='8' sm='12'>
-                {this.props.styleSheetLoaded && (
-                  <FadeIn>
-                    <h1 className='display-3 heroText'>My name is Chris, and I <span>build</span> things with code.</h1>
-                  </FadeIn>)}
-              </Col>
-            </Row>
-          </div>
-          <div className='heroImage' />
-        </div>
+const Hero = props => (
+  <div className='heroBanner'>
+    <div className='container-fluid'>
+      <Row>
+        <Col md='8' sm='12'>
+          {props.styleSheetLoaded && (
+            <FadeIn>
+              <h1 className='display-3 heroText'>My name is Chris, and I <span>build</span> things with code.</h1>
+            </FadeIn>)}
+        </Col>
+      </Row>
+    </div>
+    <div className='heroImage' />
+  </div>
+);
 
-        {this.props.siteText.introduction &&
-         <LazyFadeIn>
-            <About text={this.props.siteText.introduction} />
-          </LazyFadeIn>}
+const Home = props => (
+  <div>
+    <Hero styleSheetLoaded={props.styleSheetLoaded} />
 
-        <LazyFadeIn height={600}>
-          <StandUp {...this.props} />
-        </LazyFadeIn>
+    <About {...props} />
 
-        <LazyFadeIn>
-          {this.props.children}
-        </LazyFadeIn>
+    <LazyFadeIn height={600}>
+      <StandUp {...props} />
+    </LazyFadeIn>
 
-        <LazyFadeIn>
-          <Testimonial testimonial={this.props.testimonial} fetchTestimonial={this.props.fetchTestimonial} />
-        </LazyFadeIn>
-      </div>
-    );
-  }
-}
+    <LazyFadeIn height={1000}>
+      <Projects {...props} />
+    </LazyFadeIn>
+
+    <LazyFadeIn height={500}>
+      <Testimonial testimonial={props.testimonial} fetchTestimonial={props.fetchTestimonial} />
+    </LazyFadeIn>
+  </div>
+);
 
 
 export default Home;
