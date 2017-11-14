@@ -1,0 +1,32 @@
+{
+  "name": "personal-portfolio",
+  "description": "A showcase of personal projects. Built using React-Redux and the WordPress REST API.",
+  "url": "https://github.com/VitaC123/personal-portfolio",
+  "commits": [
+    {
+      "date": "2017-11-10T15:49:46Z",
+      "message": "Merge pull request #6 from VitaC123/active-development\n\nAdd Sentry error reporting",
+      "url": "https://github.com/VitaC123/personal-portfolio/commit/d6d1c8442d60eefd442748c71cf0c839f83d058f"
+    },
+    {
+      "date": "2017-11-08T19:43:51Z",
+      "message": "Add production only condition for Raven\n\nNo need to send error reporting during development.",
+      "url": "https://github.com/VitaC123/personal-portfolio/commit/be6ecdde2b3ca1bbc6c12ad5b6eff172da1315de"
+    },
+    {
+      "date": "2017-11-07T23:38:21Z",
+      "message": "Add raven-js error reporting",
+      "url": "https://github.com/VitaC123/personal-portfolio/commit/b1e0c933ffa9e13b522a1a68e223e54d3a2ae8cc"
+    },
+    {
+      "date": "2017-11-07T21:27:43Z",
+      "message": "Merge pull request #5 from VitaC123/active-development\n\nFix failure to load response from WordPress app - CORS",
+      "url": "https://github.com/VitaC123/personal-portfolio/commit/25dff075f811e4e99a95927acbab91c7bd2e11e9"
+    },
+    {
+      "date": "2017-11-07T20:53:41Z",
+      "message": "Add new path to new WP app\n\nFresh WP install as a new Heroku app.",
+      "url": "https://github.com/VitaC123/personal-portfolio/commit/63d78b62be1d161b959ecbe9ed00508b2071c297"
+    }
+  ]
+}

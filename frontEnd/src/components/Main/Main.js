@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
+import FadeIn from '../helper/FadeIn';
 import Home from '../Home/Home';
 import Projects from '../Projects/Projects';
 import Music from '../Music/Music';
@@ -12,32 +13,43 @@ import Footer from './Footer';
 import './Main.css';
 
 
-const Main = props => (
-  <div className='mainBody'>
+class Main extends Component {
+  componentWillMount() {
+    // Ensures app knows when stylesheet has loaded
+    document.getElementById('styleSheetBootstrap').addEventListener('load', this.props.refreshStyleSheetStatus);
+  }
+  render() {
+    return (
+      <div className='mainBody'>
 
-    <div className='mainContent'>
-      <header>
-        <Navigation {...props.routing.location} />
-      </header>
-      <main>
-        <Switch>
-          <Route path='/' exact={true} render={() => (<Home {...props}><Projects {...props} /></Home>)} />
-          <Route path='/projects' render={() => <Projects {...props} />} />
-          <Route path='/music' render={() => <Music {...props} />} />
-          <Route component={NoMatch404} />
-        </Switch>
-      </main>
-    </div>
+        <div className='mainContent'>
+          <header>
+            {this.props.styleSheetLoaded && (
+              <FadeIn>
+                <Navigation {...this.props.routing.location} />
+              </FadeIn>)}
+          </header>
+          <main>
+            <Switch>
+              <Route path='/' exact={true} render={() => <Home {...this.props} />} />
+              <Route path='/projects' render={() => <Projects {...this.props} />} />
+              <Route path='/music' render={() => <Music {...this.props} />} />
+              <Route component={NoMatch404} />
+            </Switch>
+          </main>
+        </div>
 
-    {props.selectedMusic &&
-      <Player {...props.selectedMusic} />}
+        {this.props.selectedMusic &&
+          <Player {...this.props.selectedMusic} />}
 
-    <footer className='mainFooter'>
-      <Footer />
-    </footer>
+        <footer className='mainFooter'>
+          <Footer />
+        </footer>
 
-  </div>
-);
+      </div>
+    );
+  }
+}
 
 
 export default Main;

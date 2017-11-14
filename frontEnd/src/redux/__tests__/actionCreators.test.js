@@ -44,4 +44,28 @@ describe('action creators', () => {
     };
     expect(actions.makeSelectedMusic(input)).toEqual(expectedAction);
   });
+
+  it('should create an action to fetch testimonial', () => {
+    const expectedAction = {
+      type: types.FETCH_TESTIMONIAL_REQUESTED,
+      payload: ['testimonial', true]
+    };
+    expect(actions.fetchTestimonial('testimonial')).toEqual(expectedAction);
+  });
+
+  it('should create an action to fetch commits', () => {
+    const expectedAction = {
+      type: types.FETCH_COMMITS_REQUESTED,
+      payload: 3
+    };
+    expect(actions.fetchCommits()).toEqual(expectedAction);
+  });
+
+  it('should create an action to refresh stylesheet status', () => {
+    const expectedAction = {
+      type: types.REFRESH_STYLESHEET_STATUS,
+      payload: null
+    };
+    expect(actions.refreshStyleSheetStatus()).toEqual(expectedAction);
+  });
 });

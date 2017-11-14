@@ -1,0 +1,23 @@
+.standUp {
+  margin-bottom: 5em;
+}
+
+.standUpHeading {
+  margin-top: 5em;
+}
+
+.twitterTimelineButton {
+  color: #2e3844;
+  border-color: #6D7C8B;
+}
+
+.twitterTimelineButton:hover {
+  color: #374249;
+  background: #8a98a1;
+  border-color: #374249;
+}
+
+.commitsDate {
+  letter-spacing: 0.1em;
+  font-size: 0.75em;
+}

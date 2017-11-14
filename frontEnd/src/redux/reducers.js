@@ -61,6 +61,24 @@ export const testimonial = (state = initialState.testimonial, action) => {
   }
 };
 
+export const commits = (state = initialState.commits, action) => {
+  switch (action.type) {
+    case types.FETCH_COMMITS_SUCCEEDED:
+      return action.payload;
+    default:
+      return state;
+  }
+};
+
+export const styleSheetLoaded = (state = initialState.styleSheetLoaded) => {
+  const styleSheetHref = 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css';
+  if (document.styleSheets.length > 0 && document.styleSheets[0].href === styleSheetHref) {
+    return true;
+  } else {
+    return state;
+  }
+};
+
 export const errors = (state = initialState.errors, action) => {
   if (action.type && action.type.indexOf('FAILED') !== -1) {
     if (process.env.NODE_ENV === 'production') {
@@ -72,6 +90,7 @@ export const errors = (state = initialState.errors, action) => {
   return state;
 };
 
+
 const rootReducer = combineReducers({
   siteText,
   selectedProject,
@@ -79,6 +98,8 @@ const rootReducer = combineReducers({
   selectedMusic,
   musics,
   testimonial,
+  commits,
+  styleSheetLoaded,
   errors,
   routing: routerReducer
 });

@@ -1,4 +1,4 @@
-import { siteText, projects, musics, selectedProject, selectedMusic, errors } from '../reducers';
+import { siteText, projects, musics, selectedProject, selectedMusic, testimonial, commits, styleSheetLoaded, errors } from '../reducers';
 import initialState from '../initialState';
 import * as types from '../actionTypes';
 
@@ -58,6 +58,42 @@ describe('reducers: `selectedMusic`', () => {
   it(`should handle ${types.MAKE_SELECTED_MUSIC}`, () => {
     const stubData = {};
     expect(projects(stubData, types.MAKE_SELECTED_MUSIC)).toEqual(stubData);
+  });
+});
+
+
+describe('reducers: `testimonial`', () => {
+  it('should return the initial state', () => {
+    expect(testimonial(undefined, {})).toEqual(initialState.testimonial)
+  });
+
+  it(`should handle ${types.FETCH_TESTIMONIAL_SUCCEEDED}`, () => {
+    const stubData = [{}];
+    expect(projects(stubData, types.FETCH_TESTIMONIAL_SUCCEEDED)).toEqual(stubData);
+  });
+});
+
+
+describe('reducers: `commits`', () => {
+  it('should return the initial state', () => {
+    expect(commits(undefined, {})).toEqual(initialState.commits)
+  });
+
+  it(`should handle ${types.FETCH_COMMITS_SUCCEEDED}`, () => {
+    const stubData = [{}];
+    expect(projects(stubData, types.FETCH_COMMITS_SUCCEEDED)).toEqual(stubData);
+  });
+});
+
+
+describe('reducers: `styleSheeLoaded`', () => {
+  it('should return the initial state', () => {
+    expect(styleSheetLoaded(undefined, {})).toEqual(initialState.styleSheetLoaded)
+  });
+
+  it(`should handle ${types.REFRESH_STYLESHEET_STATUS}`, () => {
+    const stubData = [{}];
+    expect(styleSheetLoaded(stubData, types.REFRESH_STYLESHEET_STATUS)).toEqual(stubData);
   });
 });
 

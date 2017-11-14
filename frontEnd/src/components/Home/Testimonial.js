@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
-//import LazyFadeIn from '../helper/LazyFadeIn';
+import LazyFadeIn from '../helper/LazyFadeIn';
 import './Testimonial.css';
 
 
@@ -11,7 +11,9 @@ const Testimony = props => {
     <blockquote className='jumbotron testimonialContainer'>
       <Row>
         <Col xl='12' md='4' xs='12'>
-          <img className='testimonialImage' src={images.medium.source_url} alt={name} />
+          <LazyFadeIn>
+            <img className='testimonialImage' src={images.medium.source_url} alt={name} />
+          </LazyFadeIn>
           <h3 className='subtitle testimonialNameAndOrg'>
             <a className='linkUnstyled' href={linkedin_url}>{name}</a>
             <br />

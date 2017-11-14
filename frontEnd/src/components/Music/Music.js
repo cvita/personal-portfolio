@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Container, Row, Col } from 'reactstrap';
 import LazyFadeIn from '../helper/LazyFadeIn';
+import FadeIn from '../helper/FadeIn';
+import { Container, Row, Col } from 'reactstrap';
 import './Music.css';
 
 
@@ -17,12 +18,12 @@ const AlbumLayout = props => {
  } = props;
 
   return (
-    <LazyFadeIn offset={250}>
+    <LazyFadeIn>
       <Row className='media album'>
 
         <Col md='4' sm='4' xs='8'>
           <div className='albumImageContainer' onClick={() => props.handleClick(bandcamp_album_id)}>
-            <i className="fa fa-play-circle playButton" aria-hidden="true" />
+            <i className="fa fa-play-circle" id='playButton' aria-hidden="true" />
             <img className='mr-3 albumImage' src={images.medium.source_url} alt={recording_title} />
           </div>
         </Col>
@@ -81,14 +82,14 @@ class Music extends Component {
   }
   render() {
     const albums = this.props.musics;
-
+    
     return (
       <Container>
         <Col>
-          {this.props.siteText.music &&
-            <LazyFadeIn>
+          {this.props.siteText.music && (
+            <FadeIn>
               <MusicText {...this.props.siteText.music} />
-            </LazyFadeIn>}
+            </FadeIn>)}
         </Col>
 
         {albums.length > 0 && (

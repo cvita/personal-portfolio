@@ -19,6 +19,11 @@ export const makeSelectedMusic = (playerProps = defaultPlayerProps) => ({
   payload: playerProps
 });
 
+export const refreshStyleSheetStatus = () => ({
+  type: types.REFRESH_STYLESHEET_STATUS,
+  payload: null
+});
+
 // Async
 export const fetchSiteText = (customPostType, postId, embed = false) => ({
   type: types.FETCH_SITE_TEXT_REQUESTED,
@@ -38,4 +43,9 @@ export const fetchMusics = () => ({
 export const fetchTestimonial = (customPostType, embed = true) => ({
   type: types.FETCH_TESTIMONIAL_REQUESTED,
   payload: [customPostType, embed]
+});
+
+export const fetchCommits = (maxResults = 3) => ({
+  type: types.FETCH_COMMITS_REQUESTED,
+  payload: maxResults
 });
