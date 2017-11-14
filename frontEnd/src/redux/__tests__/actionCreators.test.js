@@ -56,7 +56,7 @@ describe('action creators', () => {
   it('should create an action to fetch commits', () => {
     const expectedAction = {
       type: types.FETCH_COMMITS_REQUESTED,
-      payload: 5
+      payload: 3
     };
     expect(actions.fetchCommits()).toEqual(expectedAction);
   });

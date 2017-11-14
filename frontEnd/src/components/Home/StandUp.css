@@ -1,58 +1,23 @@
 .standUp {
-  margin-top: 0.75vh;
+  margin-bottom: 5em;
 }
 
 .standUpHeading {
-  position: relative;
-  z-index: 1;
+  margin-top: 5em;
 }
 
-.twitterHeader {
-  position: relative;
-  width: 100%;
-  min-width: 229px;
-  height: 45px;
-  top: 45px;
-  margin-top: -90px;
-  border-bottom: 1px solid #E3E9EC;
-  background: white;
+.twitterTimelineButton {
+  color: #2e3844;
+  border-color: #6D7C8B;
 }
 
-@media (min-width: 475px) {
-  .twitterHeader {
-    height: 57px;
-    top: 57px;
-    margin-top: -114px;
-  }
+.twitterTimelineButton:hover {
+  color: #374249;
+  background: #8a98a1;
+  border-color: #374249;
 }
 
-@media (min-width: 768px) {
-  .twitterHeader {
-    height: 45px;
-    top: 45px;
-    margin-top: -90px;
-  }
-}
-
-@media (min-width: 991px) {
-  .twitterHeader {
-    height: 57px;
-    top: 57px;
-    margin-top: -114px;
-  }
-}
-
-.twitterTimelineContainer {
-  border-left: 1px solid #E3E9EC;
-}
-
-.twitterFooter {
-  position: relative;
-  width: 100%;
-  min-width: 229px;
-  height: 47px;
-  top: -53px;
-  margin-bottom: -84px;
-  border-top: 1px solid #E3E9EC;
-  background: white;
+.commitsDate {
+  letter-spacing: 0.1em;
+  font-size: 0.75em;
 }

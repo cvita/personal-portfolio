@@ -9,11 +9,11 @@
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-lazyload": "^2.3.0",
-    "react-load-script": "0.0.6",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "react-router-redux": "^5.0.0-alpha.6",
     "react-transition-group": "^1.2.1",
+    "react-twitter-widgets": "^1.7.1",
     "reactstrap": "^5.0.0-alpha.3",
     "redux": "^3.7.2",
     "redux-saga": "^0.15.6"
