@@ -47,18 +47,20 @@ class Projects extends Component {
     }
 
     return (
-      <Container>
-        <Switch>
-          {projectRoutes}
-        </Switch>
+      <div style={{ marginBottom: '5em' }}>
+        <Container>
+          <Switch>
+            {projectRoutes}
+          </Switch>
 
-        {projectPreviews.length > 0 &&
-          <h1 className='sectionHeading'>{sectionHeading}</h1>}
+          {projectPreviews.length > 0 &&
+            <h1 className='sectionHeading'>{sectionHeading}</h1>}
 
-        <Row>
-          {projectPreviews}
-        </Row>
-      </Container>
+          <Row>
+            {projectPreviews}
+          </Row>
+        </Container>
+      </div>
     );
   }
 }
