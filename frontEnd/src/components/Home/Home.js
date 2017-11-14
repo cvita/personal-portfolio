@@ -36,7 +36,7 @@ class Home extends Component {
             <About text={this.props.siteText.introduction} />
           </LazyFadeIn>}
 
-        <LazyFadeIn>
+        <LazyFadeIn height={600}>
           <StandUp {...this.props} />
         </LazyFadeIn>
 
