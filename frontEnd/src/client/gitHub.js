@@ -1,56 +1,54 @@
 const fetchGitHub = (maxResults) => (
   new Promise((resolve, reject) => {
-    fetchRecentPushedRepo()
-      .then(repo => fetchRecentCommits(repo, maxResults))
-      .then(commits => resolve(commits))
+    fetchRecentPushedRepos()
+      .then(repos => {
+        Promise.all(repos.map(repo => fetchRecentCommits(repo, maxResults)))
+          .then(commits => resolve(sortByDate(commits).slice(0, maxResults)));
+      })
       .catch(e => reject(e));
   })
 );
 
-const fetchRecentPushedRepo = () => (
+const fetchRecentPushedRepos = () => (
   new Promise((resolve, reject) => {
-    const request = `https://api.github.com/users/vitac123/repos?sort=pushed&per_page=1` // returns an array
+    const request = `https://api.github.com/users/vitac123/repos?sort=pushed&per_page=3` // returns an array
     fetch(request, { method: 'GET' })
       .then(res => res.json())
-      .then(repos => resolve(parseRepos(repos[0])))
+      .then(repos => resolve(repos.map(repo => repo.name))) // Array of repo names
       .catch(e => reject(e));
   })
 );
 
 const fetchRecentCommits = (repo, maxResults) => (
   new Promise((resolve, reject) => {
-    const request = `https://api.github.com/repos/vitac123/${repo.name}/commits?per_page=${maxResults}`
+    const request = `https://api.github.com/repos/vitac123/${repo}/commits?per_page=${maxResults}`
     fetch(request, { method: 'GET' })
       .then(res => res.json())
-      .then(commits => resolve(
-        { ...repo, commits: parseCommits(commits) }
-      ))
+      .then(commits => resolve(parseCommits(commits, repo)))
       .catch(e => reject(e));
   })
 );
 
 // Helper functions
-const parseRepos = (repo) => (
-  {
-    name: repo.name,
-    description: repo.description,
-    url: repo.html_url
-  }
-);
-
-const parseCommits = (commits) => (
+const parseCommits = (commits, repo) => (
   commits.map(commit => {
     return {
-      date: commit.commit.author.date,
+      repo,
+      date: new Date(commit.commit.author.date).getTime(),
       message: commit.commit.message,
       url: commit.html_url
     };
   })
 );
 
+const sortByDate = commits => {
+  const commitsFlattened = commits.reduce((prev, curr) => prev.concat(curr));
+  return commitsFlattened.sort((a, b) => b.date - a.date);
+};
+
 
 export default {
   fetchGitHub,
-  fetchRecentPushedRepo,
+  fetchRecentPushedRepos,
   fetchRecentCommits
 };
