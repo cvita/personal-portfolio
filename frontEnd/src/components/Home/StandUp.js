@@ -81,7 +81,7 @@ class StandUp extends Component {
     }
   }
   render() {
-    const { commits } = this.props.commits;
+    const { commits } = this.props;
     const timelineError = "There was a problem embedding the <i>daily stand-ups</i> from Twitter, but you can still <a href='https://twitter.com/cvpdx'>view them here</a>.";
     return (
       <div className='standUp'>
@@ -96,7 +96,7 @@ class StandUp extends Component {
             <Col />
             {commits.length > 0 && (
               <Col md='4' xs='12'>
-                <RecentCommits {...this.props.commits} />
+                <RecentCommits commits={this.props.commits} />
               </Col>)}
           </Row>
         </Container>

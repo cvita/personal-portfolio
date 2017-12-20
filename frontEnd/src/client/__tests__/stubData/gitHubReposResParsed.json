@@ -1,5 +1,3 @@
-{
-  "name": "personal-portfolio",
-  "description": "A showcase of personal projects. Built using React-Redux and the WordPress REST API.",
-  "url": "https://github.com/VitaC123/personal-portfolio"
-}
+[
+  "personal-portfolio"
+]

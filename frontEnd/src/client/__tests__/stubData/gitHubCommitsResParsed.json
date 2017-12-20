@@ -1,32 +1,20 @@
-{
-  "name": "personal-portfolio",
-  "description": "A showcase of personal projects. Built using React-Redux and the WordPress REST API.",
-  "url": "https://github.com/VitaC123/personal-portfolio",
-  "commits": [
-    {
-      "date": "2017-11-10T15:49:46Z",
-      "message": "Merge pull request #6 from VitaC123/active-development\n\nAdd Sentry error reporting",
-      "url": "https://github.com/VitaC123/personal-portfolio/commit/d6d1c8442d60eefd442748c71cf0c839f83d058f"
-    },
-    {
-      "date": "2017-11-08T19:43:51Z",
-      "message": "Add production only condition for Raven\n\nNo need to send error reporting during development.",
-      "url": "https://github.com/VitaC123/personal-portfolio/commit/be6ecdde2b3ca1bbc6c12ad5b6eff172da1315de"
-    },
-    {
-      "date": "2017-11-07T23:38:21Z",
-      "message": "Add raven-js error reporting",
-      "url": "https://github.com/VitaC123/personal-portfolio/commit/b1e0c933ffa9e13b522a1a68e223e54d3a2ae8cc"
-    },
-    {
-      "date": "2017-11-07T21:27:43Z",
-      "message": "Merge pull request #5 from VitaC123/active-development\n\nFix failure to load response from WordPress app - CORS",
-      "url": "https://github.com/VitaC123/personal-portfolio/commit/25dff075f811e4e99a95927acbab91c7bd2e11e9"
-    },
-    {
-      "date": "2017-11-07T20:53:41Z",
-      "message": "Add new path to new WP app\n\nFresh WP install as a new Heroku app.",
-      "url": "https://github.com/VitaC123/personal-portfolio/commit/63d78b62be1d161b959ecbe9ed00508b2071c297"
-    }
-  ]
-}
+[
+  {
+    "repo": "game-price-tracker",
+    "date": 1513728181000,
+    "message": "Fix small UI style bugs (#15)\n\n* Fix broken paths to config vars\r\n\r\n* Add sticky footer\r\n\r\n* Add navbar\r\n\r\n* Cut `Currently tracking` list on `<Home />`\r\n\r\nAvoid redundant game listings.\r\n\r\n* Fix style bug on `<Game />` subcomponent\r\n\r\n`<Game />` should center on small screens.\r\n\r\n* Fix style bug on `<GameDetails />`\r\n\r\n`<Description />` should fill entire row on small screens.\r\n\r\n* Cut unused vars\r\n\r\n* Cut incompatible assertions\r\n\r\nManual acceptance test successful. Long term fix in #14.",
+    "url": "https://github.com/VitaC123/game-price-tracker/commit/a7bf78db61a6378227261c648e77e0169becd61d"
+  },
+  {
+    "repo": "game-price-tracker",
+    "date": 1510940566000,
+    "message": "Refactor components (#13)\n\n* Cut `build` folder\r\n\r\nWill be replaced in automated build via Travis-CI.\r\n\r\n* Refactor file/folder hierarchy: `<Main />` and subcomponents\r\n\r\n* Refactor file/folder hierarchy\r\n\r\nGrouping sub/components by page.\r\n\r\n* Bump client-side dev/dependencies to current\r\n\r\nMigrating app to react-router-dom v4. Refactoring `<App />` and subcomponents to accommodate.\r\n\r\n* Fix depricated reactstrap component\r\n\r\n* Fix broken feature: `browserHistory.push()`\r\n\r\nReplacing with `store.dispatch(push())`.\r\n\r\n* Fix broken reactstrap component `<Dropdown />`\r\n\r\n* Fix broken path to client-side app\r\n\r\nBroke when I changed folder from `client` to `frontend`.\r\n\r\n* Refactor file/folder hierarchy for client functions\r\n\r\nAll frontend clients (MongoDB, Sony PS Store, YouTube).\r\n\r\n* Add only display confirm/reset after blacklist check\r\n\r\nImprove UX.\r\n\r\n* Cut `react-lazy-load` add `react-lazyload`\r\n\r\nSmoother performance. Implementing via new helper component.\r\n\r\n* Cut temp `./client/build` folder\r\n\r\nShouldn't be tracked by Git.\r\n\r\n* Add font awesome script\r\n\r\nAlso adding more descriptive site title.\r\n\r\n* Refactor `<SubmiteGameForm />` `<TitleSearch />`\r\n\r\nRefactored and file retitled.\r\n\r\n* Refactor `<AutoSuggestions />`\r\n\r\n* Refactor `<SearchResults />`\r\n\r\nSingle CSS rule. Moved inline.\r\n\r\n* Refactor `<Games />` and subcomponents\r\n\r\nCreated `<ListOfPlatforms />` as new helper.\r\n\r\n* Refactor `<PriceAlert />` and subcomponents\r\n\r\nSlight change to props.errors to enable invalid gameId err handling.\r\n\r\n* Refactor `<Unsubscribe />` to update new filenames",
+    "url": "https://github.com/VitaC123/game-price-tracker/commit/d1c500f3026edd8b2fd6fc82ff861faab2ff654b"
+  },
+  {
+    "repo": "game-price-tracker",
+    "date": 1510768065000,
+    "message": "Refactor client-side (#12)\n\n* Cut `build` folder\r\n\r\nWill be replaced in automated build via Travis-CI.\r\n\r\n* Refactor file/folder hierarchy: `<Main />` and subcomponents\r\n\r\n* Refactor file/folder hierarchy\r\n\r\nGrouping sub/components by page.\r\n\r\n* Bump client-side dev/dependencies to current\r\n\r\nMigrating app to react-router-dom v4. Refactoring `<App />` and subcomponents to accommodate.\r\n\r\n* Fix depricated reactstrap component\r\n\r\n* Fix broken feature: `browserHistory.push()`\r\n\r\nReplacing with `store.dispatch(push())`.\r\n\r\n* Fix broken reactstrap component `<Dropdown />`\r\n\r\n* Fix broken path to client-side app\r\n\r\nBroke when I changed folder from `client` to `frontend`.\r\n\r\n* Refactor file/folder hierarchy for client functions\r\n\r\nAll frontend clients (MongoDB, Sony PS Store, YouTube).\r\n\r\n* Add only display confirm/reset after blacklist check\r\n\r\nImprove UX.",
+    "url": "https://github.com/VitaC123/game-price-tracker/commit/ce22c33e40ed131eaddc00cc459f38c2bbb74d28"
+  }
+]
