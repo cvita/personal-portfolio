@@ -76,7 +76,7 @@ const RecentCommits = props => {
 
 class StandUp extends Component {
   componentDidMount() {
-    if (this.props.commits.commits.length === 0) {
+    if (this.props.commits.length === 0) {
       this.props.fetchCommits();
     }
   }
