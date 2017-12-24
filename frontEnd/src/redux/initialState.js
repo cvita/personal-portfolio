@@ -5,7 +5,7 @@ const initialState = {
   selectedMusic: null,
   musics: [],
   testimonial: [],
-  commits: { commits: [] },
+  commits: [],
   styleSheetLoaded: false,
   errors: []
 };
